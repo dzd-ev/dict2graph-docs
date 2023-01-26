@@ -1,0 +1,725 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="basics/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>dict2graph Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dict2graph" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="dict2graph Docs" class="md-header__button md-logo" aria-label="dict2graph Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dict2graph Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="dict2graph Docs" class="md-nav__button md-logo" aria-label="dict2graph Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    dict2graph Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Start
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    Content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dict2graph" class="md-nav__link">
+    What is dict2graph
+  </a>
+  
+    <nav class="md-nav" aria-label="What is dict2graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    Recommended workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-dict2graph-is-not" class="md-nav__link">
+    What dict2graph is not
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2neo-depcrecation-warning" class="md-nav__link">
+    py2neo depcrecation warning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-example" class="md-nav__link">
+    Basic Usage Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-a-dict" class="md-nav__link">
+    Load a dict
+  </a>
+  
+    <nav class="md-nav" aria-label="Load a dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transform-the-model" class="md-nav__link">
+    Transform the model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dict2graph_api/" class="md-nav__link">
+        Dict2Graph API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Transformers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Transformers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Transformers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="match_content_to_transform/" class="md-nav__link">
+        Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="use_transformers/" class="md-nav__link">
+        Transforming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="list_transformer/" class="md-nav__link">
+        Available Transformers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="diy_transformer/" class="md-nav__link">
+        Bring your own Transformer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    Content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dict2graph" class="md-nav__link">
+    What is dict2graph
+  </a>
+  
+    <nav class="md-nav" aria-label="What is dict2graph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    Recommended workflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-dict2graph-is-not" class="md-nav__link">
+    What dict2graph is not
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2neo-depcrecation-warning" class="md-nav__link">
+    py2neo depcrecation warning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-example" class="md-nav__link">
+    Basic Usage Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-a-dict" class="md-nav__link">
+    Load a dict
+  </a>
+  
+    <nav class="md-nav" aria-label="Load a dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transform-the-model" class="md-nav__link">
+    Transform the model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dict2graph">Dict2graph<a class="headerlink" href="#dict2graph" title="Permanent link">&para;</a></h1>
+<p>V3 - BRANCH - Total Refactoring WIP!</p>
+<p>Transfer (json compatible) Python dicts into a Neo4j graph database with the help of https://github.com/kaiserpreusse/graphio . dict2graph also comes with some data transform capabilities.</p>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p><strong>Maintainer</strong>: tim.bleimehl@dzd-ev.de</p>
+<p><strong>Licence</strong>: MIT</p>
+<p><strong>issue tracker</strong>: https://git.connect.dzd-ev.de/dzdtools/pythonmodules/-/issues?label_name%5B%5D=DZDdict2graph</p>
+<p><strong>user docs</strong>:</p>
+<p><strong>source code</strong>: https://git.connect.dzd-ev.de/dzdpythonmodules/dict2graph</p>
+<h2 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#dict2graph">Dict2graph</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#content">Content</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#what-is-dict2graph">What is dict2graph</a><ul>
+<li><a href="#recommended-workflow">Recommended workflow</a></li>
+</ul>
+</li>
+<li><a href="#what-dict2graph-is-not">What dict2graph is <strong>not</strong></a></li>
+<li><a href="#py2neo-depcrecation-warning">py2neo depcrecation warning</a></li>
+<li><a href="#basic-usage-example">Basic Usage Example</a><ul>
+<li><a href="#load-a-dict">Load a dict</a></li>
+<li><a href="#transform-the-model">Transform the model</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>at the moment if dev:</p>
+<p><code>pip3 install git+https://git.connect.dzd-ev.de/dzdpythonmodules/dict2graph.git@V3</code></p>
+<p>Later will be:</p>
+<p><code>pip3 install dict2graph</code></p>
+<h2 id="what-is-dict2graph">What is dict2graph<a class="headerlink" href="#what-is-dict2graph" title="Permanent link">&para;</a></h2>
+<p>With dict2graph you can transfer python dicts into a neo4j graph out of the box. If you are not happy with the structure of the result, dict2graph comes with a bunch of transformation tools.</p>
+<h3 id="recommended-workflow">Recommended workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h3>
+<p>The recommended workflow is:</p>
+<ul>
+<li>Load your dict (or a sample of your larger datasets) as it is, with dict2graph into a neo4j test instance</li>
+<li>Inspect the result in neo4j</li>
+<li>Add dict2graph-transformators to shape your resulting graph model</li>
+<li>Wipe your neo4j test instance</li>
+<li>Repeat the work flow with the changed dict2graph-transformators until your happy with the result</li>
+</ul>
+<h2 id="what-dict2graph-is-not">What dict2graph is <strong>not</strong><a class="headerlink" href="#what-dict2graph-is-not" title="Permanent link">&para;</a></h2>
+<p>dict2graph can <strong>not</strong> be used for de-/serializing your dict into a graph database. There is no <code>graph2dict</code> functionality (nore is it planned to have one).<br />
+Your data/dict will be transformed to be more suitable in a graph represantation. On the way, certain informations can be lost. Reproducing the exact same dict from the graph is not possible in many cases.</p>
+<h2 id="py2neo-depcrecation-warning">py2neo depcrecation warning<a class="headerlink" href="#py2neo-depcrecation-warning" title="Permanent link">&para;</a></h2>
+<p>In past versions of <code>dict2graph</code>, the awesome <a href="https://py2neo.org/2021.1/"><code>py2neo</code></a> library was the only way to connect to a Neo4j instance.<br />
+But (sadly) this lib is in a low-maintanance mode. For now it is still supported but marked as deprecated. We recommend to switch to the official <a href="https://neo4j.com/docs/api/python-driver/current/">Neo4j Python Driver</a>. </p>
+<h2 id="basic-usage-example">Basic Usage Example<a class="headerlink" href="#basic-usage-example" title="Permanent link">&para;</a></h2>
+<p>Lets show a simple example.</p>
+<h3 id="load-a-dict">Load a dict<a class="headerlink" href="#load-a-dict" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span><span class="p">,</span> <span class="n">RelTrans</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span><span class="p">,</span> <span class="n">Driver</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;El Oued&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s2">&quot;Entities&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Isabelle Eberhardt&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Slimène Ehnni&quot;</span><span class="p">}],</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">d2g</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">NEO4J_DRIVER</span><span class="p">)</span>
+</code></pre></div>
+<p>This will result in following graph:</p>
+<p><img alt="" src="dict2graph_docs/img/readme_basic_example.png" title="Result example 1" /></p>
+<h4 id="transform-the-model">Transform the model<a class="headerlink" href="#transform-the-model" title="Permanent link">&para;</a></h4>
+<p>We now have loaded the dict into a Neo4j Graph. But usally we dont need explicit <code>list</code>s in graph. Also it is common to uppercase relationship types and capitalize labels.</p>
+<p>So we need to make some adjustments to improve the visual graph represenation of the dict.<br />
+This is where <code>dict2graph.Transformers</code> come into play.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span><span class="p">,</span> <span class="n">RelTrans</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">py2neo</span> <span class="kn">import</span> <span class="n">Graph</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;El Oued&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="s2">&quot;Entities&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Isabelle Eberhardt&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Slimène Ehnni&quot;</span><span class="p">}],</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_transformation</span><span class="p">(</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">[</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">CapitalizeLabels</span><span class="p">()),</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">RelTrans</span><span class="o">.</span><span class="n">UppercaseRelationType</span><span class="p">()),</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">PopListHubNodes</span><span class="p">()),</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="p">]</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">DRIVER</span><span class="p">)</span>
+</code></pre></div>
+ Now thats look more like a graph we are used to, isn't it?</p>
+<p><img alt="" src="dict2graph_docs/img/readme_basic_example_trans.png" title="Result example 1" /></p>
+<p>There are a lot of more powerfull <code>Transformators</code> and you can even make your own 🚀!<br />
+ Have a deeper look into the docs to learn more.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
