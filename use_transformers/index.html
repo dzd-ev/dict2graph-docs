@@ -826,6 +826,7 @@ To design your <code>TransformMatcher</code> it is recommended to start with a p
 <p>This result in the following graph</p>
 <p><img alt="" src="../img/matching_tut_baseline.png" title="Result example 1" /></p>
 <h3 id="node-matching">Node Matching<a class="headerlink" href="#node-matching" title="Permanent link">&para;</a></h3>
+<p>If we want to transform certain nodes and relationships (which we will do in a couple of line. i promise), we first need to find them. In dict2graph this is done with so called "matchers".</p>
 <p>The most simple matcher you can build is a "match everything" case. <strong>Matching everything is also the default case</strong>. Just keep the matcher empty.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">AnyNode</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -857,7 +858,7 @@ This again, would match only the <code>(:books)</code>-nodes.</p>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">()</span>
 </code></pre></div>
-<p>which is equal to </p>
+<p>which is (again) equal to </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">AnyRelation</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">(</span><span class="n">AnyRelation</span><span class="p">)</span>
@@ -882,10 +883,10 @@ This again, would match only the <code>(:books)</code>-nodes.</p>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span>
 </code></pre></div>
 <h2 id="transforming">Transforming<a class="headerlink" href="#transforming" title="Permanent link">&para;</a></h2>
-<p>Great. Now as you know how to collect your nodes and relationships, lets manipulate them.
-Fot that we need to create so called <code>Transformer</code>s</p>
-<p>Lets add a new property "<code>material: 'wood'</code>" to our bookshelf.</p>
-<p>We will pick the dict2graph built in node transformer <a href="/list_generic_transformer/#dict2graph.transformers.generic_transformers.AddProperty">AddProperty</a></p>
+<p>Great. Now as we know the concept of "matchers" and how to collect our nodes and relationships, lets manipulate them.
+For that we need to create so called <code>Transformer</code>s</p>
+<p>Lets try to add a new property "<code>material: 'wood'</code>" to our bookshelf.</p>
+<p>We will pick the dict2graph built in node transformer <a href="list_generic_transformer/#dict2graph.transformers.generic_transformers.AddProperty">AddProperty</a></p>
 <p>For your convenience you can import the wrapper class <code>dict2graph.NodeTrans</code> which includes all Transformers that are applicable to nodes. Same with <code>dict2graph.RelTrans</code> for relationship transformators.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span><span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
@@ -961,7 +962,7 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">NEO4J_DRIVER</span><span class="p">)</span>
 </code></pre></div>
-<p>this is much more compact and depending on your taste more readable. But its just a style question. Choice is yours.</p>
+<p>this is much more compact and depending on your taste more readable. But its just a style question. Choice is yours. But...</p>
 <h2 id="order-matters">Order matters!<a class="headerlink" href="#order-matters" title="Permanent link">&para;</a></h2>
 <p>The sequence of your transformers matters. Any transformation is passed to the next transformator.</p>
 <p>Lets compare to very similar code snippets. The only differentce will be the sequence of our transformators.</p>
@@ -992,6 +993,7 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>│{&quot;material&quot;:&quot;wood&quot;,&quot;Genre&quot;:&quot;Explaining the world&quot;}│
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>└──────────────────────────────────────────────────┘
 </code></pre></div>
+<p>Now lets flip the order of our transformators:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
