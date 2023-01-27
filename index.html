@@ -320,6 +320,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tb27012023-rewrite-in-progress-please-do-not-use-yet" class="md-nav__link">
+    🏗️ TB,27.01.2023: REWRITE IN PROGRESS. Please do not use yet!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     Install
   </a>
@@ -698,6 +705,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tb27012023-rewrite-in-progress-please-do-not-use-yet" class="md-nav__link">
+    🏗️ TB,27.01.2023: REWRITE IN PROGRESS. Please do not use yet!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     Install
   </a>
@@ -792,6 +806,7 @@
 <p><img align="right" alt=" " width="200px" src="logo.png"></p>
 <h2 id="dict2graph">Dict2graph<a class="headerlink" href="#dict2graph" title="Permanent link">&para;</a></h2>
 <hr />
+<h2 id="tb27012023-rewrite-in-progress-please-do-not-use-yet">🏗️ TB,27.01.2023: REWRITE IN PROGRESS. Please do not use yet!<a class="headerlink" href="#tb27012023-rewrite-in-progress-please-do-not-use-yet" title="Permanent link">&para;</a></h2>
 <p>Transfer (json compatible) Python dicts into a Neo4j graph database.<br />
 dict2graph also comes with some powerful data transform capabilities.</p>
 <p><strong>Maintainer</strong>: tim.bleimehl@dzd-ev.de</p>
@@ -809,6 +824,7 @@ dict2graph also comes with some powerful data transform capabilities.</p>
 <p><strong>Content</strong>:</p>
 <ul>
 <li><a href="#dict2graph">Dict2graph</a></li>
+<li><a href="#️-tb27012023-rewrite-in-progress-please-do-not-use-yet">🏗️ TB,27.01.2023: REWRITE IN PROGRESS. Please do not use yet!</a></li>
 <li><a href="#install">Install</a></li>
 <li><a href="#what-is-dict2graph">What is dict2graph</a></li>
 <li><a href="#recommended-workflow">Recommended workflow</a></li>
@@ -885,9 +901,9 @@ This is where <code>dict2graph.Transformer</code>s come into play.</p>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_transformation</span><span class="p">(</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">[</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">CapitalizeLabels</span><span class="p">()),</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">RelTrans</span><span class="o">.</span><span class="n">UppercaseRelationType</span><span class="p">()),</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">PopListHubNodes</span><span class="p">()),</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">CapitalizeLabels</span><span class="p">()),</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">RelTrans</span><span class="o">.</span><span class="n">UppercaseRelationType</span><span class="p">()),</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">()</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">PopListHubNodes</span><span class="p">()),</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="p">]</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">)</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>

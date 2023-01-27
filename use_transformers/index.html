@@ -829,25 +829,25 @@ To design your <code>TransformMatcher</code> it is recommended to start with a p
 <p>The most simple matcher you can build is a "match everything" case. <strong>Matching everything is also the default case</strong>. Just keep the matcher empty.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">AnyNode</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">all_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">()</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">all_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">()</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># this is equal to </span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">all_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="n">AnyNode</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">all_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="n">AnyNode</span><span class="p">)</span>
 </code></pre></div>
 <p>If we wanted to change <code>(:books)</code> nodes only we would build a matcher like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">books_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;books&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">books_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;books&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Or we can even match multiple nodes by providing multiples labels.</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">book_and_shelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="n">has_one_label_of</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;books&quot;</span><span class="p">,</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">])</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">book_and_shelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="n">has_one_label_of</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;books&quot;</span><span class="p">,</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">])</span>
 </code></pre></div>
 This would match <code>(:books)</code> and <code>(:bookshelf)</code> nodes.</p>
 <p>Filtering out certain labels is also possible
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">no_bookshelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="n">has_none_label_of</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">])</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">no_bookshelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="n">has_none_label_of</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">])</span>
 </code></pre></div>
 This again, would match only the <code>(:books)</code>-nodes.</p>
 <h3 id="relationship-matching">Relationship matching<a class="headerlink" href="#relationship-matching" title="Permanent link">&para;</a></h3>
@@ -855,29 +855,29 @@ This again, would match only the <code>(:books)</code>-nodes.</p>
 <p>As a starter lets see how we match all relationships:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">()</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">()</span>
 </code></pre></div>
 <p>which is equal to </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">AnyRelation</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">(</span><span class="n">AnyRelation</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">all_rels_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">(</span><span class="n">AnyRelation</span><span class="p">)</span>
 </code></pre></div>
 <p>Now lets match our <code>bookshelf_HAS_books</code> relations.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">shelf2book_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">(</span><span class="s2">&quot;bookshelf_HAS_books&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">shelf2book_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">(</span><span class="s2">&quot;bookshelf_HAS_books&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Or how about matching both of our relations?</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">both_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">(</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">both_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">(</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="p">[</span><span class="s2">&quot;bookshelf_HAS_books&quot;</span><span class="p">,</span> <span class="s2">&quot;bookshelf_LIST_HAS_books&quot;</span><span class="p">]</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">)</span>
 </code></pre></div>
 <p>Of course filtering is possible as well. lets filter <code>bookshelf_HAS_books</code> away</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Transformer</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">filter_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rel</span><span class="p">(</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">filter_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_rels</span><span class="p">(</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;bookshelf_HAS_books&quot;</span><span class="p">]</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span>
 </code></pre></div>
@@ -904,7 +904,7 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>        <span class="p">}</span>
 <a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    <span class="p">}</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># we just learned how to &quot;match&quot;. lets apply it:</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">bookshelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">bookshelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span>
 <a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">add_prop_transformator</span> <span class="o">=</span> <span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;material&quot;</span><span class="p">:</span><span class="s2">&quot;wood&quot;</span><span class="p">})</span>
 <a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
 <a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="c1"># the next thing we should do is to attach the transformator to our dict2graph instance</span>
@@ -928,12 +928,12 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 </code></pre></div>
 <p>we get</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">[</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nt">&quot;bs.material&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wood&quot;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nt">&quot;bs.material&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wood&quot;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">]</span>
 </code></pre></div>
-<p>as a return value</p>
+<p>as a return value. we added a new property to the node.</p>
 <h3 id="compact-variant">Compact variant<a class="headerlink" href="#compact-variant" title="Permanent link">&para;</a></h3>
 <p>Lets tidy up our code.</p>
 <p>The same code we just wrote can also look like this:</p>
@@ -955,7 +955,7 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="p">}</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_transformation</span><span class="p">(</span>
-<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;material&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">}))</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;material&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">}))</span>
 <a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="p">)</span>
 <a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
@@ -972,8 +972,8 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_transformation</span><span class="p">(</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="p">[</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;mtr&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">})),</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;mtr&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">})),</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span>
 <a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>            <span class="n">NodeTrans</span><span class="o">.</span><span class="n">OverridePropertyName</span><span class="p">(</span><span class="s2">&quot;mtr&quot;</span><span class="p">,</span> <span class="s2">&quot;material&quot;</span><span class="p">)</span>
 <a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        <span class="p">),</span>
 <a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    <span class="p">]</span>
@@ -999,10 +999,10 @@ Fot that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_transformation</span><span class="p">(</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="p">[</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span>
 <a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>            <span class="n">NodeTrans</span><span class="o">.</span><span class="n">OverridePropertyName</span><span class="p">(</span><span class="s2">&quot;mtr&quot;</span><span class="p">,</span> <span class="s2">&quot;material&quot;</span><span class="p">)</span>
 <a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>        <span class="p">),</span>
-<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_node</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;mtr&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">})),</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>        <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;mtr&quot;</span><span class="p">:</span> <span class="s2">&quot;wood&quot;</span><span class="p">})),</span>
 <a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    <span class="p">]</span>
 <a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="p">)</span>
 <a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
