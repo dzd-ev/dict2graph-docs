@@ -886,7 +886,7 @@ This again, would match only the <code>(:books)</code>-nodes.</p>
 <p>Great. Now as we know the concept of "matchers" and how to collect our nodes and relationships, lets manipulate them.
 For that we need to create so called <code>Transformer</code>s</p>
 <p>Lets try to add a new property "<code>material: 'wood'</code>" to our bookshelf.</p>
-<p>We will pick the dict2graph built in node transformer <a href="list_generic_transformer/#dict2graph.transformers.generic_transformers.AddProperty">AddProperty</a></p>
+<p>We will pick the dict2graph built in node transformer <a href="/dict2graph-docs/list_generic_transformer/#dict2graph.transformers.generic_transformers.AddProperty">AddProperty</a></p>
 <p>For your convenience you can import the wrapper class <code>dict2graph.NodeTrans</code> which includes all Transformers that are applicable to nodes. Same with <code>dict2graph.RelTrans</code> for relationship transformators.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span><span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
