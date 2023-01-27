@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../list_rel_transformer/">
+        <link rel="prev" href="../list_node_transformer/">
       
       
-        <link rel="next" href="../api/api_dict2graph/">
+        <link rel="next" href="../diy_transformer/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Bring your own Transformer - dict2graph Docs</title>
+        <title>Relationship Transformers - dict2graph Docs</title>
       
     
     
@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#relationship-transformators-list" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bring your own Transformer
+              Relationship Transformers
             
           </span>
         </div>
@@ -429,20 +434,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../list_rel_transformer/" class="md-nav__link">
-        Relationship Transformers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -452,10 +443,87 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Relationship Transformers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Bring your own Transformer
+        Relationship Transformers
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-transformators-list" class="md-nav__link">
+    Relationship Transformators List
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Transformators List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers" class="md-nav__link">
+    dict2graph.transformers.rel_transformers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.FlipNodes" class="md-nav__link">
+    FlipNodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.OverrideReliationType" class="md-nav__link">
+    OverrideReliationType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.UppercaseRelationType" class="md-nav__link">
+    UppercaseRelationType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diy_transformer/" class="md-nav__link">
+        Bring your own Transformer
+      </a>
     </li>
   
 
@@ -578,6 +646,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-transformators-list" class="md-nav__link">
+    Relationship Transformators List
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Transformators List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers" class="md-nav__link">
+    dict2graph.transformers.rel_transformers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.FlipNodes" class="md-nav__link">
+    FlipNodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.OverrideReliationType" class="md-nav__link">
+    OverrideReliationType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.rel_transformers.UppercaseRelationType" class="md-nav__link">
+    UppercaseRelationType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -592,7 +709,222 @@
 
 
 
+  <h1>Relationship Transformers</h1>
 
+<p>dict2graph comes with a lot of predefined transformators. For a basic concepts of a dict2Graph transformators have a look at <a href="/use_transformers">How to use Transformators</a></p>
+<h2 id="relationship-transformators-list">Relationship Transformators List<a class="headerlink" href="#relationship-transformators-list" title="Permanent link">&para;</a></h2>
+<p>This is a list if transformators that can be applied to relationships only
+</p>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="dict2graph.transformers.rel_transformers"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="dict2graph.transformers.rel_transformers.FlipNodes" class="doc doc-heading">
+        <code>FlipNodes</code>
+
+
+<a href="#dict2graph.transformers.rel_transformers.FlipNodes" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="dict2graph.transformers._base._RelationTransformerBase">_RelationTransformerBase</span></code></p>
+
+  
+      <p><em>summary</em></p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>dict2graph/transformers/rel_transformers.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="k">class</span> <span class="nc">FlipNodes</span><span class="p">(</span><span class="n">_RelationTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="k">def</span> <span class="nf">transform_rel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="n">start_node</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">start_node</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        <span class="n">end_node</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">end_node</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="k">for</span> <span class="n">inc_rel</span> <span class="ow">in</span> <span class="n">start_node</span><span class="o">.</span><span class="n">incoming_relations</span><span class="p">:</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>            <span class="n">inc_rel</span><span class="o">.</span><span class="n">end_node</span> <span class="o">=</span> <span class="n">end_node</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="k">for</span> <span class="n">out_rel</span> <span class="ow">in</span> <span class="n">end_node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>            <span class="n">out_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">start_node</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="n">rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">end_node</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>        <span class="n">rel</span><span class="o">.</span><span class="n">end_node</span> <span class="o">=</span> <span class="n">start_node</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="dict2graph.transformers.rel_transformers.OverrideReliationType" class="doc doc-heading">
+        <code>OverrideReliationType</code>
+
+
+<a href="#dict2graph.transformers.rel_transformers.OverrideReliationType" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="dict2graph.transformers._base._RelationTransformerBase">_RelationTransformerBase</span></code></p>
+
+  
+      <p><em>summary</em></p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>dict2graph/transformers/rel_transformers.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">class</span> <span class="nc">OverrideReliationType</span><span class="p">(</span><span class="n">_RelationTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value must be a string. Got &#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="k">def</span> <span class="nf">transform_rel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="n">rel</span><span class="o">.</span><span class="n">relation_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="dict2graph.transformers.rel_transformers.UppercaseRelationType" class="doc doc-heading">
+        <code>UppercaseRelationType</code>
+
+
+<a href="#dict2graph.transformers.rel_transformers.UppercaseRelationType" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="dict2graph.transformers._base._RelationTransformerBase">_RelationTransformerBase</span></code></p>
+
+  
+      <p><em>summary</em></p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>dict2graph/transformers/rel_transformers.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="k">class</span> <span class="nc">UppercaseRelationType</span><span class="p">(</span><span class="n">_RelationTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    <span class="k">def</span> <span class="nf">transform_rel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>        <span class="n">rel</span><span class="o">.</span><span class="n">relation_type</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">relation_type</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
