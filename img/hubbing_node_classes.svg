@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="189.88mm" height="65.998mm" version="1.1" viewBox="0 0 189.88 65.998" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="marker2398" overflow="visible" markerHeight="6.7364779" markerWidth="7.5655537" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 7.5655539 6.7364778">
+   <path d="m-4.5422-3.2452 3.839 2.6024 0.56348 0.59256-2.3525 1.2312-1.9185 0.95907-0.16892 0.68459-0.12447 0.24894 0.39119-0.39119 0.33785-0.37341 4.641-2.4361-0.64014-0.1956-1.7872-0.28086-1.8196-1.4436-0.73773-0.34517-1.2938-0.25494 2.1825 0.042166 0.69961 1.0555 1.4407 0.11458 1.2088 0.91675 1.5333 0.47138-1.86 1.2379-2.0383 0.92243-1.547 0.97799" fill="none" stroke="context-stroke" stroke-linecap="round" stroke-width=".4"/>
+  </marker>
+  <marker id="Sketch" overflow="visible" markerHeight="6.7364779" markerWidth="7.5655537" orient="auto-start-reverse" preserveAspectRatio="xMidYMid" viewBox="0 0 7.5655539 6.7364778">
+   <path d="m-4.5422-3.2452 3.839 2.6024 0.56348 0.59256-2.3525 1.2312-1.9185 0.95907-0.16892 0.68459-0.12447 0.24894 0.39119-0.39119 0.33785-0.37341 4.641-2.4361-0.64014-0.1956-1.7872-0.28086-1.8196-1.4436-0.73773-0.34517-1.2938-0.25494 2.1825 0.042166 0.69961 1.0555 1.4407 0.11458 1.2088 0.91675 1.5333 0.47138-1.86 1.2379-2.0383 0.92243-1.547 0.97799" fill="none" stroke="context-stroke" stroke-linecap="round" stroke-width=".4"/>
+  </marker>
+  <style type="text/css"/>
+ </defs>
+ <g transform="translate(8.3566 -111.97)">
+  <g transform="matrix(.26458 0 0 .26458 118.09 95.13)">
+   <g class="relationship" stroke="#000" stroke-width="2">
+    <g transform="translate(-133.5 110.65)">
+     <path d="m12 0h163.5"/>
+    </g>
+    <g transform="translate(-321 110.65)">
+     <path d="m12 0h163.5"/>
+    </g>
+   </g>
+   <g class="node">
+    <g fill="#fe9200" stroke="#000" stroke-width="2">
+     <circle cx="-321" cy="110.65" r="11"/>
+    </g>
+    <g transform="translate(-321 110.65)">
+     <g transform="translate(-14,-16)">
+      <g transform="translate(-48.083)">
+       <g fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="46.083" height="14" rx="7" ry="7"/>
+        <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Article</text>
+       </g>
+      </g>
+      <g transform="translate(0,20)">
+       <g transform="translate(-135.07)" fill="#fff">
+        <rect width="135.07" height="12" rx="0" ry="0"/>
+        <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+         <text x="26.099998" y="9" xml:space="preserve">title:</text>
+         <text x="29.283333" y="9" text-anchor="start" xml:space="preserve">Conflicted medical...</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+    <g fill="#a4dd00" stroke="#000" stroke-width="2">
+     <circle cx="-133.5" cy="110.65" r="11"/>
+    </g>
+    <g transform="translate(-133.5 110.65)">
+     <g transform="translate(0,-46)">
+      <g transform="translate(-24.825)">
+       <g fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="47.65" height="14" rx="7" ry="7"/>
+        <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Author</text>
+       </g>
+      </g>
+      <g transform="translate(0,20)">
+       <g transform="translate(-64.25)" fill="#fff">
+        <rect width="128.5" height="12" rx="0" ry="0"/>
+        <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+         <text x="34.900002" y="9" xml:space="preserve">name:</text>
+         <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Leemon McHenry</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+    <g fill="#7b64ff" stroke="#000" stroke-width="2">
+     <circle cx="54" cy="110.65" r="11"/>
+    </g>
+    <g transform="translate(54 110.65)">
+     <g transform="translate(14,-16)">
+      <g fill="#fff" stroke="#000" stroke-width="2">
+       <rect width="61.35" height="14" rx="7" ry="7"/>
+       <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Affiliation</text>
+      </g>
+      <g transform="translate(0,20)">
+       <g fill="#fff">
+        <rect width="171.75" height="12" rx="0" ry="0"/>
+        <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+         <text x="34.900002" y="9" xml:space="preserve">name:</text>
+         <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Department of Philosophy</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g fill="#44aa00" font-family="sans-serif" font-size="10.583px" stroke-width=".265">
+   <text x="65.813942" y="177.67247" style="line-height:1.25" xml:space="preserve"><tspan x="65.813942" y="177.67247" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">Edge Nodes</tspan></text>
+   <text x="-8.3566494" y="143.64854" style="line-height:1.25" xml:space="preserve"><tspan x="-8.3566494" y="143.64854" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">Start Node</tspan></text>
+   <text x="140.12001" y="143.87929" style="line-height:1.25" xml:space="preserve"><tspan x="140.12001" y="143.87929" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">End Node</tspan></text>
+   <text x="66.559021" y="145.11745" style="line-height:1.25" xml:space="preserve"><tspan x="66.559021" y="145.11745" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">Fill Nodes</tspan></text>
+   <text x="32.231033" y="160.13676" style="line-height:1.25" xml:space="preserve"><tspan x="32.231033" y="160.13676" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">Lead Nodes</tspan></text>
+   <text x="97.581985" y="161.05806" style="line-height:1.25" xml:space="preserve"><tspan x="97.581985" y="161.05806" fill="#44aa00" font-family="'Ronald Flick'" stroke-width=".265">Follow Nodes</tspan></text>
+  </g>
+  <g fill="none" stroke-width=".565">
+   <g stroke="#9f3636">
+    <path d="m83.299 136.24c-0.05426-2.3546-0.10854-4.7095-0.16281-7.0646" marker-end="url(#marker2398)"/>
+    <path d="m42.784 150.11c-1.093-4.0969-2.186-8.1941-3.4009-11.693-1.2149-3.4985-2.5517-6.3981-3.8887-9.2981" marker-end="url(#marker2398)"/>
+    <path d="m45.782 150.42c2.4446-4.3906 4.8892-8.7812 10.201-12.555 5.3114-3.7736 13.489-6.9299 21.667-10.086" marker-end="url(#marker2398)"/>
+    <path d="m111.88 152.76c-4.1446-6.0349-8.2893-12.07-12.518-16.285-4.229-4.215-8.5423-6.6096-12.856-9.0045" marker-end="url(#marker2398)"/>
+   </g>
+   <g stroke="#b33434" stroke-linecap="round">
+    <path d="m115.13 152.12c0.42742-6.0683 0.85486-12.137 3.0659-16.405 2.211-4.2682 6.2054-6.7356 10.2-9.203" marker-end="url(#Sketch)"/>
+    <path d="m151.5 135.36c-0.87339-1.3643-1.747-2.7289-3.9617-3.7756-2.2147-1.0467-5.7705-1.7752-9.3266-2.5038" marker-end="url(#Sketch)"/>
+    <path d="m97.114 174.42c5.4063-0.60466 10.812-1.2093 17.193-3.6334 6.3806-2.4241 13.736-6.6674 17.033-13.759s2.5371-17.031 1.7768-26.972" marker-end="url(#Sketch)"/>
+   </g>
+   <path d="m62.449 174.35c-7.6852-0.47233-15.371-0.94467-21.335-4.1002-5.9643-3.1555-10.207-8.9942-11.498-16.183-1.291-7.1888 0.37004-15.727 2.0312-24.266" marker-end="url(#marker2398)" stroke="#9f3636"/>
+   <path d="m19.824 139.36c1.5778-1.2621 3.1556-2.5241 4.6986-4.0794 1.543-1.5553 3.0511-3.4039 4.5592-5.2525" marker-end="url(#marker2398)" stroke="#9f3636"/>
+  </g>
+ </g>
+</svg>
