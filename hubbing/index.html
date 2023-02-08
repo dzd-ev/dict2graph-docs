@@ -688,10 +688,44 @@
     'Nuff said. Let's code!
   </a>
   
+    <nav class="md-nav" aria-label="'Nuff said. Let's code!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    Baseline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-hubs" class="md-nav__link">
+    First hubs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    Complete example
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    tl;dr
+  </a>
   
 </li>
       
@@ -783,10 +817,44 @@
     'Nuff said. Let's code!
   </a>
   
+    <nav class="md-nav" aria-label="'Nuff said. Let's code!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline" class="md-nav__link">
+    Baseline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-hubs" class="md-nav__link">
+    First hubs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    Complete example
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    tl;dr
+  </a>
   
 </li>
       
@@ -809,8 +877,9 @@
 <h1 id="hubbing">Hubbing<a class="headerlink" href="#hubbing" title="Permanent link">&para;</a></h1>
 <p>This chapter explains the concept of hubbing used in the python modules <a href="https://dzd-ev.github.io/dict2graph-docs">dict2graph</a>.
 More precise, it is used in the node transformer <a href="https://dzd-ev.github.io/dict2graph-docs/list_node_transformer/#dict2graph.transformers.node_transformers.CreateHubbing"><code>CreateHubbing</code></a></p>
+<p>For people in a hurry there is <a href="#tldr">too long;did not read section</a></p>
 <h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
-<p>When merging multiple datasets, the connection from origin parent to child nodes can get lost. </p>
+<p>When merging multiple datasets, the relation from parent to child nodes can get lost. </p>
 <p>Lets have an example with two datasets that will be merged:</p>
 <p><strong>Dataset 1</strong>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -906,6 +975,7 @@ One solution would be create a random id for each hub. That would work in our ex
 <h3 id="nuff-said-lets-code">'Nuff said. Let's code!<a class="headerlink" href="#nuff-said-lets-code" title="Permanent link">&para;</a></h3>
 <p>All this sounded very work intensive? No worries, you just needed to see the concept once.<br />
 From now on dict2graph will do most of the work for you.</p>
+<h4 id="baseline">Baseline<a class="headerlink" href="#baseline" title="Permanent link">&para;</a></h4>
 <p>Lets start with the baseline from above:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
@@ -943,6 +1013,7 @@ From now on dict2graph will do most of the work for you.</p>
 <p><img alt="" src="../img/hubbing_lets_code_baseline.png" /></p>
 <p>As expected. Looks nice but the information "under which <code>affiliation</code> contributed the <code>author</code> to a certain <code>article</code>" is lost.</p>
 <p>Lets fix that with a hub. We use <code>Dict2Graph.NodeTrans.CreateHubbing</code> for that.</p>
+<h4 id="first-hubs">First hubs<a class="headerlink" href="#first-hubs" title="Permanent link">&para;</a></h4>
 <p>Lets summarize what we need to know to create a hub:</p>
 <ul>
 <li>We need to define a chain of nodes by defining:<ul>
@@ -1007,6 +1078,7 @@ From now on dict2graph will do most of the work for you.</p>
 <p><img alt="" src="../img/hubbing_lets_code_hub01.png" /></p>
 <p>Nice 🚀 </p>
 <p>Lets add our third dataset to prove our theoretical foundations:</p>
+<h4 id="complete-example">Complete example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h4>
 <p>(We assume a fresh/wiped database again)
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
@@ -1074,6 +1146,13 @@ From now on dict2graph will do most of the work for you.</p>
 <p>🎖️ Achievement unlocked 
 You are now a Hubber!</p>
 </blockquote>
+<h2 id="tldr">tl;dr<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<p>dict2graph helps you to merge multiple datasets without losing informations about parent child relations.</p>
+<p>From</p>
+<p><img alt="" src="../img/hubbing_tldr_start.svg" /></p>
+<p>you end up with</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="891" height="212" viewBox="0 0 891 212"><defs><style type="text/css"></style></defs><g transform="translate(375.79949336304907 -36.64295608770672) scale(1)"><g class="relationship"><g transform="translate(69.22499960660934 83.64295608770672) rotate(136.64664239428961)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 74.79459604360125 0"></path></g></g><g class="relationship"><g transform="translate(6.113718384240507 143.22708220232718) rotate(-136.6489860069829)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 74.79459604360125 0"></path></g></g><g class="relationship"><g transform="translate(6.113718384240507 143.22708220232718) rotate(135)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 77.25627651078908 0"></path></g></g><g class="relationship"><g transform="translate(69.22499960660934 83.64295608770672) rotate(43.331468680242374)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 73.65628125307087 0"></path></g></g><g class="relationship"><g transform="translate(131.53103377783646 142.42183515118546) rotate(-42.59990082152312)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 74.83482765045798 0"></path></g></g><g class="relationship"><g transform="translate(131.53103377783646 142.42183515118546) rotate(45)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 78.39506781157463 0"></path></g></g><g class="relationship"><g transform="translate(69.22499960660934 206.3408005865677) rotate(-45.732098435134205)" stroke-width="2" stroke="#000000"><path d="M 12 0 L 77.26183975515914 0"></path></g></g><g class="node"><g fill="#fe9200" stroke="#000000" stroke-width="2"><circle cx="-57" cy="83.64553762611884" r="11"></circle></g><g transform="translate(-57 83.64553762611884)"><g transform="translate(-9.899494936611664 -41.89949493661167)"><g transform="translate(0 0)"><g transform="translate(-48.08333206176758 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="46.08333206176758" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Article</text></g></g></g><g transform="translate(0 20)"><g transform="translate(-135.06666445732117 0)" fill="white"><rect x="0" y="0" width="135.06666445732117" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="26.09999918937683" y="9" stroke="none">title:</text><text xml:space="preserve" x="29.283332586288452" y="9" stroke="none" text-anchor="start">Conflicted medical...</text></g></g></g></g></g></g><g class="node"><g fill="#a4dd00" stroke="#000000" stroke-width="2"><circle cx="69.22499960660934" cy="83.64295608770672" r="11"></circle></g><g transform="translate(69.22499960660934 83.64295608770672)"><g transform="translate(8.572527594031472e-16 -46)"><g transform="translate(0 0)"><g transform="translate(-24.825000762939453 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="47.650001525878906" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Author</text></g></g></g><g transform="translate(0 20)"><g transform="translate(-64.24999845027924 0)" fill="white"><rect x="0" y="0" width="128.49999690055847" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="34.90000033378601" y="9" stroke="none">name:</text><text xml:space="preserve" x="38.08333373069763" y="9" stroke="none" text-anchor="start">Leemon McHenry</text></g></g></g></g></g></g><g class="node"><g fill="#7b64ff" stroke="#000000" stroke-width="2"><circle cx="-57.000000000000014" cy="206.3408005865677" r="11"></circle></g><g transform="translate(-57.000000000000014 206.3408005865677)"><g transform="translate(-9.899494936611664 9.899494936611665)"><g transform="translate(0 0)"><g transform="translate(-63.349998474121094 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="61.349998474121094" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Affiliation</text></g></g></g><g transform="translate(0 20)"><g transform="translate(-308.8999984264374 0)" fill="white"><rect x="0" y="0" width="308.8999984264374" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="34.90000033378601" y="9" stroke="none">name:</text><text xml:space="preserve" x="38.08333373069763" y="9" stroke="none" text-anchor="start">Department of Philosophy, California State University</text></g></g></g></g></g></g><g class="node"><g fill="#7b64ff" stroke="#000000" stroke-width="2"><circle cx="195.4499992132187" cy="206.3408005865677" r="11"></circle></g><g transform="translate(195.4499992132187 206.3408005865677)"><g transform="translate(9.899494936611665 9.899494936611664)"><g transform="translate(0 0)"><g transform="translate(0 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="61.349998474121094" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Affiliation</text></g></g></g><g transform="translate(0 20)"><g transform="translate(0 0)" fill="white"><rect x="0" y="0" width="308.8999984264374" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="34.90000033378601" y="9" stroke="none">name:</text><text xml:space="preserve" x="38.08333373069763" y="9" stroke="none" text-anchor="start">Department of Philosophy, California State University</text></g></g></g></g></g></g><g class="node"><g fill="#e27300" stroke="#000000" stroke-width="2"><circle cx="195.4499992132187" cy="83.64553762611884" r="11"></circle></g><g transform="translate(195.4499992132187 83.64553762611884)"><g transform="translate(9.899494936611665 -41.89949493661166)"><g transform="translate(0 0)"><g transform="translate(0 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="46.08333206176758" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Article</text></g></g></g><g transform="translate(0 20)"><g transform="translate(0 0)" fill="white"><rect x="0" y="0" width="106.26666903495789" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="26.09999918937683" y="9" stroke="none">title:</text><text xml:space="preserve" x="29.283332586288452" y="9" stroke="none" text-anchor="start">Blood money...</text></g></g></g></g></g></g><g class="node"><g fill="#ffffff" stroke="#000000" stroke-width="2"><circle cx="6.113718384240507" cy="143.22708220232718" r="11"></circle></g><g transform="translate(6.113718384240507 143.22708220232718)"><g transform="translate(9.899494936611665 9.899494936611664)"><g transform="translate(0 0)"><g transform="translate(0 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="76.08333206176758" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Contribution</text></g></g></g><g transform="translate(0 20)"><g transform="translate(0 0)" fill="white"><rect x="0" y="0" width="82.3166663646698" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="15.683333158493042" y="9" stroke="none">id:</text><text xml:space="preserve" x="18.866666555404663" y="9" stroke="none" text-anchor="start">226e6869...</text></g></g></g></g></g></g><g class="node"><g fill="#ffffff" stroke="#000000" stroke-width="2"><circle cx="131.53103377783646" cy="142.42183515118546" r="11"></circle></g><g transform="translate(131.53103377783646 142.42183515118546)"><g transform="translate(8.572527594031472e-16 -46)"><g transform="translate(0 0)"><g transform="translate(-39.04166603088379 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="76.08333206176758" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Contribution</text></g></g></g><g transform="translate(0 20)"><g transform="translate(-36.38333356380463 0)" fill="white"><rect x="0" y="0" width="72.76666712760925" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="15.683333158493042" y="9" stroke="none">id:</text><text xml:space="preserve" x="18.866666555404663" y="9" stroke="none" text-anchor="start">e67516....</text></g></g></g></g></g></g><g class="node"><g fill="#a4dd00" stroke="#000000" stroke-width="2"><circle cx="69.22499960660934" cy="206.3408005865677" r="11"></circle></g><g transform="translate(69.22499960660934 206.3408005865677)"><g transform="translate(-9.899494936611664 9.899494936611665)"><g transform="translate(0 0)"><g transform="translate(-49.650001525878906 0)"><g fill="#ffffff" stroke="#000000" stroke-width="2"><rect x="0" y="0" width="47.650001525878906" height="14" rx="7" ry="7"></rect><text xml:space="preserve" x="7" y="10" stroke="none" font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000">Author</text></g></g></g><g transform="translate(0 20)"><g transform="translate(-132.74999690055847 0)" fill="white"><rect x="0" y="0" width="132.74999690055847" height="12" rx="0" ry="0" stroke="none"></rect><g font-family="sans-serif" font-size="10" font-weight="normal" fill="#000000" text-anchor="end"><text xml:space="preserve" x="34.90000033378601" y="9" stroke="none">name:</text><text xml:space="preserve" x="38.08333373069763" y="9" stroke="none" text-anchor="start">Mellad Khoshnood</text></g></g></g></g></g></g></g></svg></p>
+<p>Take a look at the <a href="#complete-example">last example</a> to see how it works </p>
 
 
 
