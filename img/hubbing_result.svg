@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="235.49mm" height="55.985mm" version="1.1" viewBox="0 0 235.49 55.985" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css"/>
+ </defs>
+ <g transform="translate(17.299 -103.96)">
+  <g class="relationship" transform="matrix(.26458 0 0 .26458 82.131 94.263)" stroke="#000" stroke-width="2">
+   <g transform="rotate(136.65 17.989 55.579)">
+    <path d="m12 0h62.795"/>
+   </g>
+   <g transform="rotate(223.35 31.52 70.399)">
+    <path d="m12 0h62.795"/>
+   </g>
+   <g transform="rotate(135 -26.606 72.88)">
+    <path d="m12 0h65.256"/>
+   </g>
+   <g transform="rotate(43.331 -70.663 128.95)">
+    <path d="m12 0h61.656"/>
+   </g>
+   <g transform="rotate(-42.6 248.41 -97.469)">
+    <path d="m12 0h62.835"/>
+   </g>
+   <g transform="rotate(45 -106.15 229.98)">
+    <path d="m12 0h66.395"/>
+   </g>
+   <g transform="rotate(-45.732 279.26 21.095)">
+    <path d="m12 0h65.262"/>
+   </g>
+  </g>
+  <g class="node" transform="matrix(.26458 0 0 .26458 82.131 94.263)">
+   <g fill="#fe9200" stroke="#000" stroke-width="2">
+    <circle cx="-57" cy="83.646" r="11"/>
+   </g>
+   <g transform="translate(-57 83.646)">
+    <g transform="translate(-9.8995 -41.899)">
+     <g transform="translate(-48.083)">
+      <g fill="#fff" stroke="#000" stroke-width="2">
+       <rect width="46.083" height="14" rx="7" ry="7"/>
+       <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Article</text>
+      </g>
+     </g>
+     <g transform="translate(0,20)">
+      <g transform="translate(-135.07)" fill="#fff">
+       <rect width="135.07" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="26.099998" y="9" xml:space="preserve">title:</text>
+        <text x="29.283333" y="9" text-anchor="start" xml:space="preserve">Conflicted medical...</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#a4dd00" stroke="#000" stroke-width="2">
+    <circle cx="69.225" cy="83.643" r="11"/>
+   </g>
+   <g transform="translate(69.225 83.643)">
+    <g transform="translate(0,-46)">
+     <g transform="translate(-24.825)">
+      <g fill="#fff" stroke="#000" stroke-width="2">
+       <rect width="47.65" height="14" rx="7" ry="7"/>
+       <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Author</text>
+      </g>
+     </g>
+     <g transform="translate(0,20)">
+      <g transform="translate(-64.25)" fill="#fff">
+       <rect width="128.5" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="34.900002" y="9" xml:space="preserve">name:</text>
+        <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Leemon McHenry</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#7b64ff" stroke="#000" stroke-width="2">
+    <circle cx="-57" cy="206.34" r="11"/>
+   </g>
+   <g transform="translate(-57 206.34)">
+    <g transform="translate(-9.8995 9.8995)">
+     <g transform="translate(-63.35)">
+      <g fill="#fff" stroke="#000" stroke-width="2">
+       <rect width="61.35" height="14" rx="7" ry="7"/>
+       <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Affiliation</text>
+      </g>
+     </g>
+     <g transform="translate(0,20)">
+      <g transform="translate(-308.9)" fill="#fff">
+       <rect width="308.9" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="34.900002" y="9" xml:space="preserve">name:</text>
+        <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Department of Philosophy, California State University</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#7b64ff" stroke="#000" stroke-width="2">
+    <circle cx="195.45" cy="206.34" r="11"/>
+   </g>
+   <g transform="translate(195.45 206.34)">
+    <g transform="translate(9.8995 9.8995)">
+     <g fill="#fff" stroke="#000" stroke-width="2">
+      <rect width="61.35" height="14" rx="7" ry="7"/>
+      <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Affiliation</text>
+     </g>
+     <g transform="translate(0,20)">
+      <g fill="#fff">
+       <rect width="308.9" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="34.900002" y="9" xml:space="preserve">name:</text>
+        <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Department of Philosophy, California State University</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#e27300" stroke="#000" stroke-width="2">
+    <circle cx="195.45" cy="83.646" r="11"/>
+   </g>
+   <g transform="translate(195.45 83.646)">
+    <g transform="translate(9.8995 -41.899)">
+     <g fill="#fff" stroke="#000" stroke-width="2">
+      <rect width="46.083" height="14" rx="7" ry="7"/>
+      <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Article</text>
+     </g>
+     <g transform="translate(0,20)">
+      <g fill="#fff">
+       <rect width="106.27" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="26.099998" y="9" xml:space="preserve">title:</text>
+        <text x="29.283333" y="9" text-anchor="start" xml:space="preserve">Blood money...</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#fff" stroke="#000" stroke-width="2">
+    <circle cx="6.1137" cy="143.23" r="11"/>
+   </g>
+   <g transform="translate(6.1137 143.23)">
+    <g transform="translate(9.8995 9.8995)">
+     <g fill="#fff" stroke="#000" stroke-width="2">
+      <rect width="76.083" height="14" rx="7" ry="7"/>
+      <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Contribution</text>
+     </g>
+     <g transform="translate(0,20)">
+      <g fill="#fff">
+       <rect width="82.317" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="15.683333" y="9" xml:space="preserve">id:</text>
+        <text x="18.866667" y="9" text-anchor="start" xml:space="preserve">226e6869...</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g fill="#fff" stroke="#000" stroke-width="2">
+    <circle cx="131.53" cy="142.42" r="11"/>
+   </g>
+   <g transform="translate(131.53 142.42)">
+    <g transform="translate(0,-46)">
+     <g transform="translate(-39.042)">
+      <g fill="#fff" stroke="#000" stroke-width="2">
+       <rect width="76.083" height="14" rx="7" ry="7"/>
+       <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Contribution</text>
+      </g>
+     </g>
+     <g transform="translate(0,20)">
+      <g transform="translate(-36.383)" fill="#fff">
+       <rect width="72.767" height="12" rx="0" ry="0"/>
+       <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+        <text x="15.683333" y="9" xml:space="preserve">id:</text>
+        <text x="18.866667" y="9" text-anchor="start" xml:space="preserve">e67516....</text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g transform="matrix(.26458 0 0 .26458 82.131 94.263)" fill="#a4dd00" stroke="#000" stroke-width="2">
+   <circle cx="69.225" cy="206.34" r="11"/>
+  </g>
+  <g transform="matrix(.26458 0 0 .26458 97.828 151.48)">
+   <g transform="translate(-49.65)">
+    <g fill="#fff" stroke="#000" stroke-width="2">
+     <rect width="47.65" height="14" rx="7" ry="7"/>
+     <text x="7" y="10" fill="#000000" font-family="sans-serif" font-size="10px" stroke="none" xml:space="preserve">Author</text>
+    </g>
+   </g>
+  </g>
+  <g transform="matrix(.26458 0 0 .26458 115.82 156.77)">
+   <g transform="translate(-132.75)" fill="#fff">
+    <rect width="132.75" height="12" rx="0" ry="0"/>
+    <g fill="#000" font-family="sans-serif" font-size="10px" text-anchor="end">
+     <text x="34.900002" y="9" xml:space="preserve">name:</text>
+     <text x="38.083332" y="9" text-anchor="start" xml:space="preserve">Mellad Khoshnood</text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
