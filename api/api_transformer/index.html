@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../extra_style.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -537,6 +539,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Transformer
@@ -553,6 +557,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -561,29 +567,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dict2graph.Transformer" class="md-nav__link">
-    Transformer
-  </a>
-  
-    <nav class="md-nav" aria-label="Transformer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#dict2graph.transformers._base.Transformer.match_nodes" class="md-nav__link">
     match_nodes()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#dict2graph.transformers._base.Transformer.match_rels" class="md-nav__link">
     match_rels()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -698,6 +691,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -706,29 +701,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dict2graph.Transformer" class="md-nav__link">
-    Transformer
-  </a>
-  
-    <nav class="md-nav" aria-label="Transformer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#dict2graph.transformers._base.Transformer.match_nodes" class="md-nav__link">
     match_nodes()
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#dict2graph.transformers._base.Transformer.match_rels" class="md-nav__link">
     match_rels()
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -748,17 +730,15 @@
 
 
 
-  <h1>Transformer</h1>
-
 <div class="doc doc-object doc-class">
 
 
 
-<h2 id="dict2graph.Transformer" class="doc doc-heading">
+<h1 id="dict2graph.Transformer" class="doc doc-heading">
         <code>dict2graph.Transformer</code>
 
 
-<a href="#dict2graph.Transformer" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#dict2graph.Transformer" class="headerlink" title="Permanent link">&para;</a></h1>
 
 
   <div class="doc doc-contents first">
@@ -875,7 +855,8 @@
 <span class="normal"><a href="#__codelineno-0-181">181</a></span>
 <span class="normal"><a href="#__codelineno-0-182">182</a></span>
 <span class="normal"><a href="#__codelineno-0-183">183</a></span>
-<span class="normal"><a href="#__codelineno-0-184">184</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="k">class</span> <span class="nc">Transformer</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-184">184</a></span>
+<span class="normal"><a href="#__codelineno-0-185">185</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="k">class</span> <span class="nc">Transformer</span><span class="p">:</span>
 <a id="__codelineno-0-77" name="__codelineno-0-77"></a>    <span class="k">class</span> <span class="nc">NodeTransformerMatcher</span><span class="p">:</span>
 <a id="__codelineno-0-78" name="__codelineno-0-78"></a>        <span class="k">def</span> <span class="nf">_set_node_matcher</span><span class="p">(</span>
 <a id="__codelineno-0-79" name="__codelineno-0-79"></a>            <span class="bp">self</span><span class="p">,</span>
@@ -973,17 +954,18 @@
 <a id="__codelineno-0-171" name="__codelineno-0-171"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Match relationships to apply tranformers</span>
 <a id="__codelineno-0-172" name="__codelineno-0-172"></a>
 <a id="__codelineno-0-173" name="__codelineno-0-173"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="sd">            relation_name (Union[str, AnyRelation], optional): A relation type as string or mulitple relation types as list of string. Defaults to AnyRelation.</span>
-<a id="__codelineno-0-175" name="__codelineno-0-175"></a>
-<a id="__codelineno-0-176" name="__codelineno-0-176"></a><span class="sd">        Returns:</span>
-<a id="__codelineno-0-177" name="__codelineno-0-177"></a><span class="sd">            RelTransformerMatcher: _description_</span>
-<a id="__codelineno-0-178" name="__codelineno-0-178"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-179" name="__codelineno-0-179"></a>        <span class="n">tm</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">RelTransformerMatcher</span><span class="p">()</span>
-<a id="__codelineno-0-180" name="__codelineno-0-180"></a>        <span class="n">tm</span><span class="o">.</span><span class="n">_set_rel_matcher</span><span class="p">(</span>
-<a id="__codelineno-0-181" name="__codelineno-0-181"></a>            <span class="n">relation_type_match</span><span class="o">=</span><span class="n">relation_type</span><span class="p">,</span>
-<a id="__codelineno-0-182" name="__codelineno-0-182"></a>            <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="n">relation_type_is_not_in</span><span class="p">,</span>
-<a id="__codelineno-0-183" name="__codelineno-0-183"></a>        <span class="p">)</span>
-<a id="__codelineno-0-184" name="__codelineno-0-184"></a>        <span class="k">return</span> <span class="n">tm</span>
+<a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="sd">            relation_type (Union[str, List[str], AnyRelation], optional): A relation type as string or mulitple relation types as list of string.. Defaults to AnyRelation.</span>
+<a id="__codelineno-0-175" name="__codelineno-0-175"></a><span class="sd">            relation_type_is_not_in (List[str], optional): _description_. Defaults to None.</span>
+<a id="__codelineno-0-176" name="__codelineno-0-176"></a>
+<a id="__codelineno-0-177" name="__codelineno-0-177"></a><span class="sd">        Returns:</span>
+<a id="__codelineno-0-178" name="__codelineno-0-178"></a><span class="sd">            RelTransformerMatcher: _description_</span>
+<a id="__codelineno-0-179" name="__codelineno-0-179"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-180" name="__codelineno-0-180"></a>        <span class="n">tm</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">RelTransformerMatcher</span><span class="p">()</span>
+<a id="__codelineno-0-181" name="__codelineno-0-181"></a>        <span class="n">tm</span><span class="o">.</span><span class="n">_set_rel_matcher</span><span class="p">(</span>
+<a id="__codelineno-0-182" name="__codelineno-0-182"></a>            <span class="n">relation_type_match</span><span class="o">=</span><span class="n">relation_type</span><span class="p">,</span>
+<a id="__codelineno-0-183" name="__codelineno-0-183"></a>            <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="n">relation_type_is_not_in</span><span class="p">,</span>
+<a id="__codelineno-0-184" name="__codelineno-0-184"></a>        <span class="p">)</span>
+<a id="__codelineno-0-185" name="__codelineno-0-185"></a>        <span class="k">return</span> <span class="n">tm</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -1003,14 +985,14 @@
 
 
 
-<h3 id="dict2graph.transformers._base.Transformer.match_nodes" class="doc doc-heading">
+<h2 id="dict2graph.transformers._base.Transformer.match_nodes" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">match_nodes</span><span class="p">(</span><span class="n">has_labels</span><span class="o">=</span><span class="n">AnyLabel</span><span class="p">,</span> <span class="n">has_one_label_of</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">has_none_label_of</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
-<a href="#dict2graph.transformers._base.Transformer.match_nodes" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#dict2graph.transformers._base.Transformer.match_nodes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1138,14 +1120,14 @@
 
 
 
-<h3 id="dict2graph.transformers._base.Transformer.match_rels" class="doc doc-heading">
+<h2 id="dict2graph.transformers._base.Transformer.match_rels" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">match_rels</span><span class="p">(</span><span class="n">relation_type</span><span class="o">=</span><span class="n">AnyRelation</span><span class="p">,</span> <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
 
-<a href="#dict2graph.transformers._base.Transformer.match_rels" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#dict2graph.transformers._base.Transformer.match_rels" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
@@ -1164,13 +1146,23 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>relation_name</code></td>
+          <td><code>relation_type</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[str, <span title="dict2graph.transformers._base.AnyRelation">AnyRelation</span>]</code>
+                <code><span title="typing.Union">Union</span>[str, <span title="typing.List">List</span>[str], <span title="dict2graph.transformers._base.AnyRelation">AnyRelation</span>]</code>
           </td>
-          <td><p>A relation type as string or mulitple relation types as list of string. Defaults to AnyRelation.</p></td>
+          <td><p>A relation type as string or mulitple relation types as list of string.. Defaults to AnyRelation.</p></td>
           <td>
-              <em>required</em>
+                <code>AnyRelation</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>relation_type_is_not_in</code></td>
+          <td>
+                <code><span title="typing.List">List</span>[str]</code>
+          </td>
+          <td><p><em>description</em>. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
           </td>
         </tr>
     </tbody>
@@ -1215,7 +1207,8 @@
 <span class="normal"><a href="#__codelineno-0-181">181</a></span>
 <span class="normal"><a href="#__codelineno-0-182">182</a></span>
 <span class="normal"><a href="#__codelineno-0-183">183</a></span>
-<span class="normal"><a href="#__codelineno-0-184">184</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-165" name="__codelineno-0-165"></a><span class="nd">@classmethod</span>
+<span class="normal"><a href="#__codelineno-0-184">184</a></span>
+<span class="normal"><a href="#__codelineno-0-185">185</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-165" name="__codelineno-0-165"></a><span class="nd">@classmethod</span>
 <a id="__codelineno-0-166" name="__codelineno-0-166"></a><span class="k">def</span> <span class="nf">match_rels</span><span class="p">(</span>
 <a id="__codelineno-0-167" name="__codelineno-0-167"></a>    <span class="bp">cls</span><span class="p">,</span>
 <a id="__codelineno-0-168" name="__codelineno-0-168"></a>    <span class="n">relation_type</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">AnyRelation</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyRelation</span><span class="p">,</span>
@@ -1224,17 +1217,18 @@
 <a id="__codelineno-0-171" name="__codelineno-0-171"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Match relationships to apply tranformers</span>
 <a id="__codelineno-0-172" name="__codelineno-0-172"></a>
 <a id="__codelineno-0-173" name="__codelineno-0-173"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="sd">        relation_name (Union[str, AnyRelation], optional): A relation type as string or mulitple relation types as list of string. Defaults to AnyRelation.</span>
-<a id="__codelineno-0-175" name="__codelineno-0-175"></a>
-<a id="__codelineno-0-176" name="__codelineno-0-176"></a><span class="sd">    Returns:</span>
-<a id="__codelineno-0-177" name="__codelineno-0-177"></a><span class="sd">        RelTransformerMatcher: _description_</span>
-<a id="__codelineno-0-178" name="__codelineno-0-178"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-179" name="__codelineno-0-179"></a>    <span class="n">tm</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">RelTransformerMatcher</span><span class="p">()</span>
-<a id="__codelineno-0-180" name="__codelineno-0-180"></a>    <span class="n">tm</span><span class="o">.</span><span class="n">_set_rel_matcher</span><span class="p">(</span>
-<a id="__codelineno-0-181" name="__codelineno-0-181"></a>        <span class="n">relation_type_match</span><span class="o">=</span><span class="n">relation_type</span><span class="p">,</span>
-<a id="__codelineno-0-182" name="__codelineno-0-182"></a>        <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="n">relation_type_is_not_in</span><span class="p">,</span>
-<a id="__codelineno-0-183" name="__codelineno-0-183"></a>    <span class="p">)</span>
-<a id="__codelineno-0-184" name="__codelineno-0-184"></a>    <span class="k">return</span> <span class="n">tm</span>
+<a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="sd">        relation_type (Union[str, List[str], AnyRelation], optional): A relation type as string or mulitple relation types as list of string.. Defaults to AnyRelation.</span>
+<a id="__codelineno-0-175" name="__codelineno-0-175"></a><span class="sd">        relation_type_is_not_in (List[str], optional): _description_. Defaults to None.</span>
+<a id="__codelineno-0-176" name="__codelineno-0-176"></a>
+<a id="__codelineno-0-177" name="__codelineno-0-177"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-178" name="__codelineno-0-178"></a><span class="sd">        RelTransformerMatcher: _description_</span>
+<a id="__codelineno-0-179" name="__codelineno-0-179"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-180" name="__codelineno-0-180"></a>    <span class="n">tm</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">RelTransformerMatcher</span><span class="p">()</span>
+<a id="__codelineno-0-181" name="__codelineno-0-181"></a>    <span class="n">tm</span><span class="o">.</span><span class="n">_set_rel_matcher</span><span class="p">(</span>
+<a id="__codelineno-0-182" name="__codelineno-0-182"></a>        <span class="n">relation_type_match</span><span class="o">=</span><span class="n">relation_type</span><span class="p">,</span>
+<a id="__codelineno-0-183" name="__codelineno-0-183"></a>        <span class="n">relation_type_is_not_in</span><span class="o">=</span><span class="n">relation_type_is_not_in</span><span class="p">,</span>
+<a id="__codelineno-0-184" name="__codelineno-0-184"></a>    <span class="p">)</span>
+<a id="__codelineno-0-185" name="__codelineno-0-185"></a>    <span class="k">return</span> <span class="n">tm</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>

@@ -1,0 +1,15 @@
+h3 {
+    font-size: 1.8em !important;
+}
+
+h4 {
+    font-size: 1.2em !important;
+}
+
+
+h3 code {
+    background-color: white !important;
+    color: #546d78 !important;
+    border-radius: 12px !important;
+
+}

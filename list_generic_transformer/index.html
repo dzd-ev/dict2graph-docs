@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../extra_style.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1421,7 +1423,7 @@ Results in a Neo4j node <code>(:Person{name:'Camina'})</code>. the <code>id</cod
 <a id="__codelineno-0-126" name="__codelineno-0-126"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 <a id="__codelineno-0-127" name="__codelineno-0-127"></a>
 <a id="__codelineno-0-128" name="__codelineno-0-128"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-129" name="__codelineno-0-129"></a><span class="sd">            properties (Union[str, List[str]]): A property key or a list of property keys as strings that should be removed</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129"></a><span class="sd">            property_keys (Union[str, List[str]]): A property key or a list of property keys as strings that should be removed</span>
 <a id="__codelineno-0-130" name="__codelineno-0-130"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-131" name="__codelineno-0-131"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">property_keys</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
 <a id="__codelineno-0-132" name="__codelineno-0-132"></a>            <span class="n">property_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">property_keys</span><span class="p">]</span>
@@ -1481,7 +1483,7 @@ Results in a Neo4j node <code>(:Person{name:'Camina'})</code>. the <code>id</cod
     </thead>
     <tbody>
         <tr>
-          <td><code>properties</code></td>
+          <td><code>property_keys</code></td>
           <td>
                 <code><span title="typing.Union">Union</span>[str, <span title="typing.List">List</span>[str]]</code>
           </td>
@@ -1507,7 +1509,7 @@ Results in a Neo4j node <code>(:Person{name:'Camina'})</code>. the <code>id</cod
 <a id="__codelineno-0-126" name="__codelineno-0-126"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 <a id="__codelineno-0-127" name="__codelineno-0-127"></a>
 <a id="__codelineno-0-128" name="__codelineno-0-128"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-129" name="__codelineno-0-129"></a><span class="sd">        properties (Union[str, List[str]]): A property key or a list of property keys as strings that should be removed</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129"></a><span class="sd">        property_keys (Union[str, List[str]]): A property key or a list of property keys as strings that should be removed</span>
 <a id="__codelineno-0-130" name="__codelineno-0-130"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-131" name="__codelineno-0-131"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">property_keys</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
 <a id="__codelineno-0-132" name="__codelineno-0-132"></a>        <span class="n">property_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">property_keys</span><span class="p">]</span>

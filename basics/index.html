@@ -44,6 +44,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../extra_style.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -810,7 +812,7 @@
 <p><img alt="" src="../img/basics_multiple_data_expections_example.png" title="Result example 1" /></p>
 <p>But what we get is are 4 relationships. Why is that?  </p>
 <p>dict2graph creates relationship targets (start node, end node) based on the target nodes labels and properties. So if we have a node that looks equal to another they both will end up as a relatioship target, even we only wanted to relate one of them.</p>
-<p>You can workaround that by creating a custom key property. More on that later in the Chapter <a href="dict2graph/use_transormers.md"><code>dict2graph.Transformers</code></a>.</p>
+<p>You can workaround that by creating a custom key property. More on that later in the Chapter <a href="/use_transformers.md"><code>dict2graph.Transformers</code></a>.</p>
 <h2 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h2>
 <p>In our case it would make sense to just merge equal nodes. We can be pretty sure, in our dataset, that <code>Rudolf</code> from dataset 1 is the same as <code>Rudolf</code> from dataset 2.</p>
 <p>So lets do that:</p>
