@@ -1,0 +1,176 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 2,
+    "border-color": "#000000",
+    "radius": 10,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "outside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 10,
+    "caption-font-weight": "normal",
+    "label-position": "outside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 2,
+    "label-font-size": 10,
+    "label-padding": 1,
+    "label-margin": 4,
+    "directionality": "undirected",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#000000",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 10,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 10,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 170.33310313031592,
+        "y": 114.49999999999999
+      },
+      "caption": "",
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Leemon McHenry"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 110,
+        "y": 10
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Blood money..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 110,
+        "y": 219
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "California State University"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 230.66621121606894,
+        "y": 10.000002861022907
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Conflicted medical journals..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 230.66621121606894,
+        "y": 219.00000858306885
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "University of Adelaide"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n1",
+      "toId": "n0",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n0",
+      "toId": "n2",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n4",
+      "toId": "n0"
+    },
+    {
+      "id": "n3",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n0"
+    }
+  ]
+}

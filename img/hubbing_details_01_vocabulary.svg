@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="191.27mm"
+   height="65.992mm"
+   version="1.1"
+   viewBox="0 0 191.27 65.992"
+   id="svg18409"
+   sodipodi:docname="hubbing_details_01_vocabulary.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18411"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.4492603"
+     inkscape:cx="311.11434"
+     inkscape:cy="143.71686"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18409" />
+  <defs
+     id="defs18279">
+    <marker
+       id="marker2398"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path18271" />
+    </marker>
+    <marker
+       id="Sketch"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path18274" />
+    </marker>
+    <style
+       type="text/css"
+       id="style18277" />
+  </defs>
+  <g
+     class="relationship"
+     transform="matrix(.26458 0 0 .26458 126.45 -16.845)"
+     stroke="#000"
+     stroke-width="2"
+     id="g18289">
+    <g
+       transform="translate(-133.5,110.65)"
+       id="g18283">
+      <path
+         d="m12 0h163.5"
+         id="path18281" />
+    </g>
+    <g
+       transform="translate(-321,110.65)"
+       id="g18287">
+      <path
+         d="m12 0h163.5"
+         id="path18285" />
+    </g>
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 126.45 -16.845)"
+     fill="#fe9200"
+     stroke="#000"
+     stroke-width="2"
+     id="g18293">
+    <circle
+       cx="-321"
+       cy="110.65"
+       r="11"
+       id="circle18291" />
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 25.091 8.1953)"
+     id="g18301">
+    <g
+       fill="#fff"
+       stroke="#000"
+       stroke-width="2"
+       id="g18299">
+      <rect
+         width="46.083"
+         height="14"
+         rx="7"
+         ry="7"
+         id="rect18295" />
+      <text
+         x="7"
+         y="10"
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="10px"
+         stroke="none"
+         xml:space="preserve"
+         id="text18297">Article</text>
+    </g>
+  </g>
+  <rect
+     x="8.9547"
+     y="13.485"
+     width="28.671"
+     height="3.175"
+     rx="0"
+     ry="0"
+     fill="#fff"
+     stroke-width=".23698"
+     id="rect18303" />
+  <g
+     transform="matrix(.26458 0 0 .26458 8.9547 13.485)"
+     font-family="sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="g18309">
+    <text
+       x="26.099998"
+       y="9"
+       xml:space="preserve"
+       id="text18305">title:</text>
+    <text
+       x="29.283333"
+       y="9"
+       text-anchor="start"
+       xml:space="preserve"
+       id="text18307">Blood Money....</text>
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 126.45 -16.845)"
+     fill="#a4dd00"
+     stroke="#000"
+     stroke-width="2"
+     id="g18313">
+    <circle
+       cx="-133.5"
+       cy="110.65"
+       r="11"
+       id="circle18311" />
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 91.126 12.435)"
+     id="g18337">
+    <g
+       transform="translate(0,-46)"
+       id="g18335">
+      <g
+         transform="translate(-24.825)"
+         id="g18321">
+        <g
+           fill="#fff"
+           stroke="#000"
+           stroke-width="2"
+           id="g18319">
+          <rect
+             width="47.65"
+             height="14"
+             rx="7"
+             ry="7"
+             id="rect18315" />
+          <text
+             x="7"
+             y="10"
+             fill="#000000"
+             font-family="sans-serif"
+             font-size="10px"
+             stroke="none"
+             xml:space="preserve"
+             id="text18317">Author</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0,20)"
+         id="g18333">
+        <g
+           transform="translate(-64.25)"
+           fill="#fff"
+           id="g18331">
+          <rect
+             width="128.5"
+             height="12"
+             rx="0"
+             ry="0"
+             id="rect18323" />
+          <g
+             fill="#000"
+             font-family="sans-serif"
+             font-size="10px"
+             text-anchor="end"
+             id="g18329">
+            <text
+               x="34.900002"
+               y="9"
+               xml:space="preserve"
+               id="text18325">name:</text>
+            <text
+               x="38.083332"
+               y="9"
+               text-anchor="start"
+               xml:space="preserve"
+               id="text18327">Leemon McHenry</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 126.45 -16.845)"
+     fill="#7b64ff"
+     stroke="#000"
+     stroke-width="2"
+     id="g18341">
+    <circle
+       cx="54"
+       cy="110.65"
+       r="11"
+       id="circle18339" />
+  </g>
+  <g
+     transform="matrix(.26458 0 0 .26458 144.44 8.202)"
+     fill="#fff"
+     stroke="#000"
+     stroke-width="2"
+     id="g18347">
+    <rect
+       width="61.35"
+       height="14"
+       rx="7"
+       ry="7"
+       id="rect18343" />
+    <text
+       x="7"
+       y="10"
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="10px"
+       stroke="none"
+       xml:space="preserve"
+       id="text18345">Affiliation</text>
+  </g>
+  <rect
+     x="144.44"
+     y="13.494"
+     width="46.833"
+     height="3.175"
+     rx="0"
+     ry="0"
+     fill="#fff"
+     stroke-width=".2686"
+     id="rect18349" />
+  <text
+     x="153.67461"
+     y="15.874801"
+     fill="#000000"
+     font-size="2.6458px"
+     stroke-width="0.26458"
+     text-anchor="end"
+     xml:space="preserve"
+     id="text18351"
+     style="font-family:sans-serif">name:</text>
+  <text
+     x="154.51686"
+     y="15.874801"
+     fill="#000000"
+     font-size="2.6458px"
+     stroke-width="0.26458"
+     xml:space="preserve"
+     id="text18355"
+     style="font-family:sans-serif"><tspan
+       x="154.51686"
+       y="15.874801"
+       stroke-width="0.26458"
+       id="tspan18353">California State University...</tspan></text>
+  <text
+     x="72.019653"
+     y="57.043617"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18359"><tspan
+       x="72.019653"
+       y="57.043617"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18357">Edge Nodes</tspan></text>
+  <text
+     x="-4.9398805e-05"
+     y="31.678545"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18363"><tspan
+       x="-4.9398805e-05"
+       y="31.678545"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18361">Start Node</tspan></text>
+  <text
+     x="53.28323"
+     y="45.948563"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18375"><tspan
+       x="53.28323"
+       y="45.948563"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18373">Lead Nodes</tspan></text>
+  <text
+     x="97.761787"
+     y="45.912251"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18379"><tspan
+       x="97.761787"
+       y="45.912251"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18377">Follow Nodes</tspan></text>
+  <path
+     d="M 58.99601,38.574068 C 55.97127,29.665345 49.199526,22.878304 43.851,17.1489"
+     marker-end="url(#marker2398)"
+     id="path18387"
+     style="fill:none;stroke:#9f3636;stroke-width:0.565"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 72.929689,37.316438 C 75.374289,32.925838 77.8286,18.9651 86.0066,15.809"
+     marker-end="url(#marker2398)"
+     id="path18389"
+     style="fill:none;stroke:#9f3636;stroke-width:0.565"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 110.3662,38.466829 C 109.46682,28.800701 102.77854,19.724316 94.8626,15.5005"
+     marker-end="url(#marker2398)"
+     id="path18391"
+     style="fill:none;stroke:#9f3636;stroke-width:0.565"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 118.65308,37.232674 c 0.57212,-10.176647 7.14065,-20.084858 18.09991,-22.70527"
+     marker-end="url(#Sketch)"
+     id="path18395"
+     sodipodi:nodetypes="cc"
+     style="fill:none;stroke:#b33434;stroke-width:0.561105;stroke-linecap:round" />
+  <path
+     d="m 105.39599,53.689692 c 5.42739,-0.487881 10.85418,-0.975746 17.26007,-2.931675 6.40549,-1.955929 13.78959,-5.379712 17.09945,-11.101698 3.30986,-5.721986 2.547,-13.74177 1.78373,-21.762846"
+     marker-end="url(#Sketch)"
+     id="path18399"
+     style="fill:none;stroke:#b33434;stroke-width:0.508505;stroke-linecap:round" />
+  <path
+     d="M 70.83404,54.716516 C 63.135815,54.323793 55.436988,53.931062 49.46288,51.307371 43.488472,48.683705 39.238581,43.82907 37.945393,37.851884 36.652205,31.874698 38.31606,24.775542 39.980035,17.675721"
+     marker-end="url(#marker2398)"
+     stroke="#9f3636"
+     id="path18403"
+     style="fill:none;stroke-width:0.515628" />
+  <path
+     d="m 28.1806,27.39 c 1.5778,-1.2621 3.1556,-2.5241 4.6986,-4.0794 1.543,-1.5553 3.0511,-3.4039 4.5592,-5.2525"
+     marker-end="url(#marker2398)"
+     stroke="#9f3636"
+     id="path18405"
+     style="fill:none;stroke-width:0.565" />
+</svg>

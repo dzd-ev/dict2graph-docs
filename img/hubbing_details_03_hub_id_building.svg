@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="191.27306mm"
+   height="128.64mm"
+   version="1.1"
+   viewBox="0 0 191.27307 128.63999"
+   id="svg11312"
+   sodipodi:docname="hubbing_details_03_hub_id_building.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="hubbing_details_03_hub_id_building.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11314"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2270038"
+     inkscape:cx="24.449802"
+     inkscape:cy="247.758"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11312" />
+  <defs
+     id="defs11172">
+    <marker
+       id="marker2398"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path11164" />
+    </marker>
+    <marker
+       id="Sketch"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path11167" />
+    </marker>
+    <style
+       type="text/css"
+       id="style11170" />
+    <marker
+       id="Sketch-7"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path11167-5" />
+    </marker>
+    <marker
+       id="Sketch-5"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path11167-6" />
+    </marker>
+    <marker
+       id="marker2398-9"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path18271" />
+    </marker>
+    <marker
+       id="marker19431"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path19429" />
+    </marker>
+    <marker
+       id="Sketch-1"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path18274" />
+    </marker>
+    <marker
+       id="marker19437"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path19435" />
+    </marker>
+    <marker
+       id="marker19441"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path19439" />
+    </marker>
+    <marker
+       id="marker19445"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path19443" />
+    </marker>
+    <marker
+       id="marker19449"
+       overflow="visible"
+       markerHeight="6.7364779"
+       markerWidth="7.5655537"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid"
+       viewBox="0 0 7.5655539 6.7364778">
+      <path
+         d="m -4.5422,-3.2452 3.839,2.6024 0.56348,0.59256 -2.3525,1.2312 -1.9185,0.95907 -0.16892,0.68459 -0.12447,0.24894 0.39119,-0.39119 0.33785,-0.37341 4.641,-2.4361 -0.64014,-0.1956 -1.7872,-0.28086 -1.8196,-1.4436 -0.73773,-0.34517 -1.2938,-0.25494 2.1825,0.042166 0.69961,1.0555 1.4407,0.11458 1.2088,0.91675 1.5333,0.47138 -1.86,1.2379 -2.0383,0.92243 -1.547,0.97799"
+         fill="none"
+         stroke="context-stroke"
+         stroke-linecap="round"
+         stroke-width="0.4"
+         id="path19447" />
+    </marker>
+  </defs>
+  <path
+     d="m 87.396016,58.598376 c 5.4235,-0.512046 -3.374512,12.685254 3.026788,10.632445 6.40091,-2.052809 -5.363514,9.805691 -2.056014,3.800287 3.30749,-6.005405 -16.654563,8.482035 -17.735823,17.789709"
+     marker-end="url(#Sketch-5)"
+     id="path11300-2"
+     style="fill:none;stroke:#b33434;stroke-width:0.52076;stroke-linecap:round;marker-end:url(#Sketch-5)"
+     sodipodi:nodetypes="ccsc" />
+  <g
+     transform="matrix(0.26458333,0,0,0.26458333,180.13005,128.19307)"
+     id="g12776">
+    <g
+       class="relationship"
+       id="g12634">
+      <g
+         transform="rotate(-30,-360.14004,540.74702)"
+         stroke-width="2"
+         stroke="#000000"
+         id="g12632">
+        <path
+           d="M 12,0 H 122.82664"
+           id="path12630" />
+      </g>
+    </g>
+    <g
+       class="relationship"
+       id="g12640">
+      <g
+         transform="rotate(30,41.516912,-648.37068)"
+         stroke-width="2"
+         stroke="#000000"
+         id="g12638">
+        <path
+           d="M 12,0 H 122.82664"
+           id="path12636" />
+      </g>
+    </g>
+    <g
+       class="relationship"
+       id="g12646">
+      <g
+         transform="translate(-453.44977,-107.62366)"
+         stroke-width="2"
+         stroke="#000000"
+         id="g12644">
+        <path
+           d="M 12,0 H 122.82664"
+           id="path12642" />
+      </g>
+    </g>
+    <g
+       class="node"
+       id="g12678">
+      <g
+         fill="#a4dd00"
+         stroke="#000000"
+         stroke-width="2"
+         id="g12650">
+        <circle
+           cx="-201.85983"
+           cy="-175.03697"
+           r="11"
+           id="circle12648" />
+      </g>
+      <g
+         transform="translate(-201.85983,-175.03698)"
+         id="g12676">
+        <g
+           transform="translate(9.8994949,-41.899495)"
+           id="g12674">
+          <g
+             id="g12660">
+            <g
+               id="g12658">
+              <g
+                 fill="#ffffff"
+                 stroke="#000000"
+                 stroke-width="2"
+                 id="g12656">
+                <rect
+                   x="0"
+                   y="0"
+                   width="47.650002"
+                   height="14"
+                   rx="7"
+                   ry="7"
+                   id="rect12652" />
+                <text
+                   xml:space="preserve"
+                   x="7"
+                   y="10"
+                   stroke="none"
+                   font-family="sans-serif"
+                   font-size="10px"
+                   font-weight="normal"
+                   fill="#000000"
+                   id="text12654">Author</text>
+              </g>
+            </g>
+          </g>
+          <g
+             transform="translate(0,20)"
+             id="g12672">
+            <g
+               fill="#ffffff"
+               id="g12670">
+              <rect
+                 x="0"
+                 y="0"
+                 width="128.5"
+                 height="12"
+                 rx="0"
+                 ry="0"
+                 stroke="none"
+                 id="rect12662" />
+              <g
+                 font-family="sans-serif"
+                 font-size="10px"
+                 font-weight="normal"
+                 fill="#000000"
+                 text-anchor="end"
+                 id="g12668">
+                <text
+                   xml:space="preserve"
+                   x="34.900002"
+                   y="9"
+                   stroke="none"
+                   id="text12664">name:</text>
+                <text
+                   xml:space="preserve"
+                   x="38.083332"
+                   y="9"
+                   stroke="none"
+                   text-anchor="start"
+                   id="text12666">Leemon McHenry</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       class="node"
+       id="g12710">
+      <g
+         fill="#fe9200"
+         stroke="#000000"
+         stroke-width="2"
+         id="g12682">
+        <circle
+           cx="-453.44977"
+           cy="-107.62366"
+           r="11"
+           id="circle12680" />
+      </g>
+      <g
+         transform="translate(-453.44977,-107.62366)"
+         id="g12708">
+        <g
+           transform="translate(-14,-16)"
+           id="g12706">
+          <g
+             id="g12692">
+            <g
+               transform="translate(-48.083332)"
+               id="g12690">
+              <g
+                 fill="#ffffff"
+                 stroke="#000000"
+                 stroke-width="2"
+                 id="g12688">
+                <rect
+                   x="0"
+                   y="0"
+                   width="46.083332"
+                   height="14"
+                   rx="7"
+                   ry="7"
+                   id="rect12684" />
+                <text
+                   xml:space="preserve"
+                   x="7"
+                   y="10"
+                   stroke="none"
+                   font-family="sans-serif"
+                   font-size="10px"
+                   font-weight="normal"
+                   fill="#000000"
+                   id="text12686">Article</text>
+              </g>
+            </g>
+          </g>
+          <g
+             transform="translate(0,20)"
+             id="g12704">
+            <g
+               transform="translate(-106.26667)"
+               fill="#ffffff"
+               id="g12702">
+              <rect
+                 x="0"
+                 y="0"
+                 width="106.26667"
+                 height="12"
+                 rx="0"
+                 ry="0"
+                 stroke="none"
+                 id="rect12694" />
+              <g
+                 font-family="sans-serif"
+                 font-size="10px"
+                 font-weight="normal"
+                 fill="#000000"
+                 text-anchor="end"
+                 id="g12700">
+                <text
+                   xml:space="preserve"
+                   x="26.099998"
+                   y="9"
+                   stroke="none"
+                   id="text12696">title:</text>
+                <text
+                   xml:space="preserve"
+                   x="29.283333"
+                   y="9"
+                   stroke="none"
+                   text-anchor="start"
+                   id="text12698">Blood money...</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       class="node"
+       id="g12742">
+      <g
+         fill="#aea1ff"
+         stroke="#000000"
+         stroke-width="2"
+         id="g12714">
+        <circle
+           cx="-201.85983"
+           cy="-40.210335"
+           r="11"
+           id="circle12712" />
+      </g>
+      <g
+         transform="translate(-201.85983,-40.210336)"
+         id="g12740">
+        <g
+           transform="translate(9.8994949,9.8994949)"
+           id="g12738">
+          <g
+             id="g12724">
+            <g
+               id="g12722">
+              <g
+                 fill="#ffffff"
+                 stroke="#000000"
+                 stroke-width="2"
+                 id="g12720">
+                <rect
+                   x="0"
+                   y="0"
+                   width="61.349998"
+                   height="14"
+                   rx="7"
+                   ry="7"
+                   id="rect12716" />
+                <text
+                   xml:space="preserve"
+                   x="7"
+                   y="10"
+                   stroke="none"
+                   font-family="sans-serif"
+                   font-size="10px"
+                   font-weight="normal"
+                   fill="#000000"
+                   id="text12718">Affiliation</text>
+              </g>
+            </g>
+          </g>
+          <g
+             transform="translate(0,20)"
+             id="g12736">
+            <g
+               fill="#ffffff"
+               id="g12734">
+              <rect
+                 x="0"
+                 y="0"
+                 width="172.05"
+                 height="12"
+                 rx="0"
+                 ry="0"
+                 stroke="none"
+                 id="rect12726" />
+              <g
+                 font-family="sans-serif"
+                 font-size="10px"
+                 font-weight="normal"
+                 fill="#000000"
+                 text-anchor="end"
+                 id="g12732">
+                <text
+                   xml:space="preserve"
+                   x="34.900002"
+                   y="9"
+                   stroke="none"
+                   id="text12728">name:</text>
+                <text
+                   xml:space="preserve"
+                   x="38.083332"
+                   y="9"
+                   stroke="none"
+                   text-anchor="start"
+                   id="text12730">California State University</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       class="node"
+       id="g12774">
+      <g
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         id="g12746">
+        <circle
+           cx="-318.62314"
+           cy="-107.62366"
+           r="11"
+           id="circle12744" />
+      </g>
+      <g
+         transform="translate(-318.62313,-107.62366)"
+         id="g12772">
+        <g
+           transform="translate(0,-46)"
+           id="g12770">
+          <g
+             id="g12756">
+            <g
+               transform="translate(-39.041666)"
+               id="g12754">
+              <g
+                 fill="#ffffff"
+                 stroke="#000000"
+                 stroke-width="2"
+                 id="g12752">
+                <rect
+                   x="0"
+                   y="0"
+                   width="76.083328"
+                   height="14"
+                   rx="7"
+                   ry="7"
+                   id="rect12748" />
+                <text
+                   xml:space="preserve"
+                   x="7"
+                   y="10"
+                   stroke="none"
+                   font-family="sans-serif"
+                   font-size="10px"
+                   font-weight="normal"
+                   fill="#000000"
+                   id="text12750">Contribution</text>
+              </g>
+            </g>
+          </g>
+          <g
+             transform="translate(0,20)"
+             id="g12768">
+            <g
+               transform="translate(-122.1)"
+               fill="#ffffff"
+               id="g12766">
+              <rect
+                 x="0"
+                 y="0"
+                 width="244.2"
+                 height="12"
+                 rx="0"
+                 ry="0"
+                 stroke="none"
+                 id="rect12758" />
+              <g
+                 font-family="sans-serif"
+                 font-size="10px"
+                 font-weight="normal"
+                 fill="#000000"
+                 text-anchor="end"
+                 id="g12764">
+                <text
+                   xml:space="preserve"
+                   x="43.133331"
+                   y="9"
+                   stroke="none"
+                   id="text12760">id_md5:</text>
+                <text
+                   xml:space="preserve"
+                   x="46.316666"
+                   y="9"
+                   stroke="none"
+                   text-anchor="start"
+                   id="text12762">2413d63ed141c2fc9413efad473d78c8</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text
+       x="73.730408"
+       y="77.73671"
+       style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+       xml:space="preserve"
+       id="text11262-3"
+       transform="matrix(3.7795276,0,0,3.7795276,-682.41922,-494.98001)"><tspan
+         x="73.730408"
+         y="77.73671"
+         fill="#44aa00"
+         font-family="'Ronald Flick'"
+         stroke-width="0.265"
+         id="tspan11260-6">MD5 hash</tspan></text>
+  </g>
+  <g
+     class="relationship"
+     transform="matrix(0.26458,0,0,0.26458,126.45004,-16.84474)"
+     stroke="#000000"
+     stroke-width="2"
+     id="g18289">
+    <g
+       transform="translate(-133.5,110.65)"
+       id="g18283">
+      <path
+         d="M 12,0 H 175.5"
+         id="path18281" />
+    </g>
+    <g
+       transform="translate(-321,110.65)"
+       id="g18287">
+      <path
+         d="M 12,0 H 175.5"
+         id="path18285" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,126.45004,-16.84474)"
+     fill="#fe9200"
+     stroke="#000000"
+     stroke-width="2"
+     id="g18293">
+    <circle
+       cx="-321"
+       cy="110.65"
+       r="11"
+       id="circle18291" />
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,25.091049,8.19556)"
+     id="g18301">
+    <g
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       id="g18299">
+      <rect
+         width="46.083"
+         height="14"
+         rx="7"
+         ry="7"
+         id="rect18295"
+         x="0"
+         y="0" />
+      <text
+         x="7"
+         y="10"
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="10px"
+         stroke="none"
+         xml:space="preserve"
+         id="text18297">Article</text>
+    </g>
+  </g>
+  <rect
+     x="8.9547491"
+     y="13.485262"
+     width="28.671"
+     height="3.175"
+     rx="0"
+     ry="0"
+     fill="#ffffff"
+     stroke-width="0.23698"
+     id="rect18303" />
+  <g
+     transform="matrix(0.26458,0,0,0.26458,8.9547497,13.48526)"
+     font-family="sans-serif"
+     font-size="10px"
+     text-anchor="end"
+     id="g18309">
+    <text
+       x="26.099998"
+       y="9"
+       xml:space="preserve"
+       id="text18305">title:</text>
+    <text
+       x="29.283333"
+       y="9"
+       text-anchor="start"
+       xml:space="preserve"
+       id="text18307">Blood Money....</text>
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,126.45004,-16.84474)"
+     fill="#a4dd00"
+     stroke="#000000"
+     stroke-width="2"
+     id="g18313">
+    <circle
+       cx="-133.5"
+       cy="110.65"
+       r="11"
+       id="circle18311" />
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,91.126049,12.43526)"
+     id="g18337">
+    <g
+       transform="translate(0,-46)"
+       id="g18335">
+      <g
+         transform="translate(-24.825)"
+         id="g18321">
+        <g
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2"
+           id="g18319">
+          <rect
+             width="47.650002"
+             height="14"
+             rx="7"
+             ry="7"
+             id="rect18315"
+             x="0"
+             y="0" />
+          <text
+             x="7"
+             y="10"
+             fill="#000000"
+             font-family="sans-serif"
+             font-size="10px"
+             stroke="none"
+             xml:space="preserve"
+             id="text18317">Author</text>
+        </g>
+      </g>
+      <g
+         transform="translate(0,20)"
+         id="g18333">
+        <g
+           transform="translate(-64.25)"
+           fill="#ffffff"
+           id="g18331">
+          <rect
+             width="128.5"
+             height="12"
+             rx="0"
+             ry="0"
+             id="rect18323"
+             x="0"
+             y="0" />
+          <g
+             fill="#000000"
+             font-family="sans-serif"
+             font-size="10px"
+             text-anchor="end"
+             id="g18329">
+            <text
+               x="34.900002"
+               y="9"
+               xml:space="preserve"
+               id="text18325">name:</text>
+            <text
+               x="38.083332"
+               y="9"
+               text-anchor="start"
+               xml:space="preserve"
+               id="text18327">Leemon McHenry</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,126.45004,-16.84474)"
+     fill="#7b64ff"
+     stroke="#000000"
+     stroke-width="2"
+     id="g18341">
+    <circle
+       cx="54"
+       cy="110.65"
+       r="11"
+       id="circle18339" />
+  </g>
+  <g
+     transform="matrix(0.26458,0,0,0.26458,144.44004,8.20226)"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="2"
+     id="g18347">
+    <rect
+       width="61.349998"
+       height="14"
+       rx="7"
+       ry="7"
+       id="rect18343"
+       x="0"
+       y="0" />
+    <text
+       x="7"
+       y="10"
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="10px"
+       stroke="none"
+       xml:space="preserve"
+       id="text18345">Affiliation</text>
+  </g>
+  <rect
+     x="144.44005"
+     y="13.494261"
+     width="46.833"
+     height="3.175"
+     rx="0"
+     ry="0"
+     fill="#ffffff"
+     stroke-width="0.2686"
+     id="rect18349" />
+  <text
+     x="153.67465"
+     y="15.875063"
+     fill="#000000"
+     font-size="2.6458px"
+     stroke-width="0.26458"
+     text-anchor="end"
+     xml:space="preserve"
+     id="text18351"
+     style="font-family:sans-serif">name:</text>
+  <text
+     x="154.51691"
+     y="15.875063"
+     fill="#000000"
+     font-size="2.6458px"
+     stroke-width="0.26458"
+     xml:space="preserve"
+     id="text18355"
+     style="font-family:sans-serif"><tspan
+       x="154.51691"
+       y="15.875063"
+       stroke-width="0.26458"
+       id="tspan18353">California State University...</tspan></text>
+  <text
+     x="72.019707"
+     y="57.043873"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18359"><tspan
+       x="72.019707"
+       y="57.043873"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18357">Edge Nodes</tspan></text>
+  <text
+     x="0"
+     y="31.678802"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;opacity:0.204298;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18363"><tspan
+       x="0"
+       y="31.678802"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18361">Start Node</tspan></text>
+  <text
+     x="53.283279"
+     y="45.948818"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;opacity:0.204298;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18375"><tspan
+       x="53.283279"
+       y="45.948818"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18373">Lead Nodes</tspan></text>
+  <text
+     x="97.761841"
+     y="45.91251"
+     style="font-size:10.583px;line-height:1.25;font-family:sans-serif;opacity:0.204298;fill:#44aa00;stroke-width:0.265"
+     xml:space="preserve"
+     id="text18379"><tspan
+       x="97.761841"
+       y="45.91251"
+       fill="#44aa00"
+       font-family="'Ronald Flick'"
+       stroke-width="0.265"
+       id="tspan18377">Follow Nodes</tspan></text>
+  <path
+     d="M 58.996059,38.574328 C 55.971319,29.665605 49.199575,22.878564 43.851049,17.14916"
+     marker-end="url(#marker2398-9)"
+     id="path18387"
+     style="opacity:0.204298;fill:none;stroke:#9f3636;stroke-width:0.565;marker-end:url(#marker2398-9)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 72.929738,37.316698 c 2.4446,-4.3906 4.898911,-18.351338 13.076911,-21.507438"
+     marker-end="url(#marker2398-9)"
+     id="path18389"
+     style="opacity:0.204298;fill:none;stroke:#9f3636;stroke-width:0.565;marker-end:url(#marker2398-9)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 110.36624,38.467089 C 109.46686,28.800961 102.77858,19.724576 94.862649,15.50076"
+     marker-end="url(#marker2398-9)"
+     id="path18391"
+     style="opacity:0.204298;fill:none;stroke:#9f3636;stroke-width:0.565;marker-end:url(#marker2398-9)"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 118.65312,37.232934 c 0.57212,-10.176647 7.14065,-20.084858 18.09991,-22.70527"
+     marker-end="url(#Sketch-1)"
+     id="path18395"
+     sodipodi:nodetypes="cc"
+     style="opacity:0.204298;fill:none;stroke:#b33434;stroke-width:0.561105;stroke-linecap:round;marker-end:url(#Sketch-1)" />
+  <path
+     d="m 105.39603,53.689952 c 5.42739,-0.487881 10.85418,-0.975746 17.26007,-2.931675 6.40549,-1.955929 13.78959,-5.379712 17.09945,-11.101698 3.30986,-5.721986 2.547,-13.74177 1.78373,-21.762846"
+     marker-end="url(#Sketch-1)"
+     id="path18399"
+     style="fill:none;stroke:#b33434;stroke-width:0.508505;stroke-linecap:round;marker-end:url(#Sketch-1)" />
+  <path
+     d="M 70.834089,54.716776 C 63.135864,54.324053 55.437037,53.931322 49.462929,51.307631 43.488521,48.683965 39.23863,43.82933 37.945442,37.852144 36.652254,31.874958 38.316109,24.775802 39.980084,17.675981"
+     marker-end="url(#marker2398-9)"
+     stroke="#9f3636"
+     id="path18403"
+     style="fill:none;stroke-width:0.515628;marker-end:url(#marker2398-9)" />
+  <path
+     d="m 28.180649,27.39026 c 1.5778,-1.2621 3.1556,-2.5241 4.6986,-4.0794 1.543,-1.5553 3.0511,-3.4039 4.5592,-5.2525"
+     marker-end="url(#marker2398-9)"
+     stroke="#9f3636"
+     id="path18405"
+     style="opacity:0.204298;fill:none;stroke-width:0.565;marker-end:url(#marker2398-9)" />
+</svg>

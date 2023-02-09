@@ -1474,7 +1474,11 @@ This is name/key for this property. Defaults to <code>id</code>.</p></td>
 <span class="normal"><a href="#__codelineno-0-599">599</a></span>
 <span class="normal"><a href="#__codelineno-0-600">600</a></span>
 <span class="normal"><a href="#__codelineno-0-601">601</a></span>
-<span class="normal"><a href="#__codelineno-0-602">602</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="k">class</span> <span class="nc">Dict2graph</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-602">602</a></span>
+<span class="normal"><a href="#__codelineno-0-603">603</a></span>
+<span class="normal"><a href="#__codelineno-0-604">604</a></span>
+<span class="normal"><a href="#__codelineno-0-605">605</a></span>
+<span class="normal"><a href="#__codelineno-0-606">606</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="k">class</span> <span class="nc">Dict2graph</span><span class="p">:</span>
 <a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">    The central class for dict2graph. Must be instanced to do get started and access the dict2graph api.</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a>
@@ -2000,50 +2004,54 @@ This is name/key for this property. Defaults to <code>id</code>.</p></td>
 <a id="__codelineno-0-556" name="__codelineno-0-556"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Node][] to the dict2graph cache.</span>
 <a id="__codelineno-0-557" name="__codelineno-0-557"></a><span class="sd">        This method is only relevant for [`Transformers`](/use_transformers).</span>
 <a id="__codelineno-0-558" name="__codelineno-0-558"></a>
-<a id="__codelineno-0-559" name="__codelineno-0-559"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-560" name="__codelineno-0-560"></a><span class="sd">            node (Node): The [dict2graph.Node][] to add.</span>
-<a id="__codelineno-0-561" name="__codelineno-0-561"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-562" name="__codelineno-0-562"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-<a id="__codelineno-0-563" name="__codelineno-0-563"></a>
-<a id="__codelineno-0-564" name="__codelineno-0-564"></a>    <span class="k">def</span> <span class="nf">add_rel_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
-<a id="__codelineno-0-565" name="__codelineno-0-565"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Relation][] to the dict2graph cache.</span>
-<a id="__codelineno-0-566" name="__codelineno-0-566"></a><span class="sd">        This method is only relevant for [`Transformers`](/use_transformers).</span>
-<a id="__codelineno-0-567" name="__codelineno-0-567"></a>
-<a id="__codelineno-0-568" name="__codelineno-0-568"></a><span class="sd">        Args:</span>
-<a id="__codelineno-0-569" name="__codelineno-0-569"></a><span class="sd">            node (Node): The [dict2graph.Relation][] to add.</span>
-<a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-571" name="__codelineno-0-571"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
-<a id="__codelineno-0-572" name="__codelineno-0-572"></a>
-<a id="__codelineno-0-573" name="__codelineno-0-573"></a>    <span class="k">def</span> <span class="nf">_flush_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-574" name="__codelineno-0-574"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
-<a id="__codelineno-0-575" name="__codelineno-0-575"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_run_transformations</span><span class="p">()</span>
-<a id="__codelineno-0-576" name="__codelineno-0-576"></a>        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="p">:</span>
-<a id="__codelineno-0-577" name="__codelineno-0-577"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">deleted</span><span class="p">:</span>
-<a id="__codelineno-0-578" name="__codelineno-0-578"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_node_from_cache</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-<a id="__codelineno-0-579" name="__codelineno-0-579"></a>        <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
-<a id="__codelineno-0-580" name="__codelineno-0-580"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">rel</span><span class="o">.</span><span class="n">deleted</span><span class="p">:</span>
-<a id="__codelineno-0-581" name="__codelineno-0-581"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_rel_from_cache</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
-<a id="__codelineno-0-582" name="__codelineno-0-582"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-0-583" name="__codelineno-0-583"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-0-584" name="__codelineno-0-584"></a>
-<a id="__codelineno-0-585" name="__codelineno-0-585"></a>    <span class="k">def</span> <span class="nf">_run_transformations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-586" name="__codelineno-0-586"></a>        <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_transformators</span><span class="p">:</span>
-<a id="__codelineno-0-587" name="__codelineno-0-587"></a>
-<a id="__codelineno-0-588" name="__codelineno-0-588"></a>            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="p">:</span>
-<a id="__codelineno-0-589" name="__codelineno-0-589"></a>                <span class="n">trans</span><span class="o">.</span><span class="n">_run_node_match_and_transform</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-<a id="__codelineno-0-590" name="__codelineno-0-590"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-559" name="__codelineno-0-559"></a><span class="sd">        You will propably only need it of you create [custom Transformers](/diy_transformer).</span>
+<a id="__codelineno-0-560" name="__codelineno-0-560"></a>
+<a id="__codelineno-0-561" name="__codelineno-0-561"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-562" name="__codelineno-0-562"></a><span class="sd">            node (Node): The [dict2graph.Node][] to add.</span>
+<a id="__codelineno-0-563" name="__codelineno-0-563"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-564" name="__codelineno-0-564"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-565" name="__codelineno-0-565"></a>
+<a id="__codelineno-0-566" name="__codelineno-0-566"></a>    <span class="k">def</span> <span class="nf">add_rel_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
+<a id="__codelineno-0-567" name="__codelineno-0-567"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Relation][] to the dict2graph cache.</span>
+<a id="__codelineno-0-568" name="__codelineno-0-568"></a><span class="sd">        This method is only relevant for [`Transformers`](/use_transformers).</span>
+<a id="__codelineno-0-569" name="__codelineno-0-569"></a>
+<a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="sd">        You will propably only need it of you create [custom Transformers](/diy_transformer).</span>
+<a id="__codelineno-0-571" name="__codelineno-0-571"></a>
+<a id="__codelineno-0-572" name="__codelineno-0-572"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-573" name="__codelineno-0-573"></a><span class="sd">            node (Node): The [dict2graph.Relation][] to add.</span>
+<a id="__codelineno-0-574" name="__codelineno-0-574"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-575" name="__codelineno-0-575"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
+<a id="__codelineno-0-576" name="__codelineno-0-576"></a>
+<a id="__codelineno-0-577" name="__codelineno-0-577"></a>    <span class="k">def</span> <span class="nf">_flush_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-578" name="__codelineno-0-578"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-579" name="__codelineno-0-579"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_run_transformations</span><span class="p">()</span>
+<a id="__codelineno-0-580" name="__codelineno-0-580"></a>        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="p">:</span>
+<a id="__codelineno-0-581" name="__codelineno-0-581"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">deleted</span><span class="p">:</span>
+<a id="__codelineno-0-582" name="__codelineno-0-582"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_node_from_cache</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-583" name="__codelineno-0-583"></a>        <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
+<a id="__codelineno-0-584" name="__codelineno-0-584"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">rel</span><span class="o">.</span><span class="n">deleted</span><span class="p">:</span>
+<a id="__codelineno-0-585" name="__codelineno-0-585"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_rel_from_cache</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
+<a id="__codelineno-0-586" name="__codelineno-0-586"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-587" name="__codelineno-0-587"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-588" name="__codelineno-0-588"></a>
+<a id="__codelineno-0-589" name="__codelineno-0-589"></a>    <span class="k">def</span> <span class="nf">_run_transformations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-590" name="__codelineno-0-590"></a>        <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">node_transformators</span><span class="p">:</span>
 <a id="__codelineno-0-591" name="__codelineno-0-591"></a>
-<a id="__codelineno-0-592" name="__codelineno-0-592"></a>        <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">relation_transformators</span><span class="p">:</span>
-<a id="__codelineno-0-593" name="__codelineno-0-593"></a>
-<a id="__codelineno-0-594" name="__codelineno-0-594"></a>            <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
-<a id="__codelineno-0-595" name="__codelineno-0-595"></a>                <span class="n">trans</span><span class="o">.</span><span class="n">_run_rel_match_and_transform</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
-<a id="__codelineno-0-596" name="__codelineno-0-596"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-592" name="__codelineno-0-592"></a>            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="p">:</span>
+<a id="__codelineno-0-593" name="__codelineno-0-593"></a>                <span class="n">trans</span><span class="o">.</span><span class="n">_run_node_match_and_transform</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-594" name="__codelineno-0-594"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-595" name="__codelineno-0-595"></a>
+<a id="__codelineno-0-596" name="__codelineno-0-596"></a>        <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">relation_transformators</span><span class="p">:</span>
 <a id="__codelineno-0-597" name="__codelineno-0-597"></a>
-<a id="__codelineno-0-598" name="__codelineno-0-598"></a>    <span class="k">def</span> <span class="nf">_feed_cache_with_new_nodes_and_rels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-599" name="__codelineno-0-599"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="p">)</span>
-<a id="__codelineno-0-600" name="__codelineno-0-600"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-0-601" name="__codelineno-0-601"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="p">)</span>
-<a id="__codelineno-0-602" name="__codelineno-0-602"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-598" name="__codelineno-0-598"></a>            <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
+<a id="__codelineno-0-599" name="__codelineno-0-599"></a>                <span class="n">trans</span><span class="o">.</span><span class="n">_run_rel_match_and_transform</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
+<a id="__codelineno-0-600" name="__codelineno-0-600"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-601" name="__codelineno-0-601"></a>
+<a id="__codelineno-0-602" name="__codelineno-0-602"></a>    <span class="k">def</span> <span class="nf">_feed_cache_with_new_nodes_and_rels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-603" name="__codelineno-0-603"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="p">)</span>
+<a id="__codelineno-0-604" name="__codelineno-0-604"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-605" name="__codelineno-0-605"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="p">)</span>
+<a id="__codelineno-0-606" name="__codelineno-0-606"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -2194,6 +2202,7 @@ This is name/key for this property. Defaults to <code>id</code>.</p></td>
   
       <p>Add a new <a class="autorefs autorefs-internal" href="../api_node/#dict2graph.Node">dict2graph.Node</a> to the dict2graph cache.
 This method is only relevant for <a href="/use_transformers"><code>Transformers</code></a>.</p>
+<p>You will propably only need it of you create <a href="/diy_transformer">custom Transformers</a>.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2228,14 +2237,18 @@ This method is only relevant for <a href="/use_transformers"><code>Transformers<
 <span class="normal"><a href="#__codelineno-0-559">559</a></span>
 <span class="normal"><a href="#__codelineno-0-560">560</a></span>
 <span class="normal"><a href="#__codelineno-0-561">561</a></span>
-<span class="normal"><a href="#__codelineno-0-562">562</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-555" name="__codelineno-0-555"></a><span class="k">def</span> <span class="nf">add_node_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-562">562</a></span>
+<span class="normal"><a href="#__codelineno-0-563">563</a></span>
+<span class="normal"><a href="#__codelineno-0-564">564</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-555" name="__codelineno-0-555"></a><span class="k">def</span> <span class="nf">add_node_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
 <a id="__codelineno-0-556" name="__codelineno-0-556"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Node][] to the dict2graph cache.</span>
 <a id="__codelineno-0-557" name="__codelineno-0-557"></a><span class="sd">    This method is only relevant for [`Transformers`](/use_transformers).</span>
 <a id="__codelineno-0-558" name="__codelineno-0-558"></a>
-<a id="__codelineno-0-559" name="__codelineno-0-559"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-560" name="__codelineno-0-560"></a><span class="sd">        node (Node): The [dict2graph.Node][] to add.</span>
-<a id="__codelineno-0-561" name="__codelineno-0-561"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-562" name="__codelineno-0-562"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-559" name="__codelineno-0-559"></a><span class="sd">    You will propably only need it of you create [custom Transformers](/diy_transformer).</span>
+<a id="__codelineno-0-560" name="__codelineno-0-560"></a>
+<a id="__codelineno-0-561" name="__codelineno-0-561"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-562" name="__codelineno-0-562"></a><span class="sd">        node (Node): The [dict2graph.Node][] to add.</span>
+<a id="__codelineno-0-563" name="__codelineno-0-563"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-564" name="__codelineno-0-564"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
@@ -2256,6 +2269,7 @@ This method is only relevant for <a href="/use_transformers"><code>Transformers<
   
       <p>Add a new <a class="autorefs autorefs-internal" href="../api_relation/#dict2graph.Relation">dict2graph.Relation</a> to the dict2graph cache.
 This method is only relevant for <a href="/use_transformers"><code>Transformers</code></a>.</p>
+<p>You will propably only need it of you create <a href="/diy_transformer">custom Transformers</a>.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2283,21 +2297,25 @@ This method is only relevant for <a href="/use_transformers"><code>Transformers<
 
       <details class="quote">
         <summary>Source code in <code>dict2graph/dict2graph.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-564">564</a></span>
-<span class="normal"><a href="#__codelineno-0-565">565</a></span>
-<span class="normal"><a href="#__codelineno-0-566">566</a></span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-566">566</a></span>
 <span class="normal"><a href="#__codelineno-0-567">567</a></span>
 <span class="normal"><a href="#__codelineno-0-568">568</a></span>
 <span class="normal"><a href="#__codelineno-0-569">569</a></span>
 <span class="normal"><a href="#__codelineno-0-570">570</a></span>
-<span class="normal"><a href="#__codelineno-0-571">571</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-564" name="__codelineno-0-564"></a><span class="k">def</span> <span class="nf">add_rel_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
-<a id="__codelineno-0-565" name="__codelineno-0-565"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Relation][] to the dict2graph cache.</span>
-<a id="__codelineno-0-566" name="__codelineno-0-566"></a><span class="sd">    This method is only relevant for [`Transformers`](/use_transformers).</span>
-<a id="__codelineno-0-567" name="__codelineno-0-567"></a>
-<a id="__codelineno-0-568" name="__codelineno-0-568"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-569" name="__codelineno-0-569"></a><span class="sd">        node (Node): The [dict2graph.Relation][] to add.</span>
-<a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-571" name="__codelineno-0-571"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-0-571">571</a></span>
+<span class="normal"><a href="#__codelineno-0-572">572</a></span>
+<span class="normal"><a href="#__codelineno-0-573">573</a></span>
+<span class="normal"><a href="#__codelineno-0-574">574</a></span>
+<span class="normal"><a href="#__codelineno-0-575">575</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-566" name="__codelineno-0-566"></a><span class="k">def</span> <span class="nf">add_rel_to_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">:</span> <span class="n">Relation</span><span class="p">):</span>
+<a id="__codelineno-0-567" name="__codelineno-0-567"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a new [dict2graph.Relation][] to the dict2graph cache.</span>
+<a id="__codelineno-0-568" name="__codelineno-0-568"></a><span class="sd">    This method is only relevant for [`Transformers`](/use_transformers).</span>
+<a id="__codelineno-0-569" name="__codelineno-0-569"></a>
+<a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="sd">    You will propably only need it of you create [custom Transformers](/diy_transformer).</span>
+<a id="__codelineno-0-571" name="__codelineno-0-571"></a>
+<a id="__codelineno-0-572" name="__codelineno-0-572"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-573" name="__codelineno-0-573"></a><span class="sd">        node (Node): The [dict2graph.Relation][] to add.</span>
+<a id="__codelineno-0-574" name="__codelineno-0-574"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-575" name="__codelineno-0-575"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>

@@ -1,0 +1,247 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 2,
+    "border-color": "#000000",
+    "radius": 10,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "outside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 10,
+    "caption-font-weight": "normal",
+    "label-position": "outside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 2,
+    "label-font-size": 10,
+    "label-padding": 1,
+    "label-margin": 4,
+    "directionality": "undirected",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#000000",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 10,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 10,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 275.8331069450133,
+        "y": -9.999999999999943
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#a4dd00"
+      },
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Leemon McHenry"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 111.00000000000001,
+        "y": -219
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#fe9200"
+      },
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Blood money..."
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 6.500000000000014,
+        "y": -114.49999999999997
+      },
+      "caption": "",
+      "style": {
+        "node-color": "#aea1ff"
+      },
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "California State University"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 275.83310313031603,
+        "y": -219
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Conflicted medical journals..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 380.3331031303161,
+        "y": -114.49999999999997
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "University of Adelaide"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 111.00000000000001,
+        "y": -9.999999999999957
+      },
+      "caption": "",
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Mellad Khoshnood"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 111.00000000000003,
+        "y": -114.49999999999997
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Contribution"
+      ],
+      "properties": {
+        "id": "2df..."
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 275.83310313031603,
+        "y": -114.49999999999997
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Contribution"
+      ],
+      "properties": {
+        "id": "6zt..."
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n6",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n9"
+    },
+    {
+      "id": "n7",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n9"
+    },
+    {
+      "id": "n8",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n9",
+      "toId": "n1"
+    },
+    {
+      "id": "n9",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n10"
+    },
+    {
+      "id": "n11",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n10",
+      "toId": "n4"
+    },
+    {
+      "id": "n14",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n10"
+    },
+    {
+      "id": "n15",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n9"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 2,
+    "border-color": "#000000",
+    "radius": 10,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "outside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 10,
+    "caption-font-weight": "normal",
+    "label-position": "outside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 2,
+    "label-font-size": 10,
+    "label-padding": 1,
+    "label-margin": 4,
+    "directionality": "undirected",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#000000",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 10,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 10,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n5",
+      "position": {
+        "x": 833.1599616454197,
+        "y": -216.8435146854548
+      },
+      "caption": "",
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Leemon McHenry"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 766.8292792926514,
+        "y": -385.3544623738812
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Blood money..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 718.018719936335,
+        "y": -216.26972487188795
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "California State University"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 899.4906439981879,
+        "y": -385.3544623738812
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Conflicted medical journals..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 965.8213263509554,
+        "y": -216.8435146854548
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "University of Adelaide"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 766.8292792926514,
+        "y": -300.81209362288456
+      },
+      "caption": "",
+      "labels": [],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 899.4906439981879,
+        "y": -301.0255977379959
+      },
+      "caption": "",
+      "labels": [],
+      "properties": {},
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n4",
+      "fromId": "n7",
+      "toId": "n11",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n11",
+      "toId": "n6",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n12",
+      "toId": "n8",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n9",
+      "toId": "n12",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n5",
+      "toId": "n11",
+      "type": "",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n12",
+      "toId": "n5"
+    }
+  ]
+}

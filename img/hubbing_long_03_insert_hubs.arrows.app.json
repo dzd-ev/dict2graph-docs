@@ -1,0 +1,231 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 2,
+    "border-color": "#000000",
+    "radius": 10,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "outside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 10,
+    "caption-font-weight": "normal",
+    "label-position": "outside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 2,
+    "label-font-size": 10,
+    "label-padding": 1,
+    "label-margin": 4,
+    "directionality": "undirected",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#000000",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 10,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 10,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 13.479281652995411,
+        "y": 194.9685875204986
+      },
+      "caption": "",
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Leemon McHenry"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": -35,
+        "y": 26.457639832072232
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Blood money..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -83.47928165299541,
+        "y": 194.9685875204986
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "California State University"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 348.666211216069,
+        "y": 26.457639832072232
+      },
+      "caption": "",
+      "labels": [
+        "Article"
+      ],
+      "properties": {
+        "title": "Conflicted medical journals..."
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 404.7935618128019,
+        "y": 194.9685875204986
+      },
+      "caption": "",
+      "labels": [
+        "Affiliation"
+      ],
+      "properties": {
+        "name": "University of Adelaide"
+      },
+      "style": {
+        "node-color": "#aea1ff"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 292.53886061933605,
+        "y": 194.9685875204986
+      },
+      "caption": "",
+      "labels": [
+        "Author"
+      ],
+      "properties": {
+        "name": "Leemon McHenry"
+      },
+      "style": {
+        "node-color": "#a4dd00"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": -35,
+        "y": 111.00000858306885
+      },
+      "caption": "",
+      "style": {},
+      "labels": [],
+      "properties": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 348.666211216069,
+        "y": 111.00000858306885
+      },
+      "caption": "",
+      "labels": [],
+      "properties": {},
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n2",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n8"
+    },
+    {
+      "id": "n3",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n7"
+    },
+    {
+      "id": "n4",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n7",
+      "toId": "n1"
+    },
+    {
+      "id": "n5",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n8",
+      "toId": "n4"
+    },
+    {
+      "id": "n6",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n8"
+    },
+    {
+      "id": "n7",
+      "type": "",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n7"
+    }
+  ]
+}
