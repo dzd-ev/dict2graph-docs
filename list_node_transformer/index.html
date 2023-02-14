@@ -15,7 +15,7 @@
         <link rel="next" href="../list_rel_transformer/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
@@ -556,6 +556,19 @@
     MergeChildNodes
   </a>
   
+    <nav class="md-nav" aria-label="MergeChildNodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.node_transformers.MergeChildNodes.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -677,6 +690,19 @@
   <a href="#dict2graph.transformers.node_transformers.RemoveNodesWithNoProps" class="md-nav__link">
     RemoveNodesWithNoProps
   </a>
+  
+    <nav class="md-nav" aria-label="RemoveNodesWithNoProps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.node_transformers.RemoveNodesWithNoProps.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1010,6 +1036,19 @@
     MergeChildNodes
   </a>
   
+    <nav class="md-nav" aria-label="MergeChildNodes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.node_transformers.MergeChildNodes.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1131,6 +1170,19 @@
   <a href="#dict2graph.transformers.node_transformers.RemoveNodesWithNoProps" class="md-nav__link">
     RemoveNodesWithNoProps
   </a>
+  
+    <nav class="md-nav" aria-label="RemoveNodesWithNoProps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dict2graph.transformers.node_transformers.RemoveNodesWithNoProps.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2365,78 +2417,38 @@ See <code>__init__()</code> for more options to modify the hash.</p>
         Bases: <code><span title="dict2graph.transformers._base._NodeTransformerBase">_NodeTransformerBase</span></code></p>
 
   
-      <p><em>summary</em></p>
+      <p>Removes nodes but connect its children and parents to not lose the path.</p>
+<p><strong>Usage:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">&quot;person&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Chrisjen Avasarala&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s2">&quot;personal_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="s2">&quot;Home&quot;</span><span class="p">:</span> <span class="s2">&quot;New York, Earth&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="s2">&quot;occupation&quot;</span><span class="p">:</span> <span class="s2">&quot;United Nations Government&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="p">},</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_node_transformation</span><span class="p">(</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;person&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">MergeChildNodes</span><span class="p">(</span><span class="s2">&quot;personal_info&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">NEO4J_DRIVER</span><span class="p">)</span>
+</code></pre></div>
+<p>Results in one person-node with all attributes instead of an extra "personal_info"-node connected to the person-node "Chrisjen Avasarala"</p>
 
 
         <details class="quote">
           <summary>Source code in <code>dict2graph/transformers/node_transformers.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-802">802</a></span>
-<span class="normal"><a href="#__codelineno-0-803">803</a></span>
-<span class="normal"><a href="#__codelineno-0-804">804</a></span>
-<span class="normal"><a href="#__codelineno-0-805">805</a></span>
-<span class="normal"><a href="#__codelineno-0-806">806</a></span>
-<span class="normal"><a href="#__codelineno-0-807">807</a></span>
-<span class="normal"><a href="#__codelineno-0-808">808</a></span>
-<span class="normal"><a href="#__codelineno-0-809">809</a></span>
-<span class="normal"><a href="#__codelineno-0-810">810</a></span>
-<span class="normal"><a href="#__codelineno-0-811">811</a></span>
-<span class="normal"><a href="#__codelineno-0-812">812</a></span>
-<span class="normal"><a href="#__codelineno-0-813">813</a></span>
-<span class="normal"><a href="#__codelineno-0-814">814</a></span>
-<span class="normal"><a href="#__codelineno-0-815">815</a></span>
-<span class="normal"><a href="#__codelineno-0-816">816</a></span>
-<span class="normal"><a href="#__codelineno-0-817">817</a></span>
-<span class="normal"><a href="#__codelineno-0-818">818</a></span>
-<span class="normal"><a href="#__codelineno-0-819">819</a></span>
-<span class="normal"><a href="#__codelineno-0-820">820</a></span>
-<span class="normal"><a href="#__codelineno-0-821">821</a></span>
-<span class="normal"><a href="#__codelineno-0-822">822</a></span>
-<span class="normal"><a href="#__codelineno-0-823">823</a></span>
-<span class="normal"><a href="#__codelineno-0-824">824</a></span>
-<span class="normal"><a href="#__codelineno-0-825">825</a></span>
-<span class="normal"><a href="#__codelineno-0-826">826</a></span>
-<span class="normal"><a href="#__codelineno-0-827">827</a></span>
-<span class="normal"><a href="#__codelineno-0-828">828</a></span>
-<span class="normal"><a href="#__codelineno-0-829">829</a></span>
-<span class="normal"><a href="#__codelineno-0-830">830</a></span>
-<span class="normal"><a href="#__codelineno-0-831">831</a></span>
-<span class="normal"><a href="#__codelineno-0-832">832</a></span>
-<span class="normal"><a href="#__codelineno-0-833">833</a></span>
-<span class="normal"><a href="#__codelineno-0-834">834</a></span>
-<span class="normal"><a href="#__codelineno-0-835">835</a></span>
-<span class="normal"><a href="#__codelineno-0-836">836</a></span>
-<span class="normal"><a href="#__codelineno-0-837">837</a></span>
-<span class="normal"><a href="#__codelineno-0-838">838</a></span>
-<span class="normal"><a href="#__codelineno-0-839">839</a></span>
-<span class="normal"><a href="#__codelineno-0-840">840</a></span>
-<span class="normal"><a href="#__codelineno-0-841">841</a></span>
-<span class="normal"><a href="#__codelineno-0-842">842</a></span>
-<span class="normal"><a href="#__codelineno-0-843">843</a></span>
-<span class="normal"><a href="#__codelineno-0-844">844</a></span>
-<span class="normal"><a href="#__codelineno-0-845">845</a></span>
-<span class="normal"><a href="#__codelineno-0-846">846</a></span>
-<span class="normal"><a href="#__codelineno-0-847">847</a></span>
-<span class="normal"><a href="#__codelineno-0-848">848</a></span>
-<span class="normal"><a href="#__codelineno-0-849">849</a></span>
-<span class="normal"><a href="#__codelineno-0-850">850</a></span>
-<span class="normal"><a href="#__codelineno-0-851">851</a></span>
-<span class="normal"><a href="#__codelineno-0-852">852</a></span>
-<span class="normal"><a href="#__codelineno-0-853">853</a></span>
-<span class="normal"><a href="#__codelineno-0-854">854</a></span>
-<span class="normal"><a href="#__codelineno-0-855">855</a></span>
-<span class="normal"><a href="#__codelineno-0-856">856</a></span>
-<span class="normal"><a href="#__codelineno-0-857">857</a></span>
-<span class="normal"><a href="#__codelineno-0-858">858</a></span>
-<span class="normal"><a href="#__codelineno-0-859">859</a></span>
-<span class="normal"><a href="#__codelineno-0-860">860</a></span>
-<span class="normal"><a href="#__codelineno-0-861">861</a></span>
-<span class="normal"><a href="#__codelineno-0-862">862</a></span>
-<span class="normal"><a href="#__codelineno-0-863">863</a></span>
-<span class="normal"><a href="#__codelineno-0-864">864</a></span>
-<span class="normal"><a href="#__codelineno-0-865">865</a></span>
-<span class="normal"><a href="#__codelineno-0-866">866</a></span>
-<span class="normal"><a href="#__codelineno-0-867">867</a></span>
-<span class="normal"><a href="#__codelineno-0-868">868</a></span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-868">868</a></span>
 <span class="normal"><a href="#__codelineno-0-869">869</a></span>
 <span class="normal"><a href="#__codelineno-0-870">870</a></span>
 <span class="normal"><a href="#__codelineno-0-871">871</a></span>
@@ -2444,81 +2456,235 @@ See <code>__init__()</code> for more options to modify the hash.</p>
 <span class="normal"><a href="#__codelineno-0-873">873</a></span>
 <span class="normal"><a href="#__codelineno-0-874">874</a></span>
 <span class="normal"><a href="#__codelineno-0-875">875</a></span>
-<span class="normal"><a href="#__codelineno-0-876">876</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-802" name="__codelineno-0-802"></a><span class="k">class</span> <span class="nc">MergeChildNodes</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
-<a id="__codelineno-0-803" name="__codelineno-0-803"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
-<a id="__codelineno-0-804" name="__codelineno-0-804"></a>
-<a id="__codelineno-0-805" name="__codelineno-0-805"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-<a id="__codelineno-0-806" name="__codelineno-0-806"></a>        <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-0-807" name="__codelineno-0-807"></a>        <span class="n">child_labels</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AnyLabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyLabel</span><span class="p">,</span>
-<a id="__codelineno-0-808" name="__codelineno-0-808"></a>        <span class="n">child_relation_type</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AnyRelation</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyRelation</span><span class="p">,</span>
-<a id="__codelineno-0-809" name="__codelineno-0-809"></a>        <span class="n">overwrite_existing_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-810" name="__codelineno-0-810"></a>        <span class="n">prefix_merged_props_with_primary_label_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-811" name="__codelineno-0-811"></a>        <span class="n">prefix_merged_props_with_hash_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-812" name="__codelineno-0-812"></a>        <span class="n">include_relation_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-813" name="__codelineno-0-813"></a>    <span class="p">):</span>
-<a id="__codelineno-0-814" name="__codelineno-0-814"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span> <span class="o">=</span> <span class="n">child_labels</span>
-<a id="__codelineno-0-815" name="__codelineno-0-815"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span> <span class="o">=</span> <span class="n">child_relation_type</span>
-<a id="__codelineno-0-816" name="__codelineno-0-816"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">overwrite_existing_props</span> <span class="o">=</span> <span class="n">overwrite_existing_props</span>
-<a id="__codelineno-0-817" name="__codelineno-0-817"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_primary_label</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-0-818" name="__codelineno-0-818"></a>            <span class="n">prefix_merged_props_with_primary_label_of_child</span>
-<a id="__codelineno-0-819" name="__codelineno-0-819"></a>        <span class="p">)</span>
-<a id="__codelineno-0-820" name="__codelineno-0-820"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_hash_of_child</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-0-821" name="__codelineno-0-821"></a>            <span class="n">prefix_merged_props_with_hash_of_child</span>
-<a id="__codelineno-0-822" name="__codelineno-0-822"></a>        <span class="p">)</span>
-<a id="__codelineno-0-823" name="__codelineno-0-823"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">include_relation_props</span> <span class="o">=</span> <span class="n">include_relation_props</span>
-<a id="__codelineno-0-824" name="__codelineno-0-824"></a>
-<a id="__codelineno-0-825" name="__codelineno-0-825"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-0-826" name="__codelineno-0-826"></a>        <span class="k">for</span> <span class="n">outgoing_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
-<a id="__codelineno-0-827" name="__codelineno-0-827"></a>            <span class="n">child_node</span> <span class="o">=</span> <span class="n">outgoing_rel</span><span class="o">.</span><span class="n">end_node</span>
-<a id="__codelineno-0-828" name="__codelineno-0-828"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
-<a id="__codelineno-0-829" name="__codelineno-0-829"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span> <span class="o">==</span> <span class="n">AnyLabel</span>
-<a id="__codelineno-0-830" name="__codelineno-0-830"></a>                <span class="ow">or</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span><span class="p">)</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">child_node</span><span class="o">.</span><span class="n">labels</span><span class="p">))</span>
-<a id="__codelineno-0-831" name="__codelineno-0-831"></a>            <span class="p">):</span>
-<a id="__codelineno-0-832" name="__codelineno-0-832"></a>                <span class="k">continue</span>
-<a id="__codelineno-0-833" name="__codelineno-0-833"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
-<a id="__codelineno-0-834" name="__codelineno-0-834"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span> <span class="o">==</span> <span class="n">AnyRelation</span>
-<a id="__codelineno-0-835" name="__codelineno-0-835"></a>                <span class="ow">or</span> <span class="n">outgoing_rel</span><span class="o">.</span><span class="n">relation_type</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span>
-<a id="__codelineno-0-836" name="__codelineno-0-836"></a>            <span class="p">):</span>
-<a id="__codelineno-0-837" name="__codelineno-0-837"></a>                <span class="k">continue</span>
-<a id="__codelineno-0-838" name="__codelineno-0-838"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">include_relation_props</span><span class="p">:</span>
-<a id="__codelineno-0-839" name="__codelineno-0-839"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_merge_props</span><span class="p">(</span><span class="n">target_node</span><span class="o">=</span><span class="n">node</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">outgoing_rel</span><span class="p">)</span>
-<a id="__codelineno-0-840" name="__codelineno-0-840"></a>
-<a id="__codelineno-0-841" name="__codelineno-0-841"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_merge_props</span><span class="p">(</span><span class="n">target_node</span><span class="o">=</span><span class="n">node</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">child_node</span><span class="p">)</span>
-<a id="__codelineno-0-842" name="__codelineno-0-842"></a>            <span class="k">for</span> <span class="n">outgoing_child_rel</span> <span class="ow">in</span> <span class="n">child_node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
-<a id="__codelineno-0-843" name="__codelineno-0-843"></a>                <span class="n">outgoing_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">node</span>
-<a id="__codelineno-0-844" name="__codelineno-0-844"></a>            <span class="k">for</span> <span class="n">incoming_child_rel</span> <span class="ow">in</span> <span class="n">child_node</span><span class="o">.</span><span class="n">incoming_relations</span><span class="p">:</span>
-<a id="__codelineno-0-845" name="__codelineno-0-845"></a>                <span class="k">if</span> <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">!=</span> <span class="n">node</span><span class="p">:</span>
-<a id="__codelineno-0-846" name="__codelineno-0-846"></a>                    <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">node</span>
-<a id="__codelineno-0-847" name="__codelineno-0-847"></a>                <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-848" name="__codelineno-0-848"></a>                    <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-0-849" name="__codelineno-0-849"></a>            <span class="n">child_node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-0-850" name="__codelineno-0-850"></a>
-<a id="__codelineno-0-851" name="__codelineno-0-851"></a>    <span class="k">def</span> <span class="nf">_merge_props</span><span class="p">(</span>
-<a id="__codelineno-0-852" name="__codelineno-0-852"></a>        <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-0-853" name="__codelineno-0-853"></a>        <span class="n">target_node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span>
-<a id="__codelineno-0-854" name="__codelineno-0-854"></a>        <span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Node</span><span class="p">,</span> <span class="n">Relation</span><span class="p">],</span>
-<a id="__codelineno-0-855" name="__codelineno-0-855"></a>    <span class="p">):</span>
-<a id="__codelineno-0-856" name="__codelineno-0-856"></a>
-<a id="__codelineno-0-857" name="__codelineno-0-857"></a>        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<a id="__codelineno-0-858" name="__codelineno-0-858"></a>            <span class="n">result_key</span> <span class="o">=</span> <span class="n">key</span>
-<a id="__codelineno-0-859" name="__codelineno-0-859"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_primary_label</span><span class="p">:</span>
-<a id="__codelineno-0-860" name="__codelineno-0-860"></a>                <span class="n">prefix</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-0-861" name="__codelineno-0-861"></a>                    <span class="n">obj</span><span class="o">.</span><span class="n">primary_label</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Node</span><span class="p">)</span> <span class="k">else</span> <span class="n">obj</span><span class="o">.</span><span class="n">relation_type</span>
-<a id="__codelineno-0-862" name="__codelineno-0-862"></a>                <span class="p">)</span>
-<a id="__codelineno-0-863" name="__codelineno-0-863"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-0-864" name="__codelineno-0-864"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_hash_of_child</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-0-865" name="__codelineno-0-865"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">get_hash</span><span class="p">()</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-0-866" name="__codelineno-0-866"></a>            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">target_node</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">overwrite_existing_props</span><span class="p">:</span>
-<a id="__codelineno-0-867" name="__codelineno-0-867"></a>                <span class="n">max_index</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
-<a id="__codelineno-0-868" name="__codelineno-0-868"></a>                    <span class="p">[</span>
-<a id="__codelineno-0-869" name="__codelineno-0-869"></a>                        <span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<a id="__codelineno-0-870" name="__codelineno-0-870"></a>                        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">target_node</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<a id="__codelineno-0-871" name="__codelineno-0-871"></a>                        <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
-<a id="__codelineno-0-872" name="__codelineno-0-872"></a>                    <span class="p">],</span>
-<a id="__codelineno-0-873" name="__codelineno-0-873"></a>                    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;-1&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-874" name="__codelineno-0-874"></a>                <span class="p">)</span>
-<a id="__codelineno-0-875" name="__codelineno-0-875"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">max_index</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-0-876" name="__codelineno-0-876"></a>            <span class="n">target_node</span><span class="p">[</span><span class="n">result_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+<span class="normal"><a href="#__codelineno-0-876">876</a></span>
+<span class="normal"><a href="#__codelineno-0-877">877</a></span>
+<span class="normal"><a href="#__codelineno-0-878">878</a></span>
+<span class="normal"><a href="#__codelineno-0-879">879</a></span>
+<span class="normal"><a href="#__codelineno-0-880">880</a></span>
+<span class="normal"><a href="#__codelineno-0-881">881</a></span>
+<span class="normal"><a href="#__codelineno-0-882">882</a></span>
+<span class="normal"><a href="#__codelineno-0-883">883</a></span>
+<span class="normal"><a href="#__codelineno-0-884">884</a></span>
+<span class="normal"><a href="#__codelineno-0-885">885</a></span>
+<span class="normal"><a href="#__codelineno-0-886">886</a></span>
+<span class="normal"><a href="#__codelineno-0-887">887</a></span>
+<span class="normal"><a href="#__codelineno-0-888">888</a></span>
+<span class="normal"><a href="#__codelineno-0-889">889</a></span>
+<span class="normal"><a href="#__codelineno-0-890">890</a></span>
+<span class="normal"><a href="#__codelineno-0-891">891</a></span>
+<span class="normal"><a href="#__codelineno-0-892">892</a></span>
+<span class="normal"><a href="#__codelineno-0-893">893</a></span>
+<span class="normal"><a href="#__codelineno-0-894">894</a></span>
+<span class="normal"><a href="#__codelineno-0-895">895</a></span>
+<span class="normal"><a href="#__codelineno-0-896">896</a></span>
+<span class="normal"><a href="#__codelineno-0-897">897</a></span>
+<span class="normal"><a href="#__codelineno-0-898">898</a></span>
+<span class="normal"><a href="#__codelineno-0-899">899</a></span>
+<span class="normal"><a href="#__codelineno-0-900">900</a></span>
+<span class="normal"><a href="#__codelineno-0-901">901</a></span>
+<span class="normal"><a href="#__codelineno-0-902">902</a></span>
+<span class="normal"><a href="#__codelineno-0-903">903</a></span>
+<span class="normal"><a href="#__codelineno-0-904">904</a></span>
+<span class="normal"><a href="#__codelineno-0-905">905</a></span>
+<span class="normal"><a href="#__codelineno-0-906">906</a></span>
+<span class="normal"><a href="#__codelineno-0-907">907</a></span>
+<span class="normal"><a href="#__codelineno-0-908">908</a></span>
+<span class="normal"><a href="#__codelineno-0-909">909</a></span>
+<span class="normal"><a href="#__codelineno-0-910">910</a></span>
+<span class="normal"><a href="#__codelineno-0-911">911</a></span>
+<span class="normal"><a href="#__codelineno-0-912">912</a></span>
+<span class="normal"><a href="#__codelineno-0-913">913</a></span>
+<span class="normal"><a href="#__codelineno-0-914">914</a></span>
+<span class="normal"><a href="#__codelineno-0-915">915</a></span>
+<span class="normal"><a href="#__codelineno-0-916">916</a></span>
+<span class="normal"><a href="#__codelineno-0-917">917</a></span>
+<span class="normal"><a href="#__codelineno-0-918">918</a></span>
+<span class="normal"><a href="#__codelineno-0-919">919</a></span>
+<span class="normal"><a href="#__codelineno-0-920">920</a></span>
+<span class="normal"><a href="#__codelineno-0-921">921</a></span>
+<span class="normal"><a href="#__codelineno-0-922">922</a></span>
+<span class="normal"><a href="#__codelineno-0-923">923</a></span>
+<span class="normal"><a href="#__codelineno-0-924">924</a></span>
+<span class="normal"><a href="#__codelineno-0-925">925</a></span>
+<span class="normal"><a href="#__codelineno-0-926">926</a></span>
+<span class="normal"><a href="#__codelineno-0-927">927</a></span>
+<span class="normal"><a href="#__codelineno-0-928">928</a></span>
+<span class="normal"><a href="#__codelineno-0-929">929</a></span>
+<span class="normal"><a href="#__codelineno-0-930">930</a></span>
+<span class="normal"><a href="#__codelineno-0-931">931</a></span>
+<span class="normal"><a href="#__codelineno-0-932">932</a></span>
+<span class="normal"><a href="#__codelineno-0-933">933</a></span>
+<span class="normal"><a href="#__codelineno-0-934">934</a></span>
+<span class="normal"><a href="#__codelineno-0-935">935</a></span>
+<span class="normal"><a href="#__codelineno-0-936">936</a></span>
+<span class="normal"><a href="#__codelineno-0-937">937</a></span>
+<span class="normal"><a href="#__codelineno-0-938">938</a></span>
+<span class="normal"><a href="#__codelineno-0-939">939</a></span>
+<span class="normal"><a href="#__codelineno-0-940">940</a></span>
+<span class="normal"><a href="#__codelineno-0-941">941</a></span>
+<span class="normal"><a href="#__codelineno-0-942">942</a></span>
+<span class="normal"><a href="#__codelineno-0-943">943</a></span>
+<span class="normal"><a href="#__codelineno-0-944">944</a></span>
+<span class="normal"><a href="#__codelineno-0-945">945</a></span>
+<span class="normal"><a href="#__codelineno-0-946">946</a></span>
+<span class="normal"><a href="#__codelineno-0-947">947</a></span>
+<span class="normal"><a href="#__codelineno-0-948">948</a></span>
+<span class="normal"><a href="#__codelineno-0-949">949</a></span>
+<span class="normal"><a href="#__codelineno-0-950">950</a></span>
+<span class="normal"><a href="#__codelineno-0-951">951</a></span>
+<span class="normal"><a href="#__codelineno-0-952">952</a></span>
+<span class="normal"><a href="#__codelineno-0-953">953</a></span>
+<span class="normal"><a href="#__codelineno-0-954">954</a></span>
+<span class="normal"><a href="#__codelineno-0-955">955</a></span>
+<span class="normal"><a href="#__codelineno-0-956">956</a></span>
+<span class="normal"><a href="#__codelineno-0-957">957</a></span>
+<span class="normal"><a href="#__codelineno-0-958">958</a></span>
+<span class="normal"><a href="#__codelineno-0-959">959</a></span>
+<span class="normal"><a href="#__codelineno-0-960">960</a></span>
+<span class="normal"><a href="#__codelineno-0-961">961</a></span>
+<span class="normal"><a href="#__codelineno-0-962">962</a></span>
+<span class="normal"><a href="#__codelineno-0-963">963</a></span>
+<span class="normal"><a href="#__codelineno-0-964">964</a></span>
+<span class="normal"><a href="#__codelineno-0-965">965</a></span>
+<span class="normal"><a href="#__codelineno-0-966">966</a></span>
+<span class="normal"><a href="#__codelineno-0-967">967</a></span>
+<span class="normal"><a href="#__codelineno-0-968">968</a></span>
+<span class="normal"><a href="#__codelineno-0-969">969</a></span>
+<span class="normal"><a href="#__codelineno-0-970">970</a></span>
+<span class="normal"><a href="#__codelineno-0-971">971</a></span>
+<span class="normal"><a href="#__codelineno-0-972">972</a></span>
+<span class="normal"><a href="#__codelineno-0-973">973</a></span>
+<span class="normal"><a href="#__codelineno-0-974">974</a></span>
+<span class="normal"><a href="#__codelineno-0-975">975</a></span>
+<span class="normal"><a href="#__codelineno-0-976">976</a></span>
+<span class="normal"><a href="#__codelineno-0-977">977</a></span>
+<span class="normal"><a href="#__codelineno-0-978">978</a></span>
+<span class="normal"><a href="#__codelineno-0-979">979</a></span>
+<span class="normal"><a href="#__codelineno-0-980">980</a></span>
+<span class="normal"><a href="#__codelineno-0-981">981</a></span>
+<span class="normal"><a href="#__codelineno-0-982">982</a></span>
+<span class="normal"><a href="#__codelineno-0-983">983</a></span>
+<span class="normal"><a href="#__codelineno-0-984">984</a></span>
+<span class="normal"><a href="#__codelineno-0-985">985</a></span>
+<span class="normal"><a href="#__codelineno-0-986">986</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-868" name="__codelineno-0-868"></a><span class="k">class</span> <span class="nc">MergeChildNodes</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-869" name="__codelineno-0-869"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes nodes but connect its children and parents to not lose the path.</span>
+<a id="__codelineno-0-870" name="__codelineno-0-870"></a>
+<a id="__codelineno-0-871" name="__codelineno-0-871"></a>
+<a id="__codelineno-0-872" name="__codelineno-0-872"></a><span class="sd">    **Usage:**</span>
+<a id="__codelineno-0-873" name="__codelineno-0-873"></a>
+<a id="__codelineno-0-874" name="__codelineno-0-874"></a><span class="sd">    ```python</span>
+<a id="__codelineno-0-875" name="__codelineno-0-875"></a><span class="sd">    from dict2graph import Dict2graph, Transformer, NodeTrans</span>
+<a id="__codelineno-0-876" name="__codelineno-0-876"></a><span class="sd">    from neo4j import GraphDatabase</span>
+<a id="__codelineno-0-877" name="__codelineno-0-877"></a>
+<a id="__codelineno-0-878" name="__codelineno-0-878"></a><span class="sd">    NEO4J_DRIVER = GraphDatabase.driver(&quot;neo4j://localhost&quot;)</span>
+<a id="__codelineno-0-879" name="__codelineno-0-879"></a>
+<a id="__codelineno-0-880" name="__codelineno-0-880"></a><span class="sd">    dic = {</span>
+<a id="__codelineno-0-881" name="__codelineno-0-881"></a><span class="sd">        &quot;person&quot;: {</span>
+<a id="__codelineno-0-882" name="__codelineno-0-882"></a><span class="sd">            &quot;name&quot;: &quot;Chrisjen Avasarala&quot;,</span>
+<a id="__codelineno-0-883" name="__codelineno-0-883"></a><span class="sd">            &quot;personal_info&quot;: {</span>
+<a id="__codelineno-0-884" name="__codelineno-0-884"></a><span class="sd">                &quot;Home&quot;: &quot;New York, Earth&quot;,</span>
+<a id="__codelineno-0-885" name="__codelineno-0-885"></a><span class="sd">                &quot;occupation&quot;: &quot;United Nations Government&quot;,</span>
+<a id="__codelineno-0-886" name="__codelineno-0-886"></a><span class="sd">            },</span>
+<a id="__codelineno-0-887" name="__codelineno-0-887"></a><span class="sd">        }</span>
+<a id="__codelineno-0-888" name="__codelineno-0-888"></a><span class="sd">    }</span>
+<a id="__codelineno-0-889" name="__codelineno-0-889"></a>
+<a id="__codelineno-0-890" name="__codelineno-0-890"></a><span class="sd">    d2g = Dict2graph()</span>
+<a id="__codelineno-0-891" name="__codelineno-0-891"></a>
+<a id="__codelineno-0-892" name="__codelineno-0-892"></a><span class="sd">    d2g.add_node_transformation(</span>
+<a id="__codelineno-0-893" name="__codelineno-0-893"></a><span class="sd">        Transformer.match_nodes(&quot;person&quot;).do(NodeTrans.MergeChildNodes(&quot;personal_info&quot;))</span>
+<a id="__codelineno-0-894" name="__codelineno-0-894"></a><span class="sd">    )</span>
+<a id="__codelineno-0-895" name="__codelineno-0-895"></a>
+<a id="__codelineno-0-896" name="__codelineno-0-896"></a><span class="sd">    d2g.parse(dic)</span>
+<a id="__codelineno-0-897" name="__codelineno-0-897"></a><span class="sd">    d2g.create(NEO4J_DRIVER)</span>
+<a id="__codelineno-0-898" name="__codelineno-0-898"></a><span class="sd">    ```</span>
+<a id="__codelineno-0-899" name="__codelineno-0-899"></a>
+<a id="__codelineno-0-900" name="__codelineno-0-900"></a><span class="sd">    Results in one person-node with all attributes instead of an extra &quot;personal_info&quot;-node connected to the person-node &quot;Chrisjen Avasarala&quot;</span>
+<a id="__codelineno-0-901" name="__codelineno-0-901"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-902" name="__codelineno-0-902"></a>
+<a id="__codelineno-0-903" name="__codelineno-0-903"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<a id="__codelineno-0-904" name="__codelineno-0-904"></a>        <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-905" name="__codelineno-0-905"></a>        <span class="n">child_labels</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">AnyLabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyLabel</span><span class="p">,</span>
+<a id="__codelineno-0-906" name="__codelineno-0-906"></a>        <span class="n">child_relation_type</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AnyRelation</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyRelation</span><span class="p">,</span>
+<a id="__codelineno-0-907" name="__codelineno-0-907"></a>        <span class="n">overwrite_existing_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-908" name="__codelineno-0-908"></a>        <span class="n">prefix_merged_props_with_primary_label_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-909" name="__codelineno-0-909"></a>        <span class="n">prefix_merged_props_with_hash_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-910" name="__codelineno-0-910"></a>        <span class="n">include_relation_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-911" name="__codelineno-0-911"></a>    <span class="p">):</span>
+<a id="__codelineno-0-912" name="__codelineno-0-912"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+<a id="__codelineno-0-913" name="__codelineno-0-913"></a>
+<a id="__codelineno-0-914" name="__codelineno-0-914"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-915" name="__codelineno-0-915"></a><span class="sd">            child_labels (Union[str, List[str], AnyLabel], optional): Label to match a specific child. Defaults to AnyLabel which merges all children</span>
+<a id="__codelineno-0-916" name="__codelineno-0-916"></a><span class="sd">            child_relation_type (Union[str, AnyRelation], optional): If you want to match children with a specifi relationshop only. Defaults to AnyRelation.</span>
+<a id="__codelineno-0-917" name="__codelineno-0-917"></a><span class="sd">            overwrite_existing_props (bool, optional): If parent and children share property keys overwrite them on the parent. If set so false, the props will get an index. Defaults to True.</span>
+<a id="__codelineno-0-918" name="__codelineno-0-918"></a><span class="sd">            prefix_merged_props_with_primary_label_of_child (bool, optional): Prefix the merged properties with the primary label of the child. Defaults to False.</span>
+<a id="__codelineno-0-919" name="__codelineno-0-919"></a><span class="sd">            prefix_merged_props_with_hash_of_child (bool, optional): Prefix the merged properties with a hash of the child. Defaults to False.</span>
+<a id="__codelineno-0-920" name="__codelineno-0-920"></a><span class="sd">            include_relation_props (bool, optional): Merge properties from the Node-child relationship as well. Defaults to True.</span>
+<a id="__codelineno-0-921" name="__codelineno-0-921"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-922" name="__codelineno-0-922"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child_labels</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-0-923" name="__codelineno-0-923"></a>            <span class="n">child_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">child_labels</span><span class="p">]</span>
+<a id="__codelineno-0-924" name="__codelineno-0-924"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span> <span class="o">=</span> <span class="n">child_labels</span>
+<a id="__codelineno-0-925" name="__codelineno-0-925"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span> <span class="o">=</span> <span class="n">child_relation_type</span>
+<a id="__codelineno-0-926" name="__codelineno-0-926"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">overwrite_existing_props</span> <span class="o">=</span> <span class="n">overwrite_existing_props</span>
+<a id="__codelineno-0-927" name="__codelineno-0-927"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_primary_label</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-928" name="__codelineno-0-928"></a>            <span class="n">prefix_merged_props_with_primary_label_of_child</span>
+<a id="__codelineno-0-929" name="__codelineno-0-929"></a>        <span class="p">)</span>
+<a id="__codelineno-0-930" name="__codelineno-0-930"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_hash_of_child</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-931" name="__codelineno-0-931"></a>            <span class="n">prefix_merged_props_with_hash_of_child</span>
+<a id="__codelineno-0-932" name="__codelineno-0-932"></a>        <span class="p">)</span>
+<a id="__codelineno-0-933" name="__codelineno-0-933"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">include_relation_props</span> <span class="o">=</span> <span class="n">include_relation_props</span>
+<a id="__codelineno-0-934" name="__codelineno-0-934"></a>
+<a id="__codelineno-0-935" name="__codelineno-0-935"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
+<a id="__codelineno-0-936" name="__codelineno-0-936"></a>        <span class="k">for</span> <span class="n">outgoing_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
+<a id="__codelineno-0-937" name="__codelineno-0-937"></a>            <span class="n">child_node</span> <span class="o">=</span> <span class="n">outgoing_rel</span><span class="o">.</span><span class="n">end_node</span>
+<a id="__codelineno-0-938" name="__codelineno-0-938"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
+<a id="__codelineno-0-939" name="__codelineno-0-939"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span> <span class="o">==</span> <span class="n">AnyLabel</span>
+<a id="__codelineno-0-940" name="__codelineno-0-940"></a>                <span class="ow">or</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span><span class="p">)</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">child_node</span><span class="o">.</span><span class="n">labels</span><span class="p">))</span>
+<a id="__codelineno-0-941" name="__codelineno-0-941"></a>            <span class="p">):</span>
+<a id="__codelineno-0-942" name="__codelineno-0-942"></a>                <span class="k">continue</span>
+<a id="__codelineno-0-943" name="__codelineno-0-943"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
+<a id="__codelineno-0-944" name="__codelineno-0-944"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span> <span class="o">==</span> <span class="n">AnyRelation</span>
+<a id="__codelineno-0-945" name="__codelineno-0-945"></a>                <span class="ow">or</span> <span class="n">outgoing_rel</span><span class="o">.</span><span class="n">relation_type</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span>
+<a id="__codelineno-0-946" name="__codelineno-0-946"></a>            <span class="p">):</span>
+<a id="__codelineno-0-947" name="__codelineno-0-947"></a>                <span class="k">continue</span>
+<a id="__codelineno-0-948" name="__codelineno-0-948"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">include_relation_props</span><span class="p">:</span>
+<a id="__codelineno-0-949" name="__codelineno-0-949"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">_merge_props</span><span class="p">(</span><span class="n">target_node</span><span class="o">=</span><span class="n">node</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">outgoing_rel</span><span class="p">)</span>
+<a id="__codelineno-0-950" name="__codelineno-0-950"></a>
+<a id="__codelineno-0-951" name="__codelineno-0-951"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_merge_props</span><span class="p">(</span><span class="n">target_node</span><span class="o">=</span><span class="n">node</span><span class="p">,</span> <span class="n">obj</span><span class="o">=</span><span class="n">child_node</span><span class="p">)</span>
+<a id="__codelineno-0-952" name="__codelineno-0-952"></a>            <span class="k">for</span> <span class="n">outgoing_child_rel</span> <span class="ow">in</span> <span class="n">child_node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
+<a id="__codelineno-0-953" name="__codelineno-0-953"></a>                <span class="n">outgoing_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">node</span>
+<a id="__codelineno-0-954" name="__codelineno-0-954"></a>            <span class="k">for</span> <span class="n">incoming_child_rel</span> <span class="ow">in</span> <span class="n">child_node</span><span class="o">.</span><span class="n">incoming_relations</span><span class="p">:</span>
+<a id="__codelineno-0-955" name="__codelineno-0-955"></a>                <span class="k">if</span> <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">!=</span> <span class="n">node</span><span class="p">:</span>
+<a id="__codelineno-0-956" name="__codelineno-0-956"></a>                    <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">node</span>
+<a id="__codelineno-0-957" name="__codelineno-0-957"></a>                <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-958" name="__codelineno-0-958"></a>                    <span class="n">incoming_child_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-959" name="__codelineno-0-959"></a>            <span class="n">child_node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-960" name="__codelineno-0-960"></a>
+<a id="__codelineno-0-961" name="__codelineno-0-961"></a>    <span class="k">def</span> <span class="nf">_merge_props</span><span class="p">(</span>
+<a id="__codelineno-0-962" name="__codelineno-0-962"></a>        <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-963" name="__codelineno-0-963"></a>        <span class="n">target_node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span>
+<a id="__codelineno-0-964" name="__codelineno-0-964"></a>        <span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Node</span><span class="p">,</span> <span class="n">Relation</span><span class="p">],</span>
+<a id="__codelineno-0-965" name="__codelineno-0-965"></a>    <span class="p">):</span>
+<a id="__codelineno-0-966" name="__codelineno-0-966"></a>
+<a id="__codelineno-0-967" name="__codelineno-0-967"></a>        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-0-968" name="__codelineno-0-968"></a>            <span class="n">result_key</span> <span class="o">=</span> <span class="n">key</span>
+<a id="__codelineno-0-969" name="__codelineno-0-969"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_primary_label</span><span class="p">:</span>
+<a id="__codelineno-0-970" name="__codelineno-0-970"></a>                <span class="n">prefix</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-971" name="__codelineno-0-971"></a>                    <span class="n">obj</span><span class="o">.</span><span class="n">primary_label</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Node</span><span class="p">)</span> <span class="k">else</span> <span class="n">obj</span><span class="o">.</span><span class="n">relation_type</span>
+<a id="__codelineno-0-972" name="__codelineno-0-972"></a>                <span class="p">)</span>
+<a id="__codelineno-0-973" name="__codelineno-0-973"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-974" name="__codelineno-0-974"></a>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_hash_of_child</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Node</span><span class="p">):</span>
+<a id="__codelineno-0-975" name="__codelineno-0-975"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="n">get_hash</span><span class="p">()</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-976" name="__codelineno-0-976"></a>            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">target_node</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">overwrite_existing_props</span><span class="p">:</span>
+<a id="__codelineno-0-977" name="__codelineno-0-977"></a>                <span class="n">max_index</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+<a id="__codelineno-0-978" name="__codelineno-0-978"></a>                    <span class="p">[</span>
+<a id="__codelineno-0-979" name="__codelineno-0-979"></a>                        <span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-0-980" name="__codelineno-0-980"></a>                        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">target_node</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-0-981" name="__codelineno-0-981"></a>                        <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">k</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
+<a id="__codelineno-0-982" name="__codelineno-0-982"></a>                    <span class="p">],</span>
+<a id="__codelineno-0-983" name="__codelineno-0-983"></a>                    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-984" name="__codelineno-0-984"></a>                <span class="p">)</span>
+<a id="__codelineno-0-985" name="__codelineno-0-985"></a>                <span class="n">result_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result_key</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">max_index</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-986" name="__codelineno-0-986"></a>            <span class="n">target_node</span><span class="p">[</span><span class="n">result_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -2533,6 +2699,163 @@ See <code>__init__()</code> for more options to modify the hash.</p>
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="dict2graph.transformers.node_transformers.MergeChildNodes.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">child_labels</span><span class="o">=</span><span class="n">AnyLabel</span><span class="p">,</span> <span class="n">child_relation_type</span><span class="o">=</span><span class="n">AnyRelation</span><span class="p">,</span> <span class="n">overwrite_existing_props</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">prefix_merged_props_with_primary_label_of_child</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefix_merged_props_with_hash_of_child</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">include_relation_props</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#dict2graph.transformers.node_transformers.MergeChildNodes.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p><em>summary</em></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>child_labels</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[str, <span title="typing.List">List</span>[str], <span title="dict2graph.transformers._base.AnyLabel">AnyLabel</span>]</code>
+          </td>
+          <td><p>Label to match a specific child. Defaults to AnyLabel which merges all children</p></td>
+          <td>
+                <code>AnyLabel</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>child_relation_type</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[str, <span title="dict2graph.transformers._base.AnyRelation">AnyRelation</span>]</code>
+          </td>
+          <td><p>If you want to match children with a specifi relationshop only. Defaults to AnyRelation.</p></td>
+          <td>
+                <code>AnyRelation</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>overwrite_existing_props</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>If parent and children share property keys overwrite them on the parent. If set so false, the props will get an index. Defaults to True.</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>prefix_merged_props_with_primary_label_of_child</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>Prefix the merged properties with the primary label of the child. Defaults to False.</p></td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>prefix_merged_props_with_hash_of_child</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>Prefix the merged properties with a hash of the child. Defaults to False.</p></td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>include_relation_props</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>Merge properties from the Node-child relationship as well. Defaults to True.</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>dict2graph/transformers/node_transformers.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-903">903</a></span>
+<span class="normal"><a href="#__codelineno-0-904">904</a></span>
+<span class="normal"><a href="#__codelineno-0-905">905</a></span>
+<span class="normal"><a href="#__codelineno-0-906">906</a></span>
+<span class="normal"><a href="#__codelineno-0-907">907</a></span>
+<span class="normal"><a href="#__codelineno-0-908">908</a></span>
+<span class="normal"><a href="#__codelineno-0-909">909</a></span>
+<span class="normal"><a href="#__codelineno-0-910">910</a></span>
+<span class="normal"><a href="#__codelineno-0-911">911</a></span>
+<span class="normal"><a href="#__codelineno-0-912">912</a></span>
+<span class="normal"><a href="#__codelineno-0-913">913</a></span>
+<span class="normal"><a href="#__codelineno-0-914">914</a></span>
+<span class="normal"><a href="#__codelineno-0-915">915</a></span>
+<span class="normal"><a href="#__codelineno-0-916">916</a></span>
+<span class="normal"><a href="#__codelineno-0-917">917</a></span>
+<span class="normal"><a href="#__codelineno-0-918">918</a></span>
+<span class="normal"><a href="#__codelineno-0-919">919</a></span>
+<span class="normal"><a href="#__codelineno-0-920">920</a></span>
+<span class="normal"><a href="#__codelineno-0-921">921</a></span>
+<span class="normal"><a href="#__codelineno-0-922">922</a></span>
+<span class="normal"><a href="#__codelineno-0-923">923</a></span>
+<span class="normal"><a href="#__codelineno-0-924">924</a></span>
+<span class="normal"><a href="#__codelineno-0-925">925</a></span>
+<span class="normal"><a href="#__codelineno-0-926">926</a></span>
+<span class="normal"><a href="#__codelineno-0-927">927</a></span>
+<span class="normal"><a href="#__codelineno-0-928">928</a></span>
+<span class="normal"><a href="#__codelineno-0-929">929</a></span>
+<span class="normal"><a href="#__codelineno-0-930">930</a></span>
+<span class="normal"><a href="#__codelineno-0-931">931</a></span>
+<span class="normal"><a href="#__codelineno-0-932">932</a></span>
+<span class="normal"><a href="#__codelineno-0-933">933</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-903" name="__codelineno-0-903"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<a id="__codelineno-0-904" name="__codelineno-0-904"></a>    <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-905" name="__codelineno-0-905"></a>    <span class="n">child_labels</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">AnyLabel</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyLabel</span><span class="p">,</span>
+<a id="__codelineno-0-906" name="__codelineno-0-906"></a>    <span class="n">child_relation_type</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AnyRelation</span><span class="p">]</span> <span class="o">=</span> <span class="n">AnyRelation</span><span class="p">,</span>
+<a id="__codelineno-0-907" name="__codelineno-0-907"></a>    <span class="n">overwrite_existing_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-908" name="__codelineno-0-908"></a>    <span class="n">prefix_merged_props_with_primary_label_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-909" name="__codelineno-0-909"></a>    <span class="n">prefix_merged_props_with_hash_of_child</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-910" name="__codelineno-0-910"></a>    <span class="n">include_relation_props</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-911" name="__codelineno-0-911"></a><span class="p">):</span>
+<a id="__codelineno-0-912" name="__codelineno-0-912"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+<a id="__codelineno-0-913" name="__codelineno-0-913"></a>
+<a id="__codelineno-0-914" name="__codelineno-0-914"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-915" name="__codelineno-0-915"></a><span class="sd">        child_labels (Union[str, List[str], AnyLabel], optional): Label to match a specific child. Defaults to AnyLabel which merges all children</span>
+<a id="__codelineno-0-916" name="__codelineno-0-916"></a><span class="sd">        child_relation_type (Union[str, AnyRelation], optional): If you want to match children with a specifi relationshop only. Defaults to AnyRelation.</span>
+<a id="__codelineno-0-917" name="__codelineno-0-917"></a><span class="sd">        overwrite_existing_props (bool, optional): If parent and children share property keys overwrite them on the parent. If set so false, the props will get an index. Defaults to True.</span>
+<a id="__codelineno-0-918" name="__codelineno-0-918"></a><span class="sd">        prefix_merged_props_with_primary_label_of_child (bool, optional): Prefix the merged properties with the primary label of the child. Defaults to False.</span>
+<a id="__codelineno-0-919" name="__codelineno-0-919"></a><span class="sd">        prefix_merged_props_with_hash_of_child (bool, optional): Prefix the merged properties with a hash of the child. Defaults to False.</span>
+<a id="__codelineno-0-920" name="__codelineno-0-920"></a><span class="sd">        include_relation_props (bool, optional): Merge properties from the Node-child relationship as well. Defaults to True.</span>
+<a id="__codelineno-0-921" name="__codelineno-0-921"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-922" name="__codelineno-0-922"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child_labels</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-0-923" name="__codelineno-0-923"></a>        <span class="n">child_labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">child_labels</span><span class="p">]</span>
+<a id="__codelineno-0-924" name="__codelineno-0-924"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">child_labels</span> <span class="o">=</span> <span class="n">child_labels</span>
+<a id="__codelineno-0-925" name="__codelineno-0-925"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">child_relation_type</span> <span class="o">=</span> <span class="n">child_relation_type</span>
+<a id="__codelineno-0-926" name="__codelineno-0-926"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">overwrite_existing_props</span> <span class="o">=</span> <span class="n">overwrite_existing_props</span>
+<a id="__codelineno-0-927" name="__codelineno-0-927"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_primary_label</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-928" name="__codelineno-0-928"></a>        <span class="n">prefix_merged_props_with_primary_label_of_child</span>
+<a id="__codelineno-0-929" name="__codelineno-0-929"></a>    <span class="p">)</span>
+<a id="__codelineno-0-930" name="__codelineno-0-930"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">prefix_merged_props_with_hash_of_child</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-0-931" name="__codelineno-0-931"></a>        <span class="n">prefix_merged_props_with_hash_of_child</span>
+<a id="__codelineno-0-932" name="__codelineno-0-932"></a>    <span class="p">)</span>
+<a id="__codelineno-0-933" name="__codelineno-0-933"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">include_relation_props</span> <span class="o">=</span> <span class="n">include_relation_props</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
 
 
 
@@ -3496,26 +3819,118 @@ In most cases this is unnecessary and will make your graph model larger as it ha
         Bases: <code><span title="dict2graph.transformers._base._NodeTransformerBase">_NodeTransformerBase</span></code></p>
 
   
-      <p><em>summary</em></p>
+      <p>Removes nodes but connect its children and parents to not lose the path.</p>
+<p><strong>Usage:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">&quot;person&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Chrisjen Avasarala&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s2">&quot;connections&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="s2">&quot;child_1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Charanpal&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="s2">&quot;child_2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ashanti&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="p">},</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_node_transformation</span><span class="p">(</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;connections&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">PopNode</span><span class="p">())</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">NEO4J_DRIVER</span><span class="p">)</span>
+</code></pre></div>
+<p>Results in directly conneting children to person "Chrisjen Avasarala" without an in between node "connections"</p>
 
 
         <details class="quote">
           <summary>Source code in <code>dict2graph/transformers/node_transformers.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-792">792</a></span>
-<span class="normal"><a href="#__codelineno-0-793">793</a></span>
-<span class="normal"><a href="#__codelineno-0-794">794</a></span>
-<span class="normal"><a href="#__codelineno-0-795">795</a></span>
-<span class="normal"><a href="#__codelineno-0-796">796</a></span>
-<span class="normal"><a href="#__codelineno-0-797">797</a></span>
-<span class="normal"><a href="#__codelineno-0-798">798</a></span>
-<span class="normal"><a href="#__codelineno-0-799">799</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-792" name="__codelineno-0-792"></a><span class="k">class</span> <span class="nc">PopNode</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
-<a id="__codelineno-0-793" name="__codelineno-0-793"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
-<a id="__codelineno-0-794" name="__codelineno-0-794"></a>
-<a id="__codelineno-0-795" name="__codelineno-0-795"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-0-796" name="__codelineno-0-796"></a>        <span class="k">for</span> <span class="n">i_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">incoming_relations</span><span class="p">:</span>
-<a id="__codelineno-0-797" name="__codelineno-0-797"></a>            <span class="k">for</span> <span class="n">o_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
-<a id="__codelineno-0-798" name="__codelineno-0-798"></a>                <span class="n">i_rel</span><span class="o">.</span><span class="n">end_node</span> <span class="o">=</span> <span class="n">o_rel</span><span class="o">.</span><span class="n">end_node</span>
-<a id="__codelineno-0-799" name="__codelineno-0-799"></a>        <span class="n">node</span><span class="o">.</span><span class="n">deleted</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-825">825</a></span>
+<span class="normal"><a href="#__codelineno-0-826">826</a></span>
+<span class="normal"><a href="#__codelineno-0-827">827</a></span>
+<span class="normal"><a href="#__codelineno-0-828">828</a></span>
+<span class="normal"><a href="#__codelineno-0-829">829</a></span>
+<span class="normal"><a href="#__codelineno-0-830">830</a></span>
+<span class="normal"><a href="#__codelineno-0-831">831</a></span>
+<span class="normal"><a href="#__codelineno-0-832">832</a></span>
+<span class="normal"><a href="#__codelineno-0-833">833</a></span>
+<span class="normal"><a href="#__codelineno-0-834">834</a></span>
+<span class="normal"><a href="#__codelineno-0-835">835</a></span>
+<span class="normal"><a href="#__codelineno-0-836">836</a></span>
+<span class="normal"><a href="#__codelineno-0-837">837</a></span>
+<span class="normal"><a href="#__codelineno-0-838">838</a></span>
+<span class="normal"><a href="#__codelineno-0-839">839</a></span>
+<span class="normal"><a href="#__codelineno-0-840">840</a></span>
+<span class="normal"><a href="#__codelineno-0-841">841</a></span>
+<span class="normal"><a href="#__codelineno-0-842">842</a></span>
+<span class="normal"><a href="#__codelineno-0-843">843</a></span>
+<span class="normal"><a href="#__codelineno-0-844">844</a></span>
+<span class="normal"><a href="#__codelineno-0-845">845</a></span>
+<span class="normal"><a href="#__codelineno-0-846">846</a></span>
+<span class="normal"><a href="#__codelineno-0-847">847</a></span>
+<span class="normal"><a href="#__codelineno-0-848">848</a></span>
+<span class="normal"><a href="#__codelineno-0-849">849</a></span>
+<span class="normal"><a href="#__codelineno-0-850">850</a></span>
+<span class="normal"><a href="#__codelineno-0-851">851</a></span>
+<span class="normal"><a href="#__codelineno-0-852">852</a></span>
+<span class="normal"><a href="#__codelineno-0-853">853</a></span>
+<span class="normal"><a href="#__codelineno-0-854">854</a></span>
+<span class="normal"><a href="#__codelineno-0-855">855</a></span>
+<span class="normal"><a href="#__codelineno-0-856">856</a></span>
+<span class="normal"><a href="#__codelineno-0-857">857</a></span>
+<span class="normal"><a href="#__codelineno-0-858">858</a></span>
+<span class="normal"><a href="#__codelineno-0-859">859</a></span>
+<span class="normal"><a href="#__codelineno-0-860">860</a></span>
+<span class="normal"><a href="#__codelineno-0-861">861</a></span>
+<span class="normal"><a href="#__codelineno-0-862">862</a></span>
+<span class="normal"><a href="#__codelineno-0-863">863</a></span>
+<span class="normal"><a href="#__codelineno-0-864">864</a></span>
+<span class="normal"><a href="#__codelineno-0-865">865</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-825" name="__codelineno-0-825"></a><span class="k">class</span> <span class="nc">PopNode</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-826" name="__codelineno-0-826"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes nodes but connect its children and parents to not lose the path.</span>
+<a id="__codelineno-0-827" name="__codelineno-0-827"></a>
+<a id="__codelineno-0-828" name="__codelineno-0-828"></a>
+<a id="__codelineno-0-829" name="__codelineno-0-829"></a><span class="sd">    **Usage:**</span>
+<a id="__codelineno-0-830" name="__codelineno-0-830"></a>
+<a id="__codelineno-0-831" name="__codelineno-0-831"></a><span class="sd">    ```python</span>
+<a id="__codelineno-0-832" name="__codelineno-0-832"></a><span class="sd">    from dict2graph import Dict2graph, Transformer, NodeTrans</span>
+<a id="__codelineno-0-833" name="__codelineno-0-833"></a><span class="sd">    from neo4j import GraphDatabase</span>
+<a id="__codelineno-0-834" name="__codelineno-0-834"></a>
+<a id="__codelineno-0-835" name="__codelineno-0-835"></a><span class="sd">    NEO4J_DRIVER = GraphDatabase.driver(&quot;neo4j://localhost&quot;)</span>
+<a id="__codelineno-0-836" name="__codelineno-0-836"></a>
+<a id="__codelineno-0-837" name="__codelineno-0-837"></a><span class="sd">    dic = {</span>
+<a id="__codelineno-0-838" name="__codelineno-0-838"></a><span class="sd">        &quot;person&quot;: {</span>
+<a id="__codelineno-0-839" name="__codelineno-0-839"></a><span class="sd">            &quot;name&quot;: &quot;Chrisjen Avasarala&quot;,</span>
+<a id="__codelineno-0-840" name="__codelineno-0-840"></a><span class="sd">            &quot;connections&quot;: {</span>
+<a id="__codelineno-0-841" name="__codelineno-0-841"></a><span class="sd">                &quot;child_1&quot;: {&quot;name&quot;: &quot;Charanpal&quot;},</span>
+<a id="__codelineno-0-842" name="__codelineno-0-842"></a><span class="sd">                &quot;child_2&quot;: {&quot;name&quot;: &quot;Ashanti&quot;},</span>
+<a id="__codelineno-0-843" name="__codelineno-0-843"></a><span class="sd">            },</span>
+<a id="__codelineno-0-844" name="__codelineno-0-844"></a><span class="sd">        }</span>
+<a id="__codelineno-0-845" name="__codelineno-0-845"></a><span class="sd">    }</span>
+<a id="__codelineno-0-846" name="__codelineno-0-846"></a>
+<a id="__codelineno-0-847" name="__codelineno-0-847"></a><span class="sd">    d2g = Dict2graph()</span>
+<a id="__codelineno-0-848" name="__codelineno-0-848"></a>
+<a id="__codelineno-0-849" name="__codelineno-0-849"></a><span class="sd">    d2g.add_node_transformation(</span>
+<a id="__codelineno-0-850" name="__codelineno-0-850"></a><span class="sd">        Transformer.match_nodes(&quot;connections&quot;).do(NodeTrans.PopNode())</span>
+<a id="__codelineno-0-851" name="__codelineno-0-851"></a><span class="sd">    )</span>
+<a id="__codelineno-0-852" name="__codelineno-0-852"></a>
+<a id="__codelineno-0-853" name="__codelineno-0-853"></a><span class="sd">    d2g.parse(dic)</span>
+<a id="__codelineno-0-854" name="__codelineno-0-854"></a><span class="sd">    d2g.create(NEO4J_DRIVER)</span>
+<a id="__codelineno-0-855" name="__codelineno-0-855"></a><span class="sd">    ```</span>
+<a id="__codelineno-0-856" name="__codelineno-0-856"></a>
+<a id="__codelineno-0-857" name="__codelineno-0-857"></a><span class="sd">    Results in directly conneting children to person &quot;Chrisjen Avasarala&quot; without an in between node &quot;connections&quot;</span>
+<a id="__codelineno-0-858" name="__codelineno-0-858"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-859" name="__codelineno-0-859"></a>
+<a id="__codelineno-0-860" name="__codelineno-0-860"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
+<a id="__codelineno-0-861" name="__codelineno-0-861"></a>        <span class="k">for</span> <span class="n">parent_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">incoming_relations</span><span class="p">:</span>
+<a id="__codelineno-0-862" name="__codelineno-0-862"></a>            <span class="k">for</span> <span class="n">child_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
+<a id="__codelineno-0-863" name="__codelineno-0-863"></a>                <span class="n">child_rel</span><span class="o">.</span><span class="n">start_node</span> <span class="o">=</span> <span class="n">parent_rel</span><span class="o">.</span><span class="n">start_node</span>
+<a id="__codelineno-0-864" name="__codelineno-0-864"></a>            <span class="n">parent_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-865" name="__codelineno-0-865"></a>        <span class="n">node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -4333,7 +4748,12 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
 <span class="normal"><a href="#__codelineno-0-769">769</a></span>
 <span class="normal"><a href="#__codelineno-0-770">770</a></span>
 <span class="normal"><a href="#__codelineno-0-771">771</a></span>
-<span class="normal"><a href="#__codelineno-0-772">772</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-733" name="__codelineno-0-733"></a><span class="k">class</span> <span class="nc">RemoveNodesWithNoProps</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-772">772</a></span>
+<span class="normal"><a href="#__codelineno-0-773">773</a></span>
+<span class="normal"><a href="#__codelineno-0-774">774</a></span>
+<span class="normal"><a href="#__codelineno-0-775">775</a></span>
+<span class="normal"><a href="#__codelineno-0-776">776</a></span>
+<span class="normal"><a href="#__codelineno-0-777">777</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-733" name="__codelineno-0-733"></a><span class="k">class</span> <span class="nc">RemoveNodesWithNoProps</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
 <a id="__codelineno-0-734" name="__codelineno-0-734"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes nodes if they have no properties.</span>
 <a id="__codelineno-0-735" name="__codelineno-0-735"></a><span class="sd">    **Usage:**</span>
 <a id="__codelineno-0-736" name="__codelineno-0-736"></a>
@@ -4364,15 +4784,20 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
 <a id="__codelineno-0-761" name="__codelineno-0-761"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-762" name="__codelineno-0-762"></a>
 <a id="__codelineno-0-763" name="__codelineno-0-763"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">only_if_no_child_nodes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-<a id="__codelineno-0-764" name="__codelineno-0-764"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="o">=</span> <span class="n">only_if_no_child_nodes</span>
+<a id="__codelineno-0-764" name="__codelineno-0-764"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;_summary_</span>
 <a id="__codelineno-0-765" name="__codelineno-0-765"></a>
-<a id="__codelineno-0-766" name="__codelineno-0-766"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-0-767" name="__codelineno-0-767"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span>
-<a id="__codelineno-0-768" name="__codelineno-0-768"></a>            <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="__codelineno-0-769" name="__codelineno-0-769"></a>        <span class="p">):</span>
-<a id="__codelineno-0-770" name="__codelineno-0-770"></a>            <span class="n">node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-0-771" name="__codelineno-0-771"></a>            <span class="k">for</span> <span class="n">o_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">relations</span><span class="p">:</span>
-<a id="__codelineno-0-772" name="__codelineno-0-772"></a>                <span class="n">o_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-766" name="__codelineno-0-766"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-767" name="__codelineno-0-767"></a><span class="sd">            only_if_no_child_nodes (bool, optional): Remove the node only if it is  at the edge of our graph and has not outgoing relationshsips. Defaults to True.</span>
+<a id="__codelineno-0-768" name="__codelineno-0-768"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-0-769" name="__codelineno-0-769"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="o">=</span> <span class="n">only_if_no_child_nodes</span>
+<a id="__codelineno-0-770" name="__codelineno-0-770"></a>
+<a id="__codelineno-0-771" name="__codelineno-0-771"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">):</span>
+<a id="__codelineno-0-772" name="__codelineno-0-772"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span>
+<a id="__codelineno-0-773" name="__codelineno-0-773"></a>            <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<a id="__codelineno-0-774" name="__codelineno-0-774"></a>        <span class="p">):</span>
+<a id="__codelineno-0-775" name="__codelineno-0-775"></a>            <span class="n">node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-776" name="__codelineno-0-776"></a>            <span class="k">for</span> <span class="n">o_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">relations</span><span class="p">:</span>
+<a id="__codelineno-0-777" name="__codelineno-0-777"></a>                <span class="n">o_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -4387,6 +4812,65 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h4 id="dict2graph.transformers.node_transformers.RemoveNodesWithNoProps.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">only_if_no_child_nodes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#dict2graph.transformers.node_transformers.RemoveNodesWithNoProps.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+
+  <div class="doc doc-contents ">
+  
+      <p><em>summary</em></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>only_if_no_child_nodes</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>Remove the node only if it is  at the edge of our graph and has not outgoing relationshsips. Defaults to True.</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>dict2graph/transformers/node_transformers.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-763">763</a></span>
+<span class="normal"><a href="#__codelineno-0-764">764</a></span>
+<span class="normal"><a href="#__codelineno-0-765">765</a></span>
+<span class="normal"><a href="#__codelineno-0-766">766</a></span>
+<span class="normal"><a href="#__codelineno-0-767">767</a></span>
+<span class="normal"><a href="#__codelineno-0-768">768</a></span>
+<span class="normal"><a href="#__codelineno-0-769">769</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-763" name="__codelineno-0-763"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">only_if_no_child_nodes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<a id="__codelineno-0-764" name="__codelineno-0-764"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_</span>
+<a id="__codelineno-0-765" name="__codelineno-0-765"></a>
+<a id="__codelineno-0-766" name="__codelineno-0-766"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-767" name="__codelineno-0-767"></a><span class="sd">        only_if_no_child_nodes (bool, optional): Remove the node only if it is  at the edge of our graph and has not outgoing relationshsips. Defaults to True.</span>
+<a id="__codelineno-0-768" name="__codelineno-0-768"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-769" name="__codelineno-0-769"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="o">=</span> <span class="n">only_if_no_child_nodes</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
 
 
 
@@ -4412,17 +4896,36 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
         Bases: <code><span title="dict2graph.transformers._base._NodeTransformerBase">_NodeTransformerBase</span></code></p>
 
   
-      <p><em>summary</em></p>
+      <p>Removes nodes if they have only empty properties.
+"Empty" in terms of null/"" values
+<strong>Usage:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">NEO4J_DRIVER</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="s2">&quot;neo4j://localhost&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">dic</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">&quot;person&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Roberta W. Draper&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s2">&quot;child&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">d2g</span> <span class="o">=</span> <span class="n">Dict2graph</span><span class="p">()</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">d2g</span><span class="o">.</span><span class="n">add_node_transformation</span><span class="p">(</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;child&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">NodeTrans</span><span class="o">.</span><span class="n">RemoveNodesWithOnlyEmptyProps</span><span class="p">())</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">d2g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">d2g</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">NEO4J_DRIVER</span><span class="p">)</span>
+</code></pre></div>
+<p>Results in removing the empty <code>child</code>-node</p>
 
 
         <details class="quote">
           <summary>Source code in <code>dict2graph/transformers/node_transformers.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-775">775</a></span>
-<span class="normal"><a href="#__codelineno-0-776">776</a></span>
-<span class="normal"><a href="#__codelineno-0-777">777</a></span>
-<span class="normal"><a href="#__codelineno-0-778">778</a></span>
-<span class="normal"><a href="#__codelineno-0-779">779</a></span>
-<span class="normal"><a href="#__codelineno-0-780">780</a></span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-780">780</a></span>
 <span class="normal"><a href="#__codelineno-0-781">781</a></span>
 <span class="normal"><a href="#__codelineno-0-782">782</a></span>
 <span class="normal"><a href="#__codelineno-0-783">783</a></span>
@@ -4431,21 +4934,82 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
 <span class="normal"><a href="#__codelineno-0-786">786</a></span>
 <span class="normal"><a href="#__codelineno-0-787">787</a></span>
 <span class="normal"><a href="#__codelineno-0-788">788</a></span>
-<span class="normal"><a href="#__codelineno-0-789">789</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-775" name="__codelineno-0-775"></a><span class="k">class</span> <span class="nc">RemoveNodesWithOnlyEmptyProps</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
-<a id="__codelineno-0-776" name="__codelineno-0-776"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;_summary_&quot;&quot;&quot;</span>
-<a id="__codelineno-0-777" name="__codelineno-0-777"></a>
-<a id="__codelineno-0-778" name="__codelineno-0-778"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">only_if_no_child_nodes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-<a id="__codelineno-0-779" name="__codelineno-0-779"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="o">=</span> <span class="n">only_if_no_child_nodes</span>
-<a id="__codelineno-0-780" name="__codelineno-0-780"></a>
-<a id="__codelineno-0-781" name="__codelineno-0-781"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span>
-<a id="__codelineno-0-782" name="__codelineno-0-782"></a>        <span class="bp">self</span><span class="p">,</span>
-<a id="__codelineno-0-783" name="__codelineno-0-783"></a>        <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span>
-<a id="__codelineno-0-784" name="__codelineno-0-784"></a>    <span class="p">):</span>
-<a id="__codelineno-0-785" name="__codelineno-0-785"></a>        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="kc">None</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">])]:</span>
-<a id="__codelineno-0-786" name="__codelineno-0-786"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-0-787" name="__codelineno-0-787"></a>                <span class="n">node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-0-788" name="__codelineno-0-788"></a>                <span class="k">for</span> <span class="n">o_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
-<a id="__codelineno-0-789" name="__codelineno-0-789"></a>                    <span class="n">o_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="normal"><a href="#__codelineno-0-789">789</a></span>
+<span class="normal"><a href="#__codelineno-0-790">790</a></span>
+<span class="normal"><a href="#__codelineno-0-791">791</a></span>
+<span class="normal"><a href="#__codelineno-0-792">792</a></span>
+<span class="normal"><a href="#__codelineno-0-793">793</a></span>
+<span class="normal"><a href="#__codelineno-0-794">794</a></span>
+<span class="normal"><a href="#__codelineno-0-795">795</a></span>
+<span class="normal"><a href="#__codelineno-0-796">796</a></span>
+<span class="normal"><a href="#__codelineno-0-797">797</a></span>
+<span class="normal"><a href="#__codelineno-0-798">798</a></span>
+<span class="normal"><a href="#__codelineno-0-799">799</a></span>
+<span class="normal"><a href="#__codelineno-0-800">800</a></span>
+<span class="normal"><a href="#__codelineno-0-801">801</a></span>
+<span class="normal"><a href="#__codelineno-0-802">802</a></span>
+<span class="normal"><a href="#__codelineno-0-803">803</a></span>
+<span class="normal"><a href="#__codelineno-0-804">804</a></span>
+<span class="normal"><a href="#__codelineno-0-805">805</a></span>
+<span class="normal"><a href="#__codelineno-0-806">806</a></span>
+<span class="normal"><a href="#__codelineno-0-807">807</a></span>
+<span class="normal"><a href="#__codelineno-0-808">808</a></span>
+<span class="normal"><a href="#__codelineno-0-809">809</a></span>
+<span class="normal"><a href="#__codelineno-0-810">810</a></span>
+<span class="normal"><a href="#__codelineno-0-811">811</a></span>
+<span class="normal"><a href="#__codelineno-0-812">812</a></span>
+<span class="normal"><a href="#__codelineno-0-813">813</a></span>
+<span class="normal"><a href="#__codelineno-0-814">814</a></span>
+<span class="normal"><a href="#__codelineno-0-815">815</a></span>
+<span class="normal"><a href="#__codelineno-0-816">816</a></span>
+<span class="normal"><a href="#__codelineno-0-817">817</a></span>
+<span class="normal"><a href="#__codelineno-0-818">818</a></span>
+<span class="normal"><a href="#__codelineno-0-819">819</a></span>
+<span class="normal"><a href="#__codelineno-0-820">820</a></span>
+<span class="normal"><a href="#__codelineno-0-821">821</a></span>
+<span class="normal"><a href="#__codelineno-0-822">822</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-780" name="__codelineno-0-780"></a><span class="k">class</span> <span class="nc">RemoveNodesWithOnlyEmptyProps</span><span class="p">(</span><span class="n">_NodeTransformerBase</span><span class="p">):</span>
+<a id="__codelineno-0-781" name="__codelineno-0-781"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes nodes if they have only empty properties.</span>
+<a id="__codelineno-0-782" name="__codelineno-0-782"></a><span class="sd">    &quot;Empty&quot; in terms of null/&quot;&quot; values</span>
+<a id="__codelineno-0-783" name="__codelineno-0-783"></a><span class="sd">    **Usage:**</span>
+<a id="__codelineno-0-784" name="__codelineno-0-784"></a>
+<a id="__codelineno-0-785" name="__codelineno-0-785"></a><span class="sd">    ```python</span>
+<a id="__codelineno-0-786" name="__codelineno-0-786"></a><span class="sd">    from dict2graph import Dict2graph, Transformer, NodeTrans</span>
+<a id="__codelineno-0-787" name="__codelineno-0-787"></a><span class="sd">    from neo4j import GraphDatabase</span>
+<a id="__codelineno-0-788" name="__codelineno-0-788"></a>
+<a id="__codelineno-0-789" name="__codelineno-0-789"></a><span class="sd">    NEO4J_DRIVER = GraphDatabase.driver(&quot;neo4j://localhost&quot;)</span>
+<a id="__codelineno-0-790" name="__codelineno-0-790"></a>
+<a id="__codelineno-0-791" name="__codelineno-0-791"></a><span class="sd">    dic = {</span>
+<a id="__codelineno-0-792" name="__codelineno-0-792"></a><span class="sd">        &quot;person&quot;: {</span>
+<a id="__codelineno-0-793" name="__codelineno-0-793"></a><span class="sd">            &quot;name&quot;: &quot;Roberta W. Draper&quot;,</span>
+<a id="__codelineno-0-794" name="__codelineno-0-794"></a><span class="sd">            &quot;child&quot;: {&quot;name&quot;:&quot;&quot;},</span>
+<a id="__codelineno-0-795" name="__codelineno-0-795"></a><span class="sd">        }</span>
+<a id="__codelineno-0-796" name="__codelineno-0-796"></a><span class="sd">    }</span>
+<a id="__codelineno-0-797" name="__codelineno-0-797"></a>
+<a id="__codelineno-0-798" name="__codelineno-0-798"></a><span class="sd">    d2g = Dict2graph()</span>
+<a id="__codelineno-0-799" name="__codelineno-0-799"></a>
+<a id="__codelineno-0-800" name="__codelineno-0-800"></a><span class="sd">    d2g.add_node_transformation(</span>
+<a id="__codelineno-0-801" name="__codelineno-0-801"></a><span class="sd">        Transformer.match_nodes(&quot;child&quot;).do(NodeTrans.RemoveNodesWithOnlyEmptyProps())</span>
+<a id="__codelineno-0-802" name="__codelineno-0-802"></a><span class="sd">    )</span>
+<a id="__codelineno-0-803" name="__codelineno-0-803"></a>
+<a id="__codelineno-0-804" name="__codelineno-0-804"></a><span class="sd">    d2g.parse(dic)</span>
+<a id="__codelineno-0-805" name="__codelineno-0-805"></a><span class="sd">    d2g.create(NEO4J_DRIVER)</span>
+<a id="__codelineno-0-806" name="__codelineno-0-806"></a><span class="sd">    ```</span>
+<a id="__codelineno-0-807" name="__codelineno-0-807"></a>
+<a id="__codelineno-0-808" name="__codelineno-0-808"></a><span class="sd">    Results in removing the empty `child`-node</span>
+<a id="__codelineno-0-809" name="__codelineno-0-809"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-810" name="__codelineno-0-810"></a>
+<a id="__codelineno-0-811" name="__codelineno-0-811"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">only_if_no_child_nodes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<a id="__codelineno-0-812" name="__codelineno-0-812"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="o">=</span> <span class="n">only_if_no_child_nodes</span>
+<a id="__codelineno-0-813" name="__codelineno-0-813"></a>
+<a id="__codelineno-0-814" name="__codelineno-0-814"></a>    <span class="k">def</span> <span class="nf">transform_node</span><span class="p">(</span>
+<a id="__codelineno-0-815" name="__codelineno-0-815"></a>        <span class="bp">self</span><span class="p">,</span>
+<a id="__codelineno-0-816" name="__codelineno-0-816"></a>        <span class="n">node</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span>
+<a id="__codelineno-0-817" name="__codelineno-0-817"></a>    <span class="p">):</span>
+<a id="__codelineno-0-818" name="__codelineno-0-818"></a>        <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="kc">None</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">])]:</span>
+<a id="__codelineno-0-819" name="__codelineno-0-819"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">only_if_no_child_nodes</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-820" name="__codelineno-0-820"></a>                <span class="n">node</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-0-821" name="__codelineno-0-821"></a>                <span class="k">for</span> <span class="n">o_rel</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">outgoing_relations</span><span class="p">:</span>
+<a id="__codelineno-0-822" name="__codelineno-0-822"></a>                    <span class="n">o_rel</span><span class="o">.</span><span class="n">deleted</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -4721,7 +5285,7 @@ Without the <code>RemoveEmptyListRootNodes</code> the <code>Joe Miller</code>-no
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "toc.follow"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
+      <script src="../assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
     
   </body>
