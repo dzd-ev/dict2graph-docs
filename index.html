@@ -366,15 +366,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#py2neo-depcrecation-warning" class="md-nav__link">
     py2neo depcrecation warning
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -391,18 +391,12 @@
     Load a dict
   </a>
   
-    <nav class="md-nav" aria-label="Load a dict">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#transform-the-model" class="md-nav__link">
     Transform the model
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -795,15 +789,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#py2neo-depcrecation-warning" class="md-nav__link">
     py2neo depcrecation warning
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -820,18 +814,12 @@
     Load a dict
   </a>
   
-    <nav class="md-nav" aria-label="Load a dict">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#transform-the-model" class="md-nav__link">
     Transform the model
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -883,10 +871,8 @@ dict2graph also comes with some powerful data transform capabilities.</p>
 <li><a href="#what-dict2graph-is-not">What dict2graph is <strong>not</strong></a></li>
 <li><a href="#py2neo-depcrecation-warning">py2neo depcrecation warning</a></li>
 <li><a href="#basic-usage-example">Basic Usage Example</a></li>
-<li><a href="#load-a-dict">Load a dict</a><ul>
+<li><a href="#load-a-dict">Load a dict</a></li>
 <li><a href="#transform-the-model">Transform the model</a></li>
-</ul>
-</li>
 </ul>
 <hr />
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
@@ -906,7 +892,7 @@ And if you are not happy with the structure of the result, dict2graph comes with
 <h3 id="what-dict2graph-is-not">What dict2graph is <strong>not</strong><a class="headerlink" href="#what-dict2graph-is-not" title="Permanent link">&para;</a></h3>
 <p>dict2graph can <strong>not</strong> be used for de-/serializing your dict into a graph database. There is no <code>graph2dict</code> functionality (nore is it planned to have one).<br />
 Your data/dict will be transformed to be more suitable in a graph represantation. On the way, certain informations can be lost. Reproducing the exact same dict from the graph is not possible in many cases.</p>
-<h3 id="py2neo-depcrecation-warning">py2neo depcrecation warning<a class="headerlink" href="#py2neo-depcrecation-warning" title="Permanent link">&para;</a></h3>
+<h2 id="py2neo-depcrecation-warning">py2neo depcrecation warning<a class="headerlink" href="#py2neo-depcrecation-warning" title="Permanent link">&para;</a></h2>
 <p>In past versions of <code>dict2graph</code>, the awesome <a href="https://py2neo.org/2021.1/"><code>py2neo</code></a> library was the only way to connect to a Neo4j instance.<br />
 But (sadly) this lib is in a low-maintanance mode. For now it is still supported but marked as deprecated. We recommend to switch to the official <a href="https://neo4j.com/docs/api/python-driver/current/">Neo4j Python Driver</a>. </p>
 <h2 id="basic-usage-example">Basic Usage Example<a class="headerlink" href="#basic-usage-example" title="Permanent link">&para;</a></h2>
@@ -933,7 +919,7 @@ But (sadly) this lib is in a low-maintanance mode. For now it is still supported
 </code></pre></div>
 <p>This will result in following graph:</p>
 <p><img alt="" src="img/readme_basic_example.png" title="Result example 1" /></p>
-<h4 id="transform-the-model">Transform the model<a class="headerlink" href="#transform-the-model" title="Permanent link">&para;</a></h4>
+<h3 id="transform-the-model">Transform the model<a class="headerlink" href="#transform-the-model" title="Permanent link">&para;</a></h3>
 <p>We now have loaded the dict data into a Neo4j Graph. But usally we dont need stuff like explicit <code>list</code>s in a graph. Also it is common to uppercase relationship types and capitalize labels.</p>
 <p>So we need to make some adjustments to improve the graph represenation of the dict.<br />
 This is where <code>dict2graph.Transformer</code>s come into play.</p>
@@ -960,7 +946,7 @@ This is where <code>dict2graph.Transformer</code>s come into play.</p>
 </code></pre></div>
 <p>Now that looks more like a graph we are used to, isn't it?</p>
 <p><img alt="" src="img/readme_basic_example_trans.png" title="Result example 1" /></p>
-<p>There are a lot of more powerful <a href="http://127.0.0.1:8000/list_generic_transformer"><code>Transformator</code>s</a> and you can even <a href="https://dzd-ev.github.io/dict2graph-docs/diy_transformer/">make your own</a> 🚀!<br />
+<p>There are a lot of more powerful <a href="https://dzd-ev.github.io/dict2graph-docs/list_generic_transformer"><code>Transformator</code>s</a> and you can even <a href="https://dzd-ev.github.io/dict2graph-docs/diy_transformer/">make your own</a> 🚀!<br />
  Have a deeper look into the docs to <a href="https://dzd-ev.github.io/dict2graph-docs/use_transformers/">learn more how Transformators work</a>.</p>
 
 
