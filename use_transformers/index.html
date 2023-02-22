@@ -955,7 +955,7 @@ This again, would match only the <code>(:books)</code>-nodes.</p>
 For that we need to create so called <code>Transformer</code>s</p>
 <p>Lets try to add a new property "<code>material: 'wood'</code>" to our bookshelf.</p>
 <p>We will pick the dict2graph built in node transformer <a href="/dict2graph-docs/list_generic_transformer/#dict2graph.transformers.generic_transformers.AddProperty">AddProperty</a></p>
-<p>For your convenience you can import the wrapper class <code>dict2graph.NodeTrans</code> which includes all Transformers that are applicable to nodes. Same with <code>dict2graph.RelTrans</code> for relationship transformators.</p>
+<p>For your convenience you can import the wrapper class <code>dict2graph.NodeTrans</code> which includes all Transformers that are applicable to nodes. Same with <code>dict2graph.RelTrans</code> for relationship transformers.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span><span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
@@ -974,10 +974,10 @@ For that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    <span class="p">}</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># we just learned how to &quot;match&quot;. lets apply it:</span>
 <a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">bookshelf_matcher</span> <span class="o">=</span> <span class="n">Transformer</span><span class="o">.</span><span class="n">match_nodes</span><span class="p">(</span><span class="s2">&quot;bookshelf&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">add_prop_transformator</span> <span class="o">=</span> <span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;material&quot;</span><span class="p">:</span><span class="s2">&quot;wood&quot;</span><span class="p">})</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">add_prop_transformer</span> <span class="o">=</span> <span class="n">NodeTrans</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">({</span><span class="s2">&quot;material&quot;</span><span class="p">:</span><span class="s2">&quot;wood&quot;</span><span class="p">})</span>
 <a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="c1"># the next thing we should do is to attach the transformator to our dict2graph instance</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="n">match_and_transform</span> <span class="o">=</span> <span class="n">bookshelf_matcher</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">add_prop_transformator</span><span class="p">)</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="c1"># the next thing we should do is to attach the transformer to our dict2graph instance</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="n">match_and_transform</span> <span class="o">=</span> <span class="n">bookshelf_matcher</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">add_prop_transformer</span><span class="p">)</span>
 <a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>
 <a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="c1"># to be able to enjoy our work lets push the data to neo4j</span>
 <a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="c1"># From here this works the same way as we allready learned in the basic tutorial</span>
@@ -1032,8 +1032,8 @@ For that we need to create so called <code>Transformer</code>s</p>
 </code></pre></div>
 <p>this is much more compact and depending on your taste more readable. But its just a style question. Choice is yours. But...</p>
 <h2 id="order-matters">Order matters!<a class="headerlink" href="#order-matters" title="Permanent link">&para;</a></h2>
-<p>The sequence of your transformers matters. Any transformation is passed to the next transformator.</p>
-<p>Lets compare to very similar code snippets. The only differentce will be the sequence of our transformators.</p>
+<p>The sequence of your transformers matters. Any transformation is passed to the next transformer.</p>
+<p>Lets compare to very similar code snippets. The only differentce will be the sequence of our transformers.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
@@ -1061,7 +1061,7 @@ For that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>│{&quot;material&quot;:&quot;wood&quot;,&quot;Genre&quot;:&quot;Explaining the world&quot;}│
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>└──────────────────────────────────────────────────┘
 </code></pre></div>
-<p>Now lets flip the order of our transformators:</p>
+<p>Now lets flip the order of our transformers:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">from</span> <span class="nn">dict2graph</span> <span class="kn">import</span> <span class="n">Dict2graph</span><span class="p">,</span> <span class="n">Transformer</span><span class="p">,</span> <span class="n">NodeTrans</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
@@ -1090,7 +1090,7 @@ For that we need to create so called <code>Transformer</code>s</p>
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>└─────────────────────────────────────────────┘
 </code></pre></div>
 <p>You see in the first case we added the new property first and then renamed it.</p>
-<p>In the second case we tried to rename it first. but it was not available yet, as the node Transformator <code>AddProperty</code> came after <code>OverridePropertyName</code></p>
+<p>In the second case we tried to rename it first. but it was not available yet, as the node Transformer <code>AddProperty</code> came after <code>OverridePropertyName</code></p>
 <p>So keep that in mind when chaining transformations.</p>
 
 
