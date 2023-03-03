@@ -15,7 +15,7 @@
         <link rel="next" href="../api_transformer/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1491,7 +1491,10 @@ This is name/key for this property. Defaults to <code>id</code>.</p></td>
 <span class="normal"><a href="#__codelineno-0-621">621</a></span>
 <span class="normal"><a href="#__codelineno-0-622">622</a></span>
 <span class="normal"><a href="#__codelineno-0-623">623</a></span>
-<span class="normal"><a href="#__codelineno-0-624">624</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="k">class</span> <span class="nc">Dict2graph</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-624">624</a></span>
+<span class="normal"><a href="#__codelineno-0-625">625</a></span>
+<span class="normal"><a href="#__codelineno-0-626">626</a></span>
+<span class="normal"><a href="#__codelineno-0-627">627</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="k">class</span> <span class="nc">Dict2graph</span><span class="p">:</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="sd">    The central class for dict2graph. Must be instanced to do get started and access the dict2graph api.</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40"></a>
@@ -2059,26 +2062,29 @@ This is name/key for this property. Defaults to <code>id</code>.</p></td>
 <a id="__codelineno-0-602" name="__codelineno-0-602"></a>            <span class="n">matcher_trans_node_container</span>
 <a id="__codelineno-0-603" name="__codelineno-0-603"></a>        <span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matcher_and_node_transformers_stack</span><span class="o">.</span><span class="n">containers</span><span class="p">:</span>
 <a id="__codelineno-0-604" name="__codelineno-0-604"></a>            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="p">:</span>
-<a id="__codelineno-0-605" name="__codelineno-0-605"></a>                <span class="k">if</span> <span class="n">matcher_trans_node_container</span><span class="o">.</span><span class="n">matcher</span><span class="o">.</span><span class="n">_match</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
-<a id="__codelineno-0-606" name="__codelineno-0-606"></a>                    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">matcher_trans_node_container</span><span class="o">.</span><span class="n">transformers</span><span class="p">:</span>
-<a id="__codelineno-0-607" name="__codelineno-0-607"></a>                        <span class="n">trans</span><span class="o">.</span><span class="n">_run_custom_node_match_and_transform</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-<a id="__codelineno-0-608" name="__codelineno-0-608"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
-<a id="__codelineno-0-609" name="__codelineno-0-609"></a>
-<a id="__codelineno-0-610" name="__codelineno-0-610"></a>        <span class="k">for</span> <span class="p">(</span>
-<a id="__codelineno-0-611" name="__codelineno-0-611"></a>            <span class="n">matcher_trans_rel_container</span>
-<a id="__codelineno-0-612" name="__codelineno-0-612"></a>        <span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matcher_and_rel_transformers_stack</span><span class="o">.</span><span class="n">containers</span><span class="p">:</span>
-<a id="__codelineno-0-613" name="__codelineno-0-613"></a>            <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
-<a id="__codelineno-0-614" name="__codelineno-0-614"></a>                <span class="k">if</span> <span class="n">matcher_trans_rel_container</span><span class="o">.</span><span class="n">matcher</span><span class="o">.</span><span class="n">_match</span><span class="p">(</span><span class="n">rel</span><span class="p">):</span>
-<a id="__codelineno-0-615" name="__codelineno-0-615"></a>                    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">matcher_trans_rel_container</span><span class="o">.</span><span class="n">transformers</span><span class="p">:</span>
-<a id="__codelineno-0-616" name="__codelineno-0-616"></a>                        <span class="n">trans</span><span class="o">.</span><span class="n">_run_custom_rel_match_and_transform</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
-<a id="__codelineno-0-617" name="__codelineno-0-617"></a>
-<a id="__codelineno-0-618" name="__codelineno-0-618"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
-<a id="__codelineno-0-619" name="__codelineno-0-619"></a>
-<a id="__codelineno-0-620" name="__codelineno-0-620"></a>    <span class="k">def</span> <span class="nf">_feed_cache_with_new_nodes_and_rels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-621" name="__codelineno-0-621"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="p">)</span>
-<a id="__codelineno-0-622" name="__codelineno-0-622"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-0-623" name="__codelineno-0-623"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="p">)</span>
-<a id="__codelineno-0-624" name="__codelineno-0-624"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-605" name="__codelineno-0-605"></a>                <span class="k">if</span> <span class="p">(</span>
+<a id="__codelineno-0-606" name="__codelineno-0-606"></a>                    <span class="n">matcher_trans_node_container</span><span class="o">.</span><span class="n">matcher</span><span class="o">.</span><span class="n">_match</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-607" name="__codelineno-0-607"></a>                    <span class="ow">and</span> <span class="ow">not</span> <span class="n">node</span><span class="o">.</span><span class="n">deleted</span>
+<a id="__codelineno-0-608" name="__codelineno-0-608"></a>                <span class="p">):</span>
+<a id="__codelineno-0-609" name="__codelineno-0-609"></a>                    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">matcher_trans_node_container</span><span class="o">.</span><span class="n">transformers</span><span class="p">:</span>
+<a id="__codelineno-0-610" name="__codelineno-0-610"></a>                        <span class="n">trans</span><span class="o">.</span><span class="n">_run_custom_node_match_and_transform</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<a id="__codelineno-0-611" name="__codelineno-0-611"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-612" name="__codelineno-0-612"></a>
+<a id="__codelineno-0-613" name="__codelineno-0-613"></a>        <span class="k">for</span> <span class="p">(</span>
+<a id="__codelineno-0-614" name="__codelineno-0-614"></a>            <span class="n">matcher_trans_rel_container</span>
+<a id="__codelineno-0-615" name="__codelineno-0-615"></a>        <span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">matcher_and_rel_transformers_stack</span><span class="o">.</span><span class="n">containers</span><span class="p">:</span>
+<a id="__codelineno-0-616" name="__codelineno-0-616"></a>            <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="p">:</span>
+<a id="__codelineno-0-617" name="__codelineno-0-617"></a>                <span class="k">if</span> <span class="n">matcher_trans_rel_container</span><span class="o">.</span><span class="n">matcher</span><span class="o">.</span><span class="n">_match</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">rel</span><span class="o">.</span><span class="n">deleted</span><span class="p">:</span>
+<a id="__codelineno-0-618" name="__codelineno-0-618"></a>                    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">matcher_trans_rel_container</span><span class="o">.</span><span class="n">transformers</span><span class="p">:</span>
+<a id="__codelineno-0-619" name="__codelineno-0-619"></a>                        <span class="n">trans</span><span class="o">.</span><span class="n">_run_custom_rel_match_and_transform</span><span class="p">(</span><span class="n">rel</span><span class="p">)</span>
+<a id="__codelineno-0-620" name="__codelineno-0-620"></a>
+<a id="__codelineno-0-621" name="__codelineno-0-621"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_feed_cache_with_new_nodes_and_rels</span><span class="p">()</span>
+<a id="__codelineno-0-622" name="__codelineno-0-622"></a>
+<a id="__codelineno-0-623" name="__codelineno-0-623"></a>    <span class="k">def</span> <span class="nf">_feed_cache_with_new_nodes_and_rels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-624" name="__codelineno-0-624"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span><span class="p">)</span>
+<a id="__codelineno-0-625" name="__codelineno-0-625"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_node_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-0-626" name="__codelineno-0-626"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span><span class="p">)</span>
+<a id="__codelineno-0-627" name="__codelineno-0-627"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_rel_cache_feeder</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -2978,7 +2984,7 @@ Defaults to None.</p></td>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ce72ebac.min.js"></script>
       
     
   </body>
