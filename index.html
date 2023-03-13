@@ -353,6 +353,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#difference-compared-to-apocloadjson" class="md-nav__link">
+    Difference compared to apoc.load.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recommended-workflow" class="md-nav__link">
     Recommended workflow
   </a>
@@ -776,6 +783,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#difference-compared-to-apocloadjson" class="md-nav__link">
+    Difference compared to apoc.load.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#recommended-workflow" class="md-nav__link">
     Recommended workflow
   </a>
@@ -866,6 +880,7 @@ dict2graph also comes with some powerful data transform capabilities.</p>
 <li><a href="#dict2graph">Dict2graph</a></li>
 <li><a href="#install">Install</a></li>
 <li><a href="#what-is-dict2graph">What is dict2graph</a></li>
+<li><a href="#difference-compared-to-apocloadjson">Difference compared to apoc.load.json</a></li>
 <li><a href="#recommended-workflow">Recommended workflow</a></li>
 <li><a href="#what-dict2graph-is-not">What dict2graph is <strong>not</strong></a></li>
 <li><a href="#py2neo-depcrecation-warning">py2neo depcrecation warning</a></li>
@@ -879,6 +894,12 @@ dict2graph also comes with some powerful data transform capabilities.</p>
 <h2 id="what-is-dict2graph">What is dict2graph<a class="headerlink" href="#what-is-dict2graph" title="Permanent link">&para;</a></h2>
 <p>With dict2graph you can transfer python dicts into a neo4j graph out of the box.<br />
 And if you are not happy with the structure of the result, dict2graph comes with a bunch of, transformation tools, which are easy to apply to your model.</p>
+<h3 id="difference-compared-to-apocloadjson">Difference compared to apoc.load.json<a class="headerlink" href="#difference-compared-to-apocloadjson" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Client side python parsing (no <a href="https://neo4j.com/labs/apoc/4.1/overview/apoc.load/apoc.load.json/#_reading_from_a_file">database setting</a> for file loading is necessary)</li>
+<li>Iterative transforming of the json model to a graph model. You dont need to understand the complete json structure from the begining to load it into Neo4j.</li>
+<li>More resiliant against changes and irregularities in the json source. </li>
+</ul>
 <h3 id="recommended-workflow">Recommended workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h3>
 <p>The recommended workflow is:</p>
 <ul>
